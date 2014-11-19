@@ -1,0 +1,17 @@
+tile.atomizer_Assembler1Block.name=Assembler Stage 1
+tile.atomizer_Assembler2Block.name=Assembler Stage 2
+tile.atomizer_Assembler3Block.name=Assembler Stage 3
+tile.atomizer_Disassembler1Block.name=Disassembler Stage 1
+tile.atomizer_Disassembler2Block.name=Disassembler Stage 2
+tile.atomizer_Disassembler3Block.name=Disassembler Stage 3
+tile.atomizer_Speicher2Block.name=Tank
+tile.atomizer_Speicher3Block.name=Magnetic Field Tank
+tile.atomizer_Transport1Block.name=Transport Pipe Stage 1
+tile.atomizer_Transport2Block.name=Transport Pipe Stage 2
+tile.atomizer_Transport3Block.name=Magnetic Field Pipe
+tile.atomizer_soilBlock.name=Soil
+
+item.atomizer_wrenchItem.name=Wrench
+item.atomizer_laser1Item.name=Laser Stage 1
+item.atomizer_laser2Item.name=Laser Stage 2
+item.atomizer_laser3Item.name=Laser Stage 3

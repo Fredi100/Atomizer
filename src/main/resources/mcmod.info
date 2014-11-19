@@ -1,0 +1,21 @@
+{
+  "modListVersion": 2,
+  "modList": [{
+    "modid": "atomizer",
+    "name": "Atomizer",
+    "description": "Make your world Atomic, Atomize it!",
+    "version": "Alpha 0.0.2",
+    "mcversion": "1.7.10",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [ "Fredi100", "Kikoni100", "Jasmin Reckendorfer", "Nadine Loschitz" ],
+    "credits": "Created by Fredi100",
+    "logoFile": "",
+    "screenshots": "",
+    "parent": "",
+    "requiredMods": "Forge",
+    "dependencies": "",
+    "dependants": "",
+    "useDependencyInformation": false
+  }]
+}
