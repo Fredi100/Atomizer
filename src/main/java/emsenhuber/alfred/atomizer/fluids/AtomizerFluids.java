@@ -8,6 +8,11 @@ import net.minecraft.block.material.Material;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
+/**
+ * Kümmert sich um das Erzeugen und Initialisieren aller Flüssigkeiten des Mods
+ * 
+ * @author Fredi100
+ */
 public class AtomizerFluids {
 	/*Fluids*/
 	public static Fluid ironFluid;
@@ -20,7 +25,7 @@ public class AtomizerFluids {
 	public static Fluid emeraldFluid;
 	public static Fluid enderFluid;
 	
-	/*Blocs*/
+	/*Blocks*/
 	public static Block ironFluidBlock;
 	public static Block goldFluidBlock;
 	public static Block glasFluidBlock;
@@ -31,6 +36,9 @@ public class AtomizerFluids {
 	public static Block emeraldFluidBlock;
 	public static Block enderFluidBlock;
 	
+	/**
+	 * Initialisiert alle Flüssigkeiten fürs Spiel
+	 */
 	public static void init(){
 		//IronFluid
 		ironFluid = new FluidIron();

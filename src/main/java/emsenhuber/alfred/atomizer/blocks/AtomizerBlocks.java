@@ -2,8 +2,14 @@ package emsenhuber.alfred.atomizer.blocks;
 
 import net.minecraft.block.Block;
 
+/**
+ * Kümmert sich um das Erstellen und Initialisieren der einzelnen Blöcke
+ * 
+ * @author Fredi100
+ */
 public final class AtomizerBlocks {
-
+	
+	/*Erzeugen der einzelnen Blöcke*/
 	public static Block assembler1Block;
 	public static Block assembler2Block;
 	public static Block assembler3Block;
@@ -17,6 +23,9 @@ public final class AtomizerBlocks {
 	public static Block speicher3Block;
 	public static Block soilBlock;
 	
+	/**
+	 * Initialisiert die einzelnen Blöcke für das Spiel
+	 */
 	public static void init(){
 		assembler1Block = new BlockAssembler1();
 		assembler2Block = new BlockAssembler2();

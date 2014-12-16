@@ -15,7 +15,7 @@ import emsenhuber.alfred.atomizer.lib.Constants;
 
 public class BlockFluidDiamond extends BlockFluidClassic{
 
-    @SideOnly(Side.CLIENT)
+    @SideOnly(Side.CLIENT) //Dinge die nur auf der Client-Seite passieren sollen
     protected IIcon stillIcon;
     @SideOnly(Side.CLIENT)
     protected IIcon flowingIcon;
