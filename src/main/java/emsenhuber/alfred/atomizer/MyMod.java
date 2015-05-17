@@ -53,7 +53,7 @@ public class MyMod {
 			"   ",
 			'E', Items.emerald, 'L', AtomizerItems.laser1Item, 'G', Items.gold_ingot
 		});
-		//Laser2Item
+		//Laser3Item
 		GameRegistry.addRecipe(new ItemStack(AtomizerItems.laser3Item), new Object[]{
 			"   ",
 			"DLG",
