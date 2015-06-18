@@ -19,11 +19,13 @@ public class AtomizerItems {
 	 * Initialisiert alle Items die vom Mod eingebracht werden
 	 */
 	public static void init(){
+		/*
 		wrenchItem = new ItemWrench();
 		laser1Item = new ItemLaser1();
 		laser2Item = new ItemLaser2();
 		laser3Item = new ItemLaser3();
 		soilPileItem = new ItemSoilPile();
+		*/
 		
 	}
 }

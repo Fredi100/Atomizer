@@ -31,7 +31,16 @@ public class MyMod {
 		AtomizerItems.init();
 		AtomizerFluids.init();
 		
+		/*Test-Rezept*/
+		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.testBlock), new Object[]{
+			"IDI",
+			"DPD",
+			"IDI",
+			'I', Items.iron_ingot, 'D', Items.diamond, 'P', Items.iron_pickaxe
+		});
+		
 		/*Recipes*/
+		/*
 		//SoilePileItem
 		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.soilBlock), new Object[]{
 			"SSS",
@@ -81,6 +90,7 @@ public class MyMod {
 			"GRG",
 			'C', AtomizerBlocks.assembler2Block, 'D', Blocks.diamond_block, 'G', Items.gold_ingot, 'L', AtomizerItems.laser3Item, 'R', Blocks.redstone_block
 		});
+		*/
 	}
 	
 	@Mod.EventHandler
@@ -101,5 +111,4 @@ public class MyMod {
 	        return Item.getItemFromBlock(Blocks.anvil);
 	    }
 	};
-	
 }

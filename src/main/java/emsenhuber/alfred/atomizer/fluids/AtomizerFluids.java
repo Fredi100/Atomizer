@@ -40,6 +40,7 @@ public class AtomizerFluids {
 	 * Initialisiert alle Flüssigkeiten fürs Spiel
 	 */
 	public static void init(){
+		/*
 		//IronFluid
 		ironFluid = new FluidIron();
 		ironFluidBlock = new BlockFluidIron(ironFluid, Material.water);
@@ -76,5 +77,6 @@ public class AtomizerFluids {
 		enderFluid = new FluidEnder();
 		enderFluidBlock = new BlockFluidEnder(enderFluid, Material.water);
 		enderFluid.setUnlocalizedName(enderFluidBlock.getUnlocalizedName());
+		*/
 	}
 }

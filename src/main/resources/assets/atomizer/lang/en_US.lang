@@ -10,6 +10,7 @@ tile.atomizer_Transport1Block.name=Transport Pipe Stage 1
 tile.atomizer_Transport2Block.name=Transport Pipe Stage 2
 tile.atomizer_Transport3Block.name=Magnetic Field Pipe
 tile.atomizer_soilBlock.name=Soil
+tile.atomizer_TestBlock.name=Atomizer Block
 
 item.atomizer_wrenchItem.name=Wrench
 item.atomizer_laser1Item.name=Laser Stage 1

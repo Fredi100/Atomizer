@@ -16,3 +16,8 @@ LICENSE-fml.txt
 forge-1.7.10-10.13.2.1230-changelog.txt
 Thumbs.db
 *.db
+eclipse/.recommenders
+eclipse/config
+eclipse/crash-reports
+eclipse/logs
+documents/Thumbs.db

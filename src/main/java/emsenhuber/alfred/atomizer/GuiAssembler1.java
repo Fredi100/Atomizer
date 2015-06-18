@@ -7,6 +7,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 public class GuiAssembler1 extends GuiScreen{
+	/*
 	private int x, y, z, xSize, ySize;
 	private World world;
 	private EntityPlayer player;
@@ -34,4 +35,5 @@ public class GuiAssembler1 extends GuiScreen{
 	public boolean doesGuiPauseGame(){
 		return false;
 	}
+	*/
 }
