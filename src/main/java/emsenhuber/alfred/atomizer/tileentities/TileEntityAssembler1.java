@@ -1,3 +1,4 @@
+
 package emsenhuber.alfred.atomizer.tileentities;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -7,6 +8,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class TileEntityAssembler1 extends TileEntity{
+	/*
 	private int fill;
 	
 	public static final String publicName = "tileEntityAssembler1";
@@ -28,7 +30,7 @@ public class TileEntityAssembler1 extends TileEntity{
 		this.fill = par1.getInteger("fill");
 	}
 	
-	/*Zum drauf zugreifen auf die Daten von egal wo
+	//Zum drauf zugreifen auf die Daten von egal wo
 	TileEntityYour tile = (TileEntityYour) world.getBlockTileEntity(i, j, k);
 	if (tile != null){
 		int l = tile.customField;

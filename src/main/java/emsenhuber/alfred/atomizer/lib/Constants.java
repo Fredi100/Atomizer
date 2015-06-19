@@ -1,5 +1,10 @@
 package emsenhuber.alfred.atomizer.lib;
 
+/**
+ * Hält wichtige Konstanten die immer wieder im Code gebraucht werden
+ * 
+ * @author Fredi100
+ */
 public class Constants {
 	public static final String MODID = "atomizer";
 	public static final String MODNAME = "Atomizer";
