@@ -1,7 +1,0 @@
-Benötigte zusätzliche Software
-RedstoneFlux API
-Buildcraft API
-
-Andere Dokumente auf den Stand des Pflichtenheftes bringen
-
-Ihr könnte gerne selbst hier Notizen eintragen die zum Projekt gehören.
