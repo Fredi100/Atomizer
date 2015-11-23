@@ -3,6 +3,7 @@
 .metadata
 .settings
 .project
+eclipse/saves
 bin
 build
 build.gradle
@@ -22,3 +23,4 @@ eclipse/config
 eclipse/crash-reports
 eclipse/logs
 documents/Thumbs.db
+eclipse/usernamecache.json
