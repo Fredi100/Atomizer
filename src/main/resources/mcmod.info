@@ -1,16 +1,16 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "atomizer",
+  "name": "Atomizer",
+  "description": "Ein komplettes Crafting Overhaul",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
+  "authorList": ["Alfred Emsenhuber"],
   "credits": "The Forge and FML guys, for making this example",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": [mod_MinecraftForge]
 }
 ]
