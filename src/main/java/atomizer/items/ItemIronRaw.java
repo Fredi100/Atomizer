@@ -7,6 +7,8 @@ import net.minecraft.item.Item;
 
 public class ItemIronRaw extends Item{
 	
+	public static final String UNLOCALIZED_BLOCK_NAME = "ironRaw";
+	
 	public ItemIronRaw(){
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);

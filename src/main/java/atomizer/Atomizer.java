@@ -93,7 +93,9 @@ public class Atomizer {
 		
 	}
 	
-	//Use a vanilla block as an icon
+	/**
+	 * Damit kann ich einen neue CreativeTab machen in dem dann alles Items drin sind
+	 */
 	public static CreativeTabs tabAtomizer = new CreativeTabs("tabSmithy") {
 	    @Override
 	    @SideOnly(Side.CLIENT)

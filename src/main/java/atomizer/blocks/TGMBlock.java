@@ -25,6 +25,6 @@ public class TGMBlock extends Block /*extends BlockContainer*/{
         setStepSound(Block.soundTypeGravel);
         setBlockName(TGMBlock.UNLOCALIZED_BLOCK_NAME);
         setCreativeTab(CreativeTabs.tabBlock);
-        setBlockTextureName(Constants.MODID +":TGMBlock");   
+        setBlockTextureName(Constants.MODID +":"+UNLOCALIZED_BLOCK_NAME);   
     }
 }
