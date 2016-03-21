@@ -1,5 +1,23 @@
-tile.tgmBlock.name=TGM Block
+tile.atomizer_tgmBlock.name=TGM Block
+tile.atomizer_itBlock.name=IT Block
+tile.atomizer_Assembler1Block.name=Assembler Stufe 1
+tile.atomizer_Assembler2Block.name=Assembler Stufe 2
+tile.atomizer_Assembler3Block.name=Assembler Stufe 3
+tile.atomizer_Disassembler1Block.name=Disassembler Stufe 1
+tile.atomizer_Disassembler2Block.name=Disassembler Stufe 2
+tile.atomizer_Disassembler3Block.name=Disassembler Stufe 3
+tile.atomizer_Speicher2Block.name=Tank
+tile.atomizer_Speicher3Block.name=Magnetfeldtank
+tile.atomizer_Transport1Block.name=Transportrohr Stufe 1
+tile.atomizer_Transport2Block.name=Transportrohr Stufe 2
+tile.atomizer_Transport3Block.name=Magnetfeldroehre
+tile.atomizer_soilBlock.name=Erde
 
-item.ironRaw.name=Rohes Eisen
+item.atomizer_ironRaw.name=Rohes Eisen
+item.atomizer_wrenchItem.name=Schraubenschluessel
+item.atomizer_laser1Item.name=Laser Stufe 1
+item.atomizer_laser2Item.name=Laser Stufe 2
+item.atomizer_laser3Item.name=Laser Stufe 3
+item.atomizer_SoilPileItem.name=Haufen Erde
 
 itemGroup.tabName=Tab
