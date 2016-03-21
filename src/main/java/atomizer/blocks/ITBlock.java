@@ -2,6 +2,7 @@ package atomizer.blocks;
 
 import atomizer.Atomizer;
 import atomizer.lib.Constants;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -24,6 +25,7 @@ public class ITBlock extends Block /*extends BlockContainer*/{
         setStepSound(Block.soundTypeGravel);
         setBlockName(ITBlock.UNLOCALIZED_BLOCK_NAME);
         setCreativeTab(CreativeTabs.tabBlock);
-        setBlockTextureName(Constants.MODID +":"+UNLOCALIZED_BLOCK_NAME);      
+        setBlockTextureName(Constants.MODID +":"+UNLOCALIZED_BLOCK_NAME);  
+        GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);
     }
 }

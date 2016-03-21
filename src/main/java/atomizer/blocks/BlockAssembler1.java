@@ -18,7 +18,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
  * @author Fredi100
  */
 public class BlockAssembler1 extends Block implements ITileEntityProvider{
-	private String name = "Assembler1Block";
+	private String UNLOCALIZED_BLOCK_NAME = "Assembler1Block";
 	
 	/**
 	 * Konstruktor
@@ -30,8 +30,8 @@ public class BlockAssembler1 extends Block implements ITileEntityProvider{
 	public BlockAssembler1(){
 		super(Material.rock);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
-		this.setBlockName(Constants.MODID + "_" + name);//Gibt dem Block einen internen Namen
-		GameRegistry.registerBlock(this, name);//Registriert den Block im Spiel
+		this.setBlockName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}
 	
 	/*Ab hier noch in Bearbeitung da noch keine Erfahrung mit TileEntitys*/

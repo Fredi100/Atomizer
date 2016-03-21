@@ -8,12 +8,12 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockSoil extends Block{
 	
-	private static String name = "soilBlock";
+	private static String UNLOCALIZED_BLOCK_NAME = "soilBlock";
 
 	protected BlockSoil() {
 		super(Material.rock);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
-		this.setBlockName(Constants.MODID + "_" + name);//Gibt dem Block einen internen Namen
-		GameRegistry.registerBlock(this, name);//Registriert den Block im Spiel
+		this.setBlockName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}
 }

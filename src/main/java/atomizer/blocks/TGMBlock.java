@@ -2,6 +2,7 @@ package atomizer.blocks;
 
 import atomizer.Atomizer;
 import atomizer.lib.Constants;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -21,10 +22,11 @@ public class TGMBlock extends Block /*extends BlockContainer*/{
 		
     public TGMBlock(){
         super(Material.ground);
-        setHardness(0.5F);
-        setStepSound(Block.soundTypeGravel);
-        setBlockName(TGMBlock.UNLOCALIZED_BLOCK_NAME);
-        setCreativeTab(CreativeTabs.tabBlock);
-        setBlockTextureName(Constants.MODID +":"+UNLOCALIZED_BLOCK_NAME);   
+        this.setHardness(0.5F);
+        this.setStepSound(Block.soundTypeGravel);
+        this.setBlockName(TGMBlock.UNLOCALIZED_BLOCK_NAME);
+        this.setCreativeTab(CreativeTabs.tabBlock);
+        this.setBlockTextureName(Constants.MODID +":"+UNLOCALIZED_BLOCK_NAME);
+        GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);
     }
 }

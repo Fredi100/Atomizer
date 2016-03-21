@@ -12,7 +12,8 @@ import atomizer.tileentities.TileEntityAssembler1;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlockTest extends Block{
-	private String name = "TestBlock";
+	
+	public static final String UNLOCALIZED_BLOCK_NAME = "testBlock";
 	private IIcon[] icons = new IIcon[6];
 	
 	/**
@@ -25,8 +26,9 @@ public class BlockTest extends Block{
 	public BlockTest(){
 		super(Material.glass);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
-		this.setBlockName(Constants.MODID + "_" + name);//Gibt dem Block einen internen Namen
-		this.setBlockTextureName(Constants.MODID + ":" + name);
+		this.setBlockName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		this.setBlockTextureName(Constants.MODID + ":" + UNLOCALIZED_BLOCK_NAME);
+		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}
 	
 	@Override
@@ -37,7 +39,7 @@ public class BlockTest extends Block{
 	@Override
 	public void registerBlockIcons(IIconRegister iconRegister) {
 	    for (int i = 0; i < icons.length; i++) {
-	        icons[i] = iconRegister.registerIcon(""+Constants.MODID + ":" + name + i);
+	        icons[i] = iconRegister.registerIcon(""+Constants.MODID + ":" + UNLOCALIZED_BLOCK_NAME + "_" + i);
 	    }
 	}
 	

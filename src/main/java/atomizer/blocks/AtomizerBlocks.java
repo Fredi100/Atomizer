@@ -24,11 +24,17 @@ public final class AtomizerBlocks {
 	public static Block soilBlock;
 	public static Block testBlock;
 	
+	public static Block itBlock;
+	public static Block tgmBlock;
+	
 	/**
 	 * Initialisiert die einzelnen Blöcke für das Spiel
 	 */
 	public static void init(){
 		testBlock = new BlockTest();
+		itBlock = new ITBlock();
+		tgmBlock = new TGMBlock();
+		
 		assembler1Block = new BlockAssembler1();
 		assembler2Block = new BlockAssembler2();
 		assembler3Block = new BlockAssembler3();
@@ -42,5 +48,9 @@ public final class AtomizerBlocks {
 		speicher3Block = new BlockSpeicher3();
 		soilBlock = new BlockSoil();
 	}
+	
+	/**
+	 * Vielleicht später alle Blöcke in ein Array auslagen und Variablen damit sparen
+	 */
 	
 }
