@@ -1,4 +1,4 @@
-package atomizer.items;
+package atomizer.items.tools;
 
 import atomizer.Atomizer;
 import atomizer.lib.Constants;

@@ -1,4 +1,4 @@
-package atomizer.items;
+package atomizer.items.armor;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemArmor;

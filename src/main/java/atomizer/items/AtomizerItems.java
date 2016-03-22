@@ -1,5 +1,10 @@
 package atomizer.items;
 
+import atomizer.items.armor.ItemBronzeBoots;
+import atomizer.items.armor.ItemBronzeChest;
+import atomizer.items.armor.ItemBronzeHelmet;
+import atomizer.items.armor.ItemBronzeLeggings;
+import atomizer.items.tools.ItemBronzeSword;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
