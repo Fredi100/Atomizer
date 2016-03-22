@@ -6,11 +6,11 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class ItemSoilPile extends Item{
-	private String name = "soilPileItem";
+	public static final String UNLOCALIZED_ITEM_NAME = "soilPileItem";
 	
 	public ItemSoilPile(){
-		setUnlocalizedName(Constants.MODID + "_" + name);
-		GameRegistry.registerItem(this, name);
+		setUnlocalizedName(Constants.MODID + "_" + UNLOCALIZED_ITEM_NAME);
 		setCreativeTab(CreativeTabs.tabMaterials);
+		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
 	}
 }

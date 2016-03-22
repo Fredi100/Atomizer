@@ -1,5 +1,6 @@
 package atomizer.items;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemArmor;
 
 public class ItemBronzeChest extends ItemArmor{
@@ -10,5 +11,6 @@ public class ItemBronzeChest extends ItemArmor{
 		super(arg0, arg1, arg2);
 		
 		this.setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
+		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
 	}
 }

@@ -6,11 +6,11 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
-public class ItemIronPlate extends Item{
+public class ItemSilverIngot extends Item{
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "ironPlate";
+	public static final String UNLOCALIZED_ITEM_NAME = "silverIngot";
 	
-	public ItemIronPlate(){
+	public ItemSilverIngot(){
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMaterials);
 		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
