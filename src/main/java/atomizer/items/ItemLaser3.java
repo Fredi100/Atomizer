@@ -7,13 +7,12 @@ import net.minecraft.item.Item;
 
 public class ItemLaser3 extends Item{
 	
-	private String name = "laser3Item";
+	public static final String UNLOCALIZED_ITEM_NAME = "laser3Item";
 	
 	public ItemLaser3(){
 		
-		setUnlocalizedName(Constants.MODID + "_" + name);
-		GameRegistry.registerItem(this, name);
+		setUnlocalizedName(Constants.MODID + "_" + UNLOCALIZED_ITEM_NAME);
 		setCreativeTab(CreativeTabs.tabMisc);
-		
+		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
 	}
 }

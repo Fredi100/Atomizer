@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 
 public class ItemFlour extends Item{
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "flour";
+	public static final String UNLOCALIZED_ITEM_NAME = "flourBag";
 	
 	public ItemFlour(){
 		setMaxStackSize(64);

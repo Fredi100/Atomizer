@@ -22,4 +22,48 @@ item.atomizer_laser3Item.name=Laser Stage 3
 item.atomizer_SoilPileItem.name=Pile of Soil
 item.atomizer_WrenchItem.name=Wrench
 
+< Bronze >
+item.bronzeHelmet.name=Bronze Helmet
+item.bronzeChest.name=Bronze Chestplate
+item.bronzeLeggings.name=Bronze Leggings
+item.bronzeBoots.name=Bronze Boots
+item.bronzeAxe.name=Bronze Axe
+item.bronzePickaxe.name=Bronze Pickaxe
+item.bronzeShovel.name=Bronze Shovel
+item.bronzeHoe.name=Bronze Hoe
+item.bronzeSword.name=Bronze Sword
+
+< Copper >
+item.copperHelmet.name=Copper Helmet
+item.copperChest.name=Copper Chestplate
+item.copperLeggings.name=Copper Leggings
+item.copperBoots.name=Copper Boots
+item.copperAxe.name=Copper Axe
+item.copperPickaxe.name=Copper Pickaxe
+item.copperShovel.name=Copper Shovel
+item.copperHoe.name=Copper Hoe
+item.copperSword.name=Copper Sword
+
+< Zinc >
+item.zincHelmet.name=Zinc Helmet
+item.zincChest.name=Zinc Chestplate
+item.zincLeggings.name=Zinc Leggings
+item.zincBoots.name=Zinc Boots
+item.zincAxe.name=Zinc Axe
+item.zincPickaxe.name=Zinc Pickaxe
+item.zincShovel.name=Zinc Shovel
+item.zincHoe.name=Zinc Hoe
+item.zincSword.name=Zinc Sword
+
+< Silver >
+item.silverHelmet.name=Silver Helmet
+item.silverChest.name=Silver Chestplate
+item.silverLeggings.name=Silver Leggings
+item.silverBoots.name=Silver Boots
+item.silverAxe.name=Silver Axe
+item.silverPickaxe.name=Silver Pickaxe
+item.silverShovel.name=Silver Shovel
+item.silverHoe.name=Silver Hoe
+item.silverSword.name=Silver Sword
+
 itemGroup.tabName=Tab

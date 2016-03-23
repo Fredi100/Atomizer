@@ -7,12 +7,12 @@ import net.minecraft.item.Item;
 
 public class ItemWrench extends Item {
 	
-	private String name = "wrenchItem";
+	public static final String UNLOCALIZED_ITEM_NAME = "wrenchItem";
 	
 	public ItemWrench(){
 		
-		setUnlocalizedName(Constants.MODID + "_" + name);
-		GameRegistry.registerItem(this, name);
+		setUnlocalizedName(Constants.MODID + "_" + UNLOCALIZED_ITEM_NAME);
 		setCreativeTab(CreativeTabs.tabTools);
+		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
 	}
 }

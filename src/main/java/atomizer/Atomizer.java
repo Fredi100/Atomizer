@@ -135,7 +135,7 @@ public class Atomizer {
     	//Rezept 00	Bucket		<-	IronPlate*3
     	GameRegistry.addShapedRecipe(output.get(0), new Object[]{"   ","# #"," # ",'#',AtomizerItems.ironPlate});
     	//Rezept 01 IronPlate*2	<-	IronIngot + StoneHammer
-    	GameRegistry.addShapelessRecipe(output.get(1), new Object[]{Items.iron_ingot,AtomizerItems.stoneHammer});
+    	GameRegistry.addShapelessRecipe(output.get(1), new Object[]{Items.iron_ingot,AtomizerItems.items.get("stoneHammer")});
     	
     
     }

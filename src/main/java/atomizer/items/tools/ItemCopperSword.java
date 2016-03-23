@@ -3,19 +3,22 @@ package atomizer.items.tools;
 import java.util.Set;
 
 import atomizer.lib.Constants;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 
-public class ItemCopperSword extends ItemTool {
+public class ItemCopperSword extends ItemSword {
 
 	public static final String UNLOCALIZED_ITEM_NAME = "copperSword";
 	
-	public ItemCopperSword(float damageVsEntity, ToolMaterial toolMaterial, Set p_i45333_3_) {
-		super(damageVsEntity, toolMaterial, p_i45333_3_);
+	public ItemCopperSword(ToolMaterial toolMaterial) {
+		super(toolMaterial);
 		setMaxStackSize(64);
-		setCreativeTab(CreativeTabs.tabMisc);
+		setCreativeTab(CreativeTabs.tabCombat);
 		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
 		setTextureName(Constants.MODID+":"+UNLOCALIZED_ITEM_NAME);
+		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
 	}
 
 }
