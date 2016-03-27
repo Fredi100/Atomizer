@@ -1,18 +1,18 @@
 package atomizer.items;
 
+import atomizer.Atomizer;
 import atomizer.lib.Constants;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
-public class ItemZincPlate extends Item{
+public class ItemTinRaw extends Item{
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "zincPlate";
+	public static final String UNLOCALIZED_ITEM_NAME = "tinRaw";
 	
-	public ItemZincPlate(){
+	public ItemTinRaw(){
 		setMaxStackSize(64);
-		setCreativeTab(CreativeTabs.tabMaterials);
+		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
 		setTextureName(Constants.MODID+":"+UNLOCALIZED_ITEM_NAME);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);

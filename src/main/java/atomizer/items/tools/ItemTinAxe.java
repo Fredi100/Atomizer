@@ -1,20 +1,25 @@
-package atomizer.items;
+package atomizer.items.tools;
 
-import atomizer.Atomizer;
+import java.util.Set;
+
 import atomizer.lib.Constants;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemTool;
 
-public class ItemZincRaw extends Item{
+public class ItemTinAxe extends ItemAxe {
+
+	public static final String UNLOCALIZED_ITEM_NAME = "tinAxe";
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "zincRaw";
-	
-	public ItemZincRaw(){
+	public ItemTinAxe(ToolMaterial toolMaterial) {
+		super(toolMaterial);
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
 		setTextureName(Constants.MODID+":"+UNLOCALIZED_ITEM_NAME);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
 	}
+
 }
+

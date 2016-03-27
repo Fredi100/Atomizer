@@ -17,7 +17,7 @@ import atomizer.fluids.AtomizerFluids;
 import atomizer.items.AtomizerItems;
 import atomizer.lib.Constants;
 import atomizer.proxy.CommonProxy;
-import atomizer.recipies.AtomizerRecipies;
+import atomizer.recipes.AtomizerRecipes;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -37,106 +37,71 @@ import cpw.mods.fml.relauncher.SideOnly;
  *
  */
 @Mod(modid = Constants.MODID, name = Constants.MODNAME, version = Constants.VERSION)
-//Signalisiert der API das es sich bei folgender Klasse um eine Minecraft-Modifikaiton handelt
+// Signalisiert der API das es sich bei folgender Klasse um eine
+// Minecraft-Modifikaiton handelt
 public class Atomizer {
-	
-	//Sagt der API welche Instanz verwendet werden soll
-    @Instance(value = Constants.MODID)
-    public static Atomizer instance;
-    
-    
-    //Muss noch schaun
+
+	// Sagt der API welche Instanz verwendet werden soll
+	@Instance(value = Constants.MODID)
+	public static Atomizer instance;
+
+	// Muss noch schaun
 	@SidedProxy(clientSide = Constants.CLIENT_PROXY_CLASS, serverSide = Constants.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
-	//Muss noch schaun
-	
-	
-	
-	
+	// Muss noch schaun
+
 	/**
-     * Wird aufgerufen noch bevor Minecraft zu laden anfängt.
-     * Wird zum Registrieren verschiedener Klassen verwendet.
-     * 
-     * @param event
-     */
+	 * Wird aufgerufen noch bevor Minecraft zu laden anfängt. Wird zum
+	 * Registrieren verschiedener Klassen verwendet.
+	 * 
+	 * @param event
+	 */
 	@Mod.EventHandler
-	public void preInit(FMLPreInitializationEvent event){
+	public void preInit(FMLPreInitializationEvent event) {
 		AtomizerBlocks.init();
 		AtomizerItems.init();
 		AtomizerFluids.init();
-		AtomizerRecipies.init();
+		AtomizerRecipes.recipeRemover();
+		AtomizerRecipes.smeltingRemover();
+		AtomizerRecipes.init();
 	}
-	
+
 	@Mod.EventHandler
-	public void init(FMLInitializationEvent event){
+	public void init(FMLInitializationEvent event) {
 		proxy.registerTileEntities();
 	}
-	
+
 	/**
-     * Wird beim Laden von Minecraft aufgerufen.
-     * Wird zum Registrieren von Rezepten verwendet.
-     * 
-     * @param event
-     */
-    @EventHandler
-    public void load(FMLInitializationEvent event){
-    	
-    }
-	
-	/**
-     * Wird zum Interagieren mit anderen Mods und registrierten Klassen verwendet.
-     * 
-     * @param event
-     */
-	@Mod.EventHandler
-	public void postInit(FMLPostInitializationEvent event){
-		
+	 * Wird beim Laden von Minecraft aufgerufen. Wird zum Registrieren von
+	 * Rezepten verwendet.
+	 * 
+	 * @param event
+	 */
+	@EventHandler
+	public void load(FMLInitializationEvent event) {
+
 	}
-	
+
 	/**
-	 * Damit kann ich einen neue CreativeTab machen in dem dann alles Items drin sind
+	 * Wird zum Interagieren mit anderen Mods und registrierten Klassen
+	 * verwendet.
+	 * 
+	 * @param event
+	 */
+	@Mod.EventHandler
+	public void postInit(FMLPostInitializationEvent event) {
+
+	}
+
+	/**
+	 * Damit kann ich einen neue CreativeTab machen in dem dann alles Items drin
+	 * sind
 	 */
 	public static CreativeTabs tabAtomizer = new CreativeTabs("tabSmithy") {
-	    @Override
-	    @SideOnly(Side.CLIENT)
-	    public Item getTabIconItem() {
-	        return Item.getItemFromBlock(Blocks.anvil);
-	    }
+		@Override
+		@SideOnly(Side.CLIENT)
+		public Item getTabIconItem() {
+			return Item.getItemFromBlock(Blocks.anvil);
+		}
 	};
-	
-	 /**
-     * Geht alle im Spiel registrierten Rezepte durch und löscht alle die von uns ersetzt werden.
-     * Registriert anschließend unsere Rezepte
-     * 
-     * 
-     * 	!!!!!GEHT NOCH NICHT!!!!!
-     * 
-     * 
-     */
-    private static void configureRecipes(){
-    	ArrayList<ItemStack> output = new ArrayList<ItemStack>();
-    	/* Output Array */
-    	output.add(new ItemStack(Items.bucket)); 	//Rezept 01 Bucket		<-	IronPlate*3
-    	output.add(new ItemStack(AtomizerItems.ironPlate,2));		//Rezept 02 IronPlate*2	<-	IronIngot + StoneHammer
-    	
-    	ItemStack recipeResult = null;
-    	ArrayList recipes = (ArrayList) CraftingManager.getInstance().getRecipeList();
-    	for (int scan = 0; scan < recipes.size(); scan++){
-    		IRecipe tmpRecipe = (IRecipe) recipes.get(scan);
-    		recipeResult=tmpRecipe.getRecipeOutput();
-    		for(ItemStack resultItem:output){
-    			if(ItemStack.areItemStacksEqual(resultItem, recipeResult)){
-    				System.out.println("Atomizer removed following Recipe: " + recipes.get(scan) + " -> " + recipeResult);
-    				recipes.remove(scan);
-    			}
-    		}
-    	}
-    	
-    	//Rezept 00	Bucket		<-	IronPlate*3
-    	GameRegistry.addShapedRecipe(output.get(0), new Object[]{"   ","# #"," # ",'#',AtomizerItems.ironPlate});
-    	//Rezept 01 IronPlate*2	<-	IronIngot + StoneHammer
-    	GameRegistry.addShapelessRecipe(output.get(1), new Object[]{Items.iron_ingot,AtomizerItems.items.get("stoneHammer")});
-    	
-    
-    }
 }

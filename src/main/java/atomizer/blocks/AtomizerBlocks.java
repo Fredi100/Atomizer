@@ -31,6 +31,7 @@ public final class AtomizerBlocks {
 	 * Initialisiert die einzelnen Blöcke für das Spiel
 	 */
 	public static void init(){
+		System.out.println("Atomizer is initializing its blocks now!");
 		testBlock = new BlockTest();
 		itBlock = new ITBlock();
 		tgmBlock = new TGMBlock();

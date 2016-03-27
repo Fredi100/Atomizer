@@ -6,11 +6,11 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
-public class ItemZincIngot extends Item{
+public class ItemTinIngot extends Item{
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "zincIngot";
+	public static final String UNLOCALIZED_ITEM_NAME = "tinIngot";
 	
-	public ItemZincIngot(){
+	public ItemTinIngot(){
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMaterials);
 		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);

@@ -6,11 +6,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class BlockZinc extends Block{
+public class BlockTin extends Block{
 	
-	private static String UNLOCALIZED_BLOCK_NAME = "zincBlock";
+	private static String UNLOCALIZED_BLOCK_NAME = "tinBlock";
 
-	protected BlockZinc() {
+	protected BlockTin() {
 		super(Material.rock);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
 		this.setBlockName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen

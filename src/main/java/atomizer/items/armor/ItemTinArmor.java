@@ -7,11 +7,11 @@ import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
-public class ItemZincArmor extends ItemArmor{
+public class ItemTinArmor extends ItemArmor{
 	
 	public String unlocalizedName;
 
-	public ItemZincArmor(String unlocalizedName, ArmorMaterial material, int type) {
+	public ItemTinArmor(String unlocalizedName, ArmorMaterial material, int type) {
 		super(material, 0, type);
 		
 		this.setCreativeTab(CreativeTabs.tabCombat);

@@ -1,4 +1,4 @@
-package atomizer.recipies;
+package atomizer.recipes;
 
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;

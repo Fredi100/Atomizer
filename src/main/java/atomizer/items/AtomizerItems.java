@@ -6,7 +6,7 @@ import java.util.TreeMap;
 import atomizer.items.armor.ItemBronzeArmor;
 import atomizer.items.armor.ItemCopperArmor;
 import atomizer.items.armor.ItemSilverArmor;
-import atomizer.items.armor.ItemZincArmor;
+import atomizer.items.armor.ItemTinArmor;
 import atomizer.items.tools.ItemBronzeAxe;
 import atomizer.items.tools.ItemBronzeHoe;
 import atomizer.items.tools.ItemBronzePickaxe;
@@ -22,11 +22,11 @@ import atomizer.items.tools.ItemSilverHoe;
 import atomizer.items.tools.ItemSilverPickaxe;
 import atomizer.items.tools.ItemSilverShovel;
 import atomizer.items.tools.ItemSilverSword;
-import atomizer.items.tools.ItemZincAxe;
-import atomizer.items.tools.ItemZincHoe;
-import atomizer.items.tools.ItemZincPickaxe;
-import atomizer.items.tools.ItemZincShovel;
-import atomizer.items.tools.ItemZincSword;
+import atomizer.items.tools.ItemTinAxe;
+import atomizer.items.tools.ItemTinHoe;
+import atomizer.items.tools.ItemTinPickaxe;
+import atomizer.items.tools.ItemTinShovel;
+import atomizer.items.tools.ItemTinSword;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
@@ -53,16 +53,14 @@ public class AtomizerItems {
 	public static Item copperPlate;
 	public static Item copperRaw;
 	
-	/* Zinc */
-	public static ArmorMaterial zincArmorMaterial = EnumHelper.addArmorMaterial("zincArmorMaterial", 10, new int[]{1,3,4,1}, 8);
-	public static ToolMaterial zincToolMaterial = EnumHelper.addToolMaterial("zincToolMaterial", 3, 1000, 15.0F, 4.0F, 30);
-	public static Item zincIngot;
-	public static Item zincPlate;
-	public static Item zincRaw;
+	/* Tin */
+	public static ArmorMaterial tinArmorMaterial = EnumHelper.addArmorMaterial("tinArmorMaterial", 10, new int[]{1,3,4,1}, 8);
+	public static ToolMaterial tinToolMaterial = EnumHelper.addToolMaterial("tinToolMaterial", 3, 1000, 15.0F, 4.0F, 30);
+	public static Item tinIngot;
+	public static Item tinPlate;
+	public static Item tinRaw;
 	
 	/* Iron */
-	public static Item ironRaw;
-	public static Item ironPlate;
 	
 	/* Silver */
 	public static ArmorMaterial silverArmorMaterial = EnumHelper.addArmorMaterial("silverArmorMaterial", 10, new int[]{2,5,4,2}, 25);
@@ -80,6 +78,8 @@ public class AtomizerItems {
 	 * Initialisiert alle Items die vom Mod eingebracht werden
 	 */
 	public static void init(){
+		System.out.println("Atomizer is initializing its items now!");
+		
 		items = new TreeMap<String,Item>();
 		items.put(ItemWrench.UNLOCALIZED_ITEM_NAME,new ItemWrench());
 		items.put(ItemLaser1.UNLOCALIZED_ITEM_NAME,new ItemLaser1());
@@ -140,26 +140,26 @@ public class AtomizerItems {
 		items.put("silverPlate", new ItemSilverPlate());
 		items.put("silverRaw", new ItemSilverRaw());
 		
-		/* zinc */
-		items.put("zincHelmet",new ItemZincArmor("zincHelmet",zincArmorMaterial,0));
-		items.put("zincChest",new ItemZincArmor("zincChest",zincArmorMaterial,1));
-		items.put("zincLeggings",new ItemZincArmor("zincLeggings",zincArmorMaterial,2));
-		items.put("zincBoots",new ItemZincArmor("zincBoots",zincArmorMaterial,3));
-		items.put("zincAxe", new ItemZincAxe(silverToolMaterial));
-		items.put("zincPickaxe", new ItemZincPickaxe(silverToolMaterial));
-		items.put("zincShovel", new ItemZincShovel(silverToolMaterial));
-		items.put("zincHoe", new ItemZincHoe(silverToolMaterial));
-		items.put("zincSword", new ItemZincSword(silverToolMaterial));
-		items.put("zincIngot", new ItemZincIngot());
-		items.put("zincPlate", new ItemZincPlate());
-		items.put("zincRaw", new ItemZincRaw());
+		/* Tin */
+		items.put("tinHelmet",new ItemTinArmor("tinHelmet",tinArmorMaterial,0));
+		items.put("tinChest",new ItemTinArmor("tinChest",tinArmorMaterial,1));
+		items.put("tinLeggings",new ItemTinArmor("tinLeggings",tinArmorMaterial,2));
+		items.put("tinBoots",new ItemTinArmor("tinBoots",tinArmorMaterial,3));
+		items.put("tinAxe", new ItemTinAxe(tinToolMaterial));
+		items.put("tinPickaxe", new ItemTinPickaxe(tinToolMaterial));
+		items.put("tinShovel", new ItemTinShovel(tinToolMaterial));
+		items.put("tinHoe", new ItemTinHoe(tinToolMaterial));
+		items.put("tinSword", new ItemTinSword(tinToolMaterial));
+		items.put("tinIngot", new ItemTinIngot());
+		items.put("tinPlate", new ItemTinPlate());
+		items.put("tinRaw", new ItemTinRaw());
 		
 		/* iron */
 		items.put("ironRaw", new ItemIronRaw());
-		ironPlate = new ItemIronPlate();
+		items.put("ironPlate",new ItemIronPlate());
 		
 		/* gold */
-		goldRaw = new ItemGoldRaw();
-		goldPlate = new ItemGoldPlate();
+		items.put("goldRaw",new ItemGoldRaw());
+		items.put("goldPlate", new ItemGoldPlate());
 	}
 }

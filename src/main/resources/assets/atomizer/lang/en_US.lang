@@ -11,10 +11,25 @@ tile.atomizer_Speicher3Block.name=Magnetic Field Tank
 tile.atomizer_Transport1Block.name=Transport Pipe Stage 1
 tile.atomizer_Transport2Block.name=Transport Pipe Stage 2
 tile.atomizer_Transport3Block.name=Magnetic Field Pipe
-tile.atomizer_soilBlock.name=Soil
-tile.atomizer_TestBlock.name=Atomizer Block
+tile.soilBlock.name=Soil
+tile.TestBlock.name=Atomizer Block
+
+item.woodenPlank.name=Wooden Plank
+item.stoneRaw.name=Chunk of Stone
+item.netherRaw.name=Chunk of Netherrack
+item.gravelRaw.name=Pile of Gravel
+item.dirtRaw.name=Pile of Dirt
+item.obsidianRaw.name=Chunk of Obsidian
+item.stoneIngot.name=Stone Brick
+item.sandRaw.name=Pile of Sand
+item.iceShard.name=Ice Shard
+item.glassShard.name=Glass Shard
+item.goldPlate.name=Golden Plate
+item.goldRaw.name=Raw Gold
+item.flourBag.name=Bag of Flour
 
 item.ironRaw.name=Raw Iron
+item.ironPlate.name=Iron Plate
 item.atomizer_wrenchItem.name=Wrench
 item.atomizer_laser1Item.name=Laser Stage 1
 item.atomizer_laser2Item.name=Laser Stage 2
@@ -32,6 +47,9 @@ item.bronzePickaxe.name=Bronze Pickaxe
 item.bronzeShovel.name=Bronze Shovel
 item.bronzeHoe.name=Bronze Hoe
 item.bronzeSword.name=Bronze Sword
+item.bronzeIngot.name=Bronze Ingot
+item.bronzePlate.name=Bronze Plate
+item.bronzeRaw.name=Raw Bronze
 
 < Copper >
 item.copperHelmet.name=Copper Helmet
@@ -43,17 +61,23 @@ item.copperPickaxe.name=Copper Pickaxe
 item.copperShovel.name=Copper Shovel
 item.copperHoe.name=Copper Hoe
 item.copperSword.name=Copper Sword
+item.copperIngot.name=Copper Ingot
+item.copperPlate.name=Copper Plate
+item.copperRaw.name=Raw Copper
 
-< Zinc >
-item.zincHelmet.name=Zinc Helmet
-item.zincChest.name=Zinc Chestplate
-item.zincLeggings.name=Zinc Leggings
-item.zincBoots.name=Zinc Boots
-item.zincAxe.name=Zinc Axe
-item.zincPickaxe.name=Zinc Pickaxe
-item.zincShovel.name=Zinc Shovel
-item.zincHoe.name=Zinc Hoe
-item.zincSword.name=Zinc Sword
+< Tin >
+item.tinHelmet.name=Tin Helmet
+item.tinChest.name=Tin Chestplate
+item.tinLeggings.name=Tin Leggings
+item.tinBoots.name=Tin Boots
+item.tinAxe.name=Tin Axe
+item.tinPickaxe.name=Tin Pickaxe
+item.tinShovel.name=Tin Shovel
+item.tinHoe.name=Tin Hoe
+item.tinSword.name=Tin Sword
+item.tinIngot.name=Tin Ingot
+item.tinPlate.name=Tin Plate
+item.tinRaw.name=Raw Tin
 
 < Silver >
 item.silverHelmet.name=Silver Helmet
@@ -65,5 +89,8 @@ item.silverPickaxe.name=Silver Pickaxe
 item.silverShovel.name=Silver Shovel
 item.silverHoe.name=Silver Hoe
 item.silverSword.name=Silver Sword
+item.silverIngot.name=Silver Ingot
+item.silverPlate.name=Silver Plate
+item.silverRaw.name=Raw Silver
 
 itemGroup.tabName=Tab

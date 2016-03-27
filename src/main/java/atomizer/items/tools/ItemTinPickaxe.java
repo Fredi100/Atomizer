@@ -5,17 +5,17 @@ import java.util.Set;
 import atomizer.lib.Constants;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemTool;
 
-public class ItemZincSword extends ItemSword {
+public class ItemTinPickaxe extends ItemPickaxe {
 
-	public static final String UNLOCALIZED_ITEM_NAME = "zincSword";
+	public static final String UNLOCALIZED_ITEM_NAME = "tinPickaxe";
 	
-	public ItemZincSword(ToolMaterial toolMaterial) {
+	public ItemTinPickaxe(ToolMaterial toolMaterial) {
 		super(toolMaterial);
-		
-		setCreativeTab(CreativeTabs.tabCombat);
+		setMaxStackSize(64);
+		setCreativeTab(CreativeTabs.tabTools);
 		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
 		setTextureName(Constants.MODID+":"+UNLOCALIZED_ITEM_NAME);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
