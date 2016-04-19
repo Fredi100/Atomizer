@@ -27,6 +27,10 @@ public final class AtomizerBlocks {
 	public static Block itBlock;
 	public static Block tgmBlock;
 	
+	public static Block copperOreBlock;
+	public static Block tinOreBlock;
+	public static Block silverOreBlock;
+	
 	/**
 	 * Initialisiert die einzelnen Blöcke für das Spiel
 	 */
@@ -48,6 +52,11 @@ public final class AtomizerBlocks {
 		speicher2Block = new BlockSpeicher2();
 		speicher3Block = new BlockSpeicher3();
 		soilBlock = new BlockSoil();
+		
+		//Ores
+		copperOreBlock = new BlockCopperOre();
+		tinOreBlock = new BlockTinOre();
+		silverOreBlock = new BlockSilverOre();
 	}
 	
 	/**

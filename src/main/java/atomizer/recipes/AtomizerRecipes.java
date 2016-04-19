@@ -147,15 +147,15 @@ public class AtomizerRecipes {
 
 		// Bronze Axe
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeAxe")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("bronzeIngot"), '|', Items.stick });
+				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get("bronzeIngot"), '|', Items.stick });
 
 		// Bronze Shovel
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeShovel")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("bronzeIngot"), '|', Items.stick });
+				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get("bronzeIngot"), '|', Items.stick });
 
 		// Bronze Hoe
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeHoe")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("bronzeIngot"), '|', Items.stick });
+				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get("bronzeIngot"), '|', Items.stick });
 
 		/* Silver Tools */
 
@@ -165,15 +165,15 @@ public class AtomizerRecipes {
 
 		// Silver Axe
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverAxe")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("silverIngot"), '|', Items.stick });
+				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get("silverIngot"), '|', Items.stick });
 
 		// Silver Shovel
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverShovel")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("silverIngot"), '|', Items.stick });
+				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get("silverIngot"), '|', Items.stick });
 
 		// Silver Hoe
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverHoe")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("silverIngot"), '|', Items.stick });
+				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get("silverIngot"), '|', Items.stick });
 
 		/* Copper Tools */
 
@@ -183,15 +183,15 @@ public class AtomizerRecipes {
 
 		// Copper Axe
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperAxe")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("copperIngot"), '|', Items.stick });
+				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get("copperIngot"), '|', Items.stick });
 
 		// Copper Shovel
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperShovel")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("copperIngot"), '|', Items.stick });
+				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get("copperIngot"), '|', Items.stick });
 
 		// Copper Hoe
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperHoe")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("copperIngot"), '|', Items.stick });
+				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get("copperIngot"), '|', Items.stick });
 
 		/* Tin Tools */
 
@@ -201,15 +201,15 @@ public class AtomizerRecipes {
 
 		// Tin Axe
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinAxe")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("tinIngot"), '|', Items.stick });
+				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get("tinIngot"), '|', Items.stick });
 
 		// Tin Shovel
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinShovel")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("tinIngot"), '|', Items.stick });
+				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get("tinIngot"), '|', Items.stick });
 
 		// Tin Hoe
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinHoe")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("tinIngot"), '|', Items.stick });
+				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get("tinIngot"), '|', Items.stick });
 
 		// Bucket
 		GameRegistry.addShapedRecipe(new ItemStack(Items.bucket),
@@ -250,13 +250,13 @@ public class AtomizerRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeLeggings")),
 				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get("bronzePlate") });
 
-		// Bronze Chest
+		// Bronze Boots
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeBoots")),
-				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get("bronzePlate") });
+				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get("bronzePlate") });
 
 		/* Silver Armor */
 
-		// Bronze Sword
+		// Silver Sword
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverSword")),
 				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get("silverIngot"), '|', Items.stick });
 
@@ -276,13 +276,13 @@ public class AtomizerRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverLeggings")),
 				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get("silverPlate") });
 
-		// Silver Chest
+		// Silver Boots
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverBoots")),
-				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get("silverPlate") });
+				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get("silverPlate") });
 
 		/* Copper Armor */
 
-		// Bronze Sword
+		// Copper Sword
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperSword")),
 				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get("copperIngot"), '|', Items.stick });
 
@@ -302,13 +302,13 @@ public class AtomizerRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperLeggings")),
 				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get("copperPlate") });
 
-		// Copper Chest
+		// Copper Boots
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperBoots")),
-				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get("copperPlate") });
+				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get("copperPlate") });
 
 		/* Tin Armor */
 
-		// Bronze Sword
+		// Tin Sword
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinSword")),
 				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get("tinIngot"), '|', Items.stick });
 
@@ -328,9 +328,9 @@ public class AtomizerRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinLeggings")),
 				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get("tinPlate") });
 
-		// Tin Chest
+		// Tin Boots
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinBoots")),
-				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get("tinPlate") });
+				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get("tinPlate") });
 
 		/* Gold Armor */
 
@@ -350,9 +350,9 @@ public class AtomizerRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_leggings),
 				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get("goldPlate") });
 
-		// Gold Chest
+		// Gold Boots
 		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_boots),
-				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get("goldPlate") });
+				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get("goldPlate") });
 
 		/* Iron Armor */
 
@@ -372,9 +372,9 @@ public class AtomizerRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_leggings),
 				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get("ironPlate") });
 
-		// Iron Chest
+		// Iron Boots
 		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_boots),
-				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get("ironPlate") });
+				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get("ironPlate") });
 
 		// Minecart
 		GameRegistry.addShapedRecipe(new ItemStack(Items.minecart),

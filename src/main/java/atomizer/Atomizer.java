@@ -18,6 +18,7 @@ import atomizer.items.AtomizerItems;
 import atomizer.lib.Constants;
 import atomizer.proxy.CommonProxy;
 import atomizer.recipes.AtomizerRecipes;
+import atomizer.world.AtomizerWorldGen;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -69,6 +70,7 @@ public class Atomizer {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.registerTileEntities();
+		GameRegistry.registerWorldGenerator(new AtomizerWorldGen(), 0);
 	}
 
 	/**
