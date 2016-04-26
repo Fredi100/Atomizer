@@ -25,7 +25,7 @@ public class ITBlock extends Block /*extends BlockContainer*/{
         setStepSound(Block.soundTypeGravel);
         setBlockName(ITBlock.UNLOCALIZED_BLOCK_NAME);
         setCreativeTab(CreativeTabs.tabBlock);
-        setBlockTextureName(Constants.MODID +":"+UNLOCALIZED_BLOCK_NAME);  
+        setBlockTextureName(Constants.MODID +":"+UNLOCALIZED_BLOCK_NAME);
         GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);
     }
 }

@@ -1,13 +1,30 @@
 
 package atomizer.tileentities;
 
+import net.minecraft.block.BlockContainer;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class TileEntityAssembler1 extends TileEntity{
+public class TileEntityDisassembler1 extends TileEntity implements IUpdatePlayerListBox{
+	
+	public static final String UNLOCALIZED_TILEENTITY_NAME = "Disassembler1TileEntity";
+	
+	/**
+	 * Diese Methode wird nach jedem Tick aufgerufen, also 20 mal pro Sekunde
+	 */
+	@Override
+	public void update(){
+		//Hier kann was gemacht werden
+	}
+	
+	public void TileEntityAssembler1() {
+		// TODO Auto-generated constructor stub
+	}
 	/*
 	private int fill;
 	
@@ -36,4 +53,10 @@ public class TileEntityAssembler1 extends TileEntity{
 		int l = tile.customField;
 	}
 	*/
+
+	public boolean isUsableByPlayer(EntityPlayer playerIn) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

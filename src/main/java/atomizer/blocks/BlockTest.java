@@ -8,7 +8,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import atomizer.lib.Constants;
-import atomizer.tileentities.TileEntityAssembler1;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlockTest extends Block{

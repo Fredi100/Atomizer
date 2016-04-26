@@ -8,7 +8,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import atomizer.lib.Constants;
-import atomizer.tileentities.TileEntityAssembler1;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 /**
@@ -17,7 +16,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
  * 
  * @author Fredi100
  */
-public class BlockAssembler1 extends Block implements ITileEntityProvider{
+public class BlockAssembler1 extends Block{
 	private String UNLOCALIZED_BLOCK_NAME = "Assembler1Block";
 	
 	/**
@@ -28,20 +27,13 @@ public class BlockAssembler1 extends Block implements ITileEntityProvider{
 	 * Registriert den Block im Blockregister vom Spiel
 	 */
 	public BlockAssembler1(){
-		super(Material.rock);
+		super(Material.iron);
+		this.setBlockName(UNLOCALIZED_BLOCK_NAME);
+		this.setHardness(2.0f);
+		this.setResistance(6.0f);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
 		this.setBlockName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		this.isBlockContainer = true;
 		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
-	}
-	
-	/*Ab hier noch in Bearbeitung da noch keine Erfahrung mit TileEntitys*/
-	@Override
-	public TileEntity createNewTileEntity(World world, int metadata) {
-		return new TileEntityAssembler1();
-	}
-	
-	@Override
-	public boolean hasTileEntity(int metadata){
-		return true;
 	}
 }
