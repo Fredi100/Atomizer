@@ -1,14 +1,10 @@
 package atomizer.blocks;
 
+import atomizer.lib.Constants;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
-import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
-import atomizer.lib.Constants;
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * BlockAssembler1
@@ -28,11 +24,10 @@ public class BlockAssembler1 extends Block{
 	 */
 	public BlockAssembler1(){
 		super(Material.iron);
-		this.setBlockName(UNLOCALIZED_BLOCK_NAME);
 		this.setHardness(2.0f);
 		this.setResistance(6.0f);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
-		this.setBlockName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		this.setUnlocalizedName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
 		this.isBlockContainer = true;
 		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}

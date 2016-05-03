@@ -1,12 +1,18 @@
-.classpath
-.gradle
-.metadata
-.settings
-.project
-eclipse/saves
+# Eclipse
 bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# Gradle
 build
 build.gradle
+.gradle
+
+
+eclipse/saves
 CREDITS-fml.txt
 MinecraftForge-Credits.txt
 gradlew

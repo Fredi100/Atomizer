@@ -34,4 +34,10 @@ public class TestRezept implements IRecipe{
 		return false;
 	}
 
+	@Override
+	public ItemStack[] getRemainingItems(InventoryCrafting inv) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

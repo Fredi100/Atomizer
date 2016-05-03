@@ -1,12 +1,7 @@
 package atomizer.fluids;
 
-import java.sql.Blob;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
 
 /**
  * Kümmert sich um das Erzeugen und Initialisieren aller Flüssigkeiten des Mods

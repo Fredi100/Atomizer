@@ -1,17 +1,15 @@
 package atomizer.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
 import atomizer.lib.Constants;
 import atomizer.tileentities.TileEntityDisassembler1;
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.BlockContainer;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
+// TODO Hier auf neue Minecraft Version updaten
 public class BlockDisassembler1 extends BlockContainer{ //Hier sp‰ter BlockContainer
 	private String UNLOCALIZED_BLOCK_NAME = "Disassembler1Block";
 	
@@ -20,12 +18,11 @@ public class BlockDisassembler1 extends BlockContainer{ //Hier sp‰ter BlockConta
 	public BlockDisassembler1(){
 		super(Material.iron);
 		this.icons = new IIcon[6];
-		this.setBlockName(UNLOCALIZED_BLOCK_NAME);
 		this.setHardness(2.0f);
 		this.setResistance(6.0f);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
-		this.setBlockName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
-		setBlockTextureName(Constants.MODID +":"+UNLOCALIZED_BLOCK_NAME);
+		this.setUnlocalizedName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		this.setBlockTextureName(Constants.MODID +":"+UNLOCALIZED_BLOCK_NAME);
 		//this.isBlockContainer = true;
 		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}

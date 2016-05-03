@@ -3,11 +3,11 @@ package atomizer.world;
 import java.util.Random;
 
 import atomizer.blocks.AtomizerBlocks;
-import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class AtomizerWorldGen implements IWorldGenerator {
 

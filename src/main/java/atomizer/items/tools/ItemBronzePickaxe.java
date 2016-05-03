@@ -1,12 +1,9 @@
 package atomizer.items.tools;
 
-import java.util.Set;
-
 import atomizer.lib.Constants;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemPickaxe;
-import net.minecraft.item.ItemTool;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemBronzePickaxe extends ItemPickaxe {
 

@@ -1,18 +1,17 @@
 package atomizer.fluids;
 
+import atomizer.lib.Constants;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
-import atomizer.lib.Constants;
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
+// TODO Muss noch auf die neue Version upgedatet werden
 public class BlockFluidDiamond extends BlockFluidClassic{
 
     @SideOnly(Side.CLIENT) //Dinge die nur auf der Client-Seite passieren sollen

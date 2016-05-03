@@ -1,6 +1,5 @@
 package atomizer.items;
 
-import java.util.ArrayList;
 import java.util.TreeMap;
 
 import atomizer.items.armor.ItemBronzeArmor;
@@ -27,7 +26,6 @@ import atomizer.items.tools.ItemTinHoe;
 import atomizer.items.tools.ItemTinPickaxe;
 import atomizer.items.tools.ItemTinShovel;
 import atomizer.items.tools.ItemTinSword;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
