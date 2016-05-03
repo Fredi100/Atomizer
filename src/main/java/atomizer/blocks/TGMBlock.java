@@ -18,7 +18,15 @@ public class TGMBlock extends Block /*extends BlockContainer*/{
         this.setStepSound(Block.soundTypeGravel);
         this.setUnlocalizedName(TGMBlock.UNLOCALIZED_BLOCK_NAME);
         this.setCreativeTab(CreativeTabs.tabBlock);
-        this.setBlockTextureName(Constants.MODID +":"+UNLOCALIZED_BLOCK_NAME);
         GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);
     }
+    
+    /**
+	 * Gibt den Namen des Blocks zurück
+	 * 
+	 * @return Der Name des Blocks
+	 */
+	public String getName(){
+		return UNLOCALIZED_BLOCK_NAME;
+	}
 }

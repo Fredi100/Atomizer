@@ -1,10 +1,8 @@
 package atomizer.items.tools;
 
-import atomizer.Atomizer;
-import atomizer.lib.Constants;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSword;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemBronzeSword extends ItemSword{
 	
@@ -14,9 +12,17 @@ public class ItemBronzeSword extends ItemSword{
 		super(material);
 		
 		this.setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
-		this.setTextureName(Constants.MODID + ":" + UNLOCALIZED_ITEM_NAME);
 		this.setCreativeTab(CreativeTabs.tabCombat);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+	}
+	
+	/**
+	 * Gibt den Namen des Items zurück
+	 * 
+	 * @return Der Name des Blocks
+	 */
+	public String getName(){
+		return UNLOCALIZED_ITEM_NAME;
 	}
 	
 }

@@ -8,7 +8,8 @@ public class FluidDiamond extends Fluid{
 	private static String name = "diamondFluid";
 
 	public FluidDiamond() {
-		super(name);
+		// TODO Flüssigkeiten überarbeiten
+		super(name, null, null);
 		this.setLuminosity(9);
 		this.setDensity(1500);
 		this.setTemperature(1800);

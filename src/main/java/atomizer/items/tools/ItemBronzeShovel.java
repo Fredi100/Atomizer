@@ -1,12 +1,8 @@
 package atomizer.items.tools;
 
-import java.util.Set;
-
-import atomizer.lib.Constants;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSpade;
-import net.minecraft.item.ItemTool;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemBronzeShovel extends ItemSpade {
 	
@@ -17,7 +13,15 @@ public class ItemBronzeShovel extends ItemSpade {
 		
 		setCreativeTab(CreativeTabs.tabTools);
 		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
-		setTextureName(Constants.MODID+":"+UNLOCALIZED_ITEM_NAME);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+	}
+	
+	/**
+	 * Gibt den Namen des Items zurück
+	 * 
+	 * @return Der Name des Blocks
+	 */
+	public String getName(){
+		return UNLOCALIZED_ITEM_NAME;
 	}
 }

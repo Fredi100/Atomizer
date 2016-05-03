@@ -1,12 +1,17 @@
 package atomizer;
 
 import atomizer.blocks.AtomizerBlocks;
+import atomizer.blocks.TGMBlock;
 import atomizer.fluids.AtomizerFluids;
 import atomizer.items.AtomizerItems;
+import atomizer.items.ItemBronzeIngot;
 import atomizer.lib.Constants;
 import atomizer.proxy.CommonProxy;
 import atomizer.recipes.AtomizerRecipes;
 import atomizer.world.AtomizerWorldGen;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -52,13 +57,32 @@ public class Atomizer {
 		AtomizerBlocks.init();
 		AtomizerItems.init();
 		AtomizerFluids.init();
+	}
+
+	/**
+	 * Hier müssen z.B. alle Rezepte initialisiert werden
+	 * 
+	 * @param event
+	 */
+	@Mod.EventHandler
+	public void init(FMLInitializationEvent event) {
 		AtomizerRecipes.recipeRemover();
 		AtomizerRecipes.smeltingRemover();
 		AtomizerRecipes.init();
-	}
-
-	@Mod.EventHandler
-	public void init(FMLInitializationEvent event) {
+		
+		if(event.getSide() == Side.CLIENT){
+			RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
+			ModelResourceLocation mrl;
+			
+			mrl = new ModelResourceLocation(Constants.MODID + ":" + ItemBronzeIngot.UNLOCALIZED_ITEM_NAME);
+			renderItem.getItemModelMesher().register(AtomizerItems.items.get(ItemBronzeIngot.UNLOCALIZED_ITEM_NAME), 0, mrl);
+		
+			mrl = new ModelResourceLocation(Constants.MODID + ":" + TGMBlock.UNLOCALIZED_BLOCK_NAME);
+			renderItem.getItemModelMesher().register(Item.getItemFromBlock(AtomizerBlocks.tgmBlock), 0, mrl);
+		}
+		
+		
+		
 		proxy.registerTileEntities();
 		// TODO muss auf die neue Minecraft Version aktualisiert werden
 		GameRegistry.registerWorldGenerator(new AtomizerWorldGen(), 0);

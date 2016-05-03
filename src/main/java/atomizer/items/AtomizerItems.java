@@ -26,9 +26,11 @@ import atomizer.items.tools.ItemTinHoe;
 import atomizer.items.tools.ItemTinPickaxe;
 import atomizer.items.tools.ItemTinShovel;
 import atomizer.items.tools.ItemTinSword;
+import atomizer.lib.Constants;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraftforge.client.EnumHelperClient;
 import net.minecraftforge.common.util.EnumHelper;
 
 /**
@@ -41,18 +43,19 @@ public class AtomizerItems {
 	public static TreeMap<String,Item> items;
 	
 	/* Bronze */
-	public static ArmorMaterial bronzeArmorMaterial = EnumHelper.addArmorMaterial("bronzeArmorMaterial", 17, new int[]{2,5,5,2}, 15);
+	public static ArmorMaterial bronzeArmorMaterial = EnumHelper.addArmorMaterial("bronzeArmorMaterial", Constants.MODID + ":bronzeArmorMaterial" , 17, new int[]{2,5,5,2}, 15);
 	public static ToolMaterial bronzeToolMaterial = EnumHelper.addToolMaterial("bronzeToolMaterial", 3, 1000, 15.0F, 4.0F, 30);
 	
+	
 	/* Copper */
-	public static ArmorMaterial copperArmorMaterial = EnumHelper.addArmorMaterial("copperArmorMaterial", 12, new int[]{1,4,4,2}, 20);
+	public static ArmorMaterial copperArmorMaterial = EnumHelper.addArmorMaterial("copperArmorMaterial", Constants.MODID + ":copperArmorMaterial", 12, new int[]{1,4,4,2}, 20);
 	public static ToolMaterial copperToolMaterial = EnumHelper.addToolMaterial("copperToolMaterial", 3, 1000, 15.0F, 4.0F, 30);
 	public static Item copperIngot;
 	public static Item copperPlate;
 	public static Item copperRaw;
 	
 	/* Tin */
-	public static ArmorMaterial tinArmorMaterial = EnumHelper.addArmorMaterial("tinArmorMaterial", 10, new int[]{1,3,4,1}, 8);
+	public static ArmorMaterial tinArmorMaterial = EnumHelper.addArmorMaterial("tinArmorMaterial", Constants.MODID + ":tinArmorMaterial", 10, new int[]{1,3,4,1}, 8);
 	public static ToolMaterial tinToolMaterial = EnumHelper.addToolMaterial("tinToolMaterial", 3, 1000, 15.0F, 4.0F, 30);
 	public static Item tinIngot;
 	public static Item tinPlate;
@@ -61,15 +64,12 @@ public class AtomizerItems {
 	/* Iron */
 	
 	/* Silver */
-	public static ArmorMaterial silverArmorMaterial = EnumHelper.addArmorMaterial("silverArmorMaterial", 10, new int[]{2,5,4,2}, 25);
+	public static ArmorMaterial silverArmorMaterial = EnumHelper.addArmorMaterial("silverArmorMaterial", Constants.MODID + ":silverArmorMaterial", 10, new int[]{2,5,4,2}, 25);
 	public static ToolMaterial silverToolMaterial = EnumHelper.addToolMaterial("silverToolMaterial", 3, 1000, 15.0F, 4.0F, 30);
 	public static Item silverIngot;
 	public static Item silverPlate;
 	public static Item silverRaw;
 	
-	/* Gold */
-	public static Item goldPlate;
-	public static Item goldRaw;
 	
 	
 	/**

@@ -1,9 +1,9 @@
 package atomizer.items;
 
 import atomizer.lib.Constants;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemWrench extends Item {
 	
@@ -14,5 +14,14 @@ public class ItemWrench extends Item {
 		setUnlocalizedName(Constants.MODID + "_" + UNLOCALIZED_ITEM_NAME);
 		setCreativeTab(CreativeTabs.tabTools);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+	}
+	
+	/**
+	 * Gibt den Namen des Items zurück
+	 * 
+	 * @return Der Name des Blocks
+	 */
+	public String getName(){
+		return UNLOCALIZED_ITEM_NAME;
 	}
 }

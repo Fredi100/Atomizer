@@ -8,7 +8,8 @@ public class FluidIron extends Fluid{
 	private static String name = "ironFluid";
 
 	public FluidIron() {
-		super(name);
+		// TODO Flüssigkeiten überarbeiten
+		super(name, null, null);
 		this.setLuminosity(12);
 		this.setDensity(1500);
 		this.setTemperature(1800);

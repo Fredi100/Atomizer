@@ -13,7 +13,15 @@ public class ItemBronzeIngot extends Item{
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMaterials);
 		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
-		setTextureName(Constants.MODID+":"+UNLOCALIZED_ITEM_NAME);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+	}
+	
+	/**
+	 * Gibt den Namen des Items zurück
+	 * 
+	 * @return Der Name des Blocks
+	 */
+	public String getName(){
+		return UNLOCALIZED_ITEM_NAME;
 	}
 }

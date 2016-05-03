@@ -8,7 +8,8 @@ public class FluidNether extends Fluid{
 	private static String name = "netherFluid";
 
 	public FluidNether() {
-		super(name);
+		// TODO Flüssigkeiten überarbeiten
+		super(name, null, null);
 		this.setLuminosity(12);
 		this.setDensity(1500);
 		this.setTemperature(1800);

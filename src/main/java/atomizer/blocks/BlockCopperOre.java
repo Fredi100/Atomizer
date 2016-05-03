@@ -9,5 +9,7 @@ public class BlockCopperOre extends Block{
 		super(Material.rock);
 		// TODO Auto-generated constructor stub
 	}
+	
+	// TODO Hier noch alles schreiben
 
 }

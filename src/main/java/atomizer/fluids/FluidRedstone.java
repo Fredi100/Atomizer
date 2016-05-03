@@ -8,7 +8,8 @@ public class FluidRedstone extends Fluid{
 	private static String name = "redstoneFluid";
 
 	public FluidRedstone() {
-		super(name);
+		// TODO Flüssigkeiten überarbeiten
+		super(name, null, null);
 		this.setLuminosity(15);
 		this.setDensity(1500);
 		this.setTemperature(1800);

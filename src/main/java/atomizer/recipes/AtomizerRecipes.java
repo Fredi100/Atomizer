@@ -466,7 +466,7 @@ public class AtomizerRecipes {
 	 * einfügen können
 	 */
 	public static void smeltingRemover() {
-		Map furnace = FurnaceRecipes.smelting().getSmeltingList();
+		Map furnace = FurnaceRecipes.instance().getSmeltingList();
 		furnace.remove(Blocks.iron_ore);
 		furnace.remove(Blocks.gold_ore);
 		furnace.remove(Blocks.netherrack);

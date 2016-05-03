@@ -1,20 +1,26 @@
 package atomizer.items;
 
-import atomizer.Atomizer;
-import atomizer.lib.Constants;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemGoldRaw extends Item{
 	
-	public static final String UNLOCALIZED_BLOCK_NAME = "goldRaw";
+	public static final String UNLOCALIZED_ITEM_NAME = "goldRaw";
 	
 	public ItemGoldRaw(){
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
-		setUnlocalizedName(UNLOCALIZED_BLOCK_NAME);
-		setTextureName(Constants.MODID+":"+UNLOCALIZED_BLOCK_NAME);
-		GameRegistry.registerItem(this, UNLOCALIZED_BLOCK_NAME);
+		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
+		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+	}
+	
+	/**
+	 * Gibt den Namen des Items zurück
+	 * 
+	 * @return Der Name des Blocks
+	 */
+	public String getName(){
+		return UNLOCALIZED_ITEM_NAME;
 	}
 }

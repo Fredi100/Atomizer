@@ -10,7 +10,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class BlockTest extends Block{
 	
 	public static final String UNLOCALIZED_BLOCK_NAME = "testBlock";
-	private IIcon[] icons = new IIcon[6];
 	
 	/**
 	 * Konstruktor
@@ -23,24 +22,15 @@ public class BlockTest extends Block{
 		super(Material.glass);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
 		this.setUnlocalizedName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
-		this.setBlockTextureName(Constants.MODID + ":" + UNLOCALIZED_BLOCK_NAME);
 		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}
 	
-	@Override
-	public boolean hasTileEntity(int metadata){
-		return false;
-	}
-	
-	@Override
-	public void registerBlockIcons(IIconRegister iconRegister) {
-	    for (int i = 0; i < icons.length; i++) {
-	        icons[i] = iconRegister.registerIcon(""+Constants.MODID + ":" + UNLOCALIZED_BLOCK_NAME + "_" + i);
-	    }
-	}
-	
-	@Override
-	public IIcon getIcon(int side, int meta) {
-	    return icons[side];
+	/**
+	 * Gibt den Namen des Blocks zur¸ck
+	 * 
+	 * @return Der Name des Blocks
+	 */
+	public String getName(){
+		return UNLOCALIZED_BLOCK_NAME;
 	}
 }

@@ -17,7 +17,6 @@ public class ItemTinArmor extends ItemArmor{
 		this.setCreativeTab(CreativeTabs.tabCombat);
 		this.unlocalizedName = unlocalizedName;
 		this.setUnlocalizedName(unlocalizedName);
-		this.setTextureName(Constants.MODID + ":" + unlocalizedName);
 		GameRegistry.registerItem(this, unlocalizedName);
 	}
 	

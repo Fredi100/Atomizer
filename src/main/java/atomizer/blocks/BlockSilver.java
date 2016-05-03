@@ -16,4 +16,13 @@ public class BlockSilver extends Block{
 		this.setUnlocalizedName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
 		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}
+	
+	/**
+	 * Gibt den Namen des Blocks zurück
+	 * 
+	 * @return Der Name des Blocks
+	 */
+	public String getName(){
+		return UNLOCALIZED_BLOCK_NAME;
+	}
 }

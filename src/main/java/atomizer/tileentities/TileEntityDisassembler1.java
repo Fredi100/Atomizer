@@ -27,14 +27,6 @@ public class TileEntityDisassembler1 extends TileEntity implements IInventory {
 	}
 
 	/**
-	 * Diese Methode wird nach jedem Tick aufgerufen, also 20 mal pro Sekunde
-	 */
-	@Override
-	public void update() {
-		// Hier kann was gemacht werden
-	}
-
-	/**
 	 * Dient dem Speichern von Werten der TileEntity
 	 * 
 	 */
@@ -165,20 +157,6 @@ public class TileEntityDisassembler1 extends TileEntity implements IInventory {
 	}
 
 	/**
-	 * Leert einen Slot und gibt seinen vorherigen Inhalt zurück
-	 * 
-	 * @param index
-	 *            Der verlangte Slot
-	 * @return Ein ItemStack mit dem Inhalt des geleerten Slots
-	 */
-	@Override
-	public ItemStack getStackInSlotOnClosing(int index) {
-		ItemStack stack = this.getStackInSlot(index);
-		this.setInventorySlotContents(index, null);
-		return stack;
-	}
-
-	/**
 	 * Setzt den Inhalt eines Slots. Überprüft nicht ob das Item gültig für
 	 * diesen Slot ist.
 	 * 
@@ -203,27 +181,6 @@ public class TileEntityDisassembler1 extends TileEntity implements IInventory {
 	}
 
 	/**
-	 * Gibt den Namen des Inventars zurück
-	 * 
-	 * @return Der Name des Inventars als String
-	 */
-	@Override
-	public String getInventoryName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	/**
-	 * Schaut ob das Inventar einen eigenen Namen hat
-	 * 
-	 * @return Ob der Inventar einen eigenen Namen hat
-	 */
-	@Override
-	public boolean hasCustomInventoryName() {
-		return this.getInventoryName() != null && !this.customName.equals("");
-	}
-
-	/**
 	 * Gibt die maximale Stack größe zurück die in einem Slot vorhanden sein darf.
 	 * 
 	 * @return Die maximale Anzahl an Items in einem Slot
@@ -231,33 +188,6 @@ public class TileEntityDisassembler1 extends TileEntity implements IInventory {
 	@Override
 	public int getInventoryStackLimit() {
 		return 64;
-	}
-
-	/**
-	 * Gibt zurück ober der übergebene Spieler das Inventar verwenden darf
-	 * 
-	 * @param player Der Spieler der das Inventar verwenden möchte
-	 * @return Ob der übergebene Spieler das Inventar verwenden darf
-	 */
-	@Override
-	public boolean isUseableByPlayer(EntityPlayer player) {
-		return worldObj.getTileEntity(xCoord, yCoord, zCoord) == this && player.getDistanceSq(xCoord + 0.5, yCoord + 0.5, zCoord + 0.5) < 64;
-	}
-
-	/**
-	 * Leer implementierung
-	 */
-	@Override
-	public void openInventory() {
-		
-	}
-
-	/**
-	 * Leer implementierung
-	 */
-	@Override
-	public void closeInventory() {
-		
 	}
 
 	@Override
@@ -324,6 +254,12 @@ public class TileEntityDisassembler1 extends TileEntity implements IInventory {
 	public void clear() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public boolean isUseableByPlayer(EntityPlayer player) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

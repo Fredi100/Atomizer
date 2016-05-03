@@ -8,7 +8,8 @@ public class FluidGlas extends Fluid{
 	private static String name = "glasFluid";
 
 	public FluidGlas() {
-		super(name);
+		// TODO Flüssigkeiten überarbeiten
+		super(name, null, null);
 		this.setLuminosity(0);
 		this.setDensity(1500);
 		this.setTemperature(1673);
