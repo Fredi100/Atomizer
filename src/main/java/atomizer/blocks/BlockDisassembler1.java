@@ -12,7 +12,7 @@ import atomizer.lib.Constants;
 import atomizer.tileentities.TileEntityDisassembler1;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class BlockDisassembler1 extends Block{ //Hier später BlockContainer
+public class BlockDisassembler1 extends BlockContainer{ //Hier später BlockContainer
 	private String UNLOCALIZED_BLOCK_NAME = "Disassembler1Block";
 	
 	public IIcon[] icons;
@@ -40,6 +40,22 @@ public class BlockDisassembler1 extends Block{ //Hier später BlockContainer
 		for(int i = 0; i < icons.length; i++){
 			this.icons[i] = reg.registerIcon(this.textureName + "_" + i);
 		}
+	}
+	
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z){
+		
+	}
+
+	@Override
+	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
+		return new TileEntityDisassembler1();
+	}
+	
+	@Override
+	public void breakBlock(World world, int x, int y, int z, int par5, int par6){
+		dropItems(world, x, y, z);
+		super.breakBlock(world, x, y, z, par5, par6);
 	}
 	
 	/*

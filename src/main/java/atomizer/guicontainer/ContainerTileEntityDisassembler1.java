@@ -4,6 +4,7 @@ import atomizer.tileentities.TileEntityDisassembler1;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.Slot;
 
 public class ContainerTileEntityDisassembler1 extends Container{
 	
@@ -12,6 +13,9 @@ public class ContainerTileEntityDisassembler1 extends Container{
 	
 	/**
 	 * SLOTS:
+	 * 
+	 * 24 von links nach rechts zum ersten feld
+	 * 32 von oben nach unten zum ersten feld
 	 * 
 	 * Tile Entity 0-? ....... 0 - ?
 	 * Player Inventory ?-? .. ? - ?
@@ -23,6 +27,10 @@ public class ContainerTileEntityDisassembler1 extends Container{
 	 */
 	public ContainerTileEntityDisassembler1(IInventory playerInv, TileEntityDisassembler1 te) {
 		this.te = te;
+		
+		// Unsere Slots 0 und 1, Slot ID 0 und 1
+		this.addSlotToContainer(new Slot(te, 0, 24, 32));
+		
 		// TODO Hier muss ich die ganzen Slots machen
 	}
 
