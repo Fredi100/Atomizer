@@ -71,6 +71,7 @@ public class Atomizer {
 		AtomizerRecipes.init();
 		
 		if(event.getSide() == Side.CLIENT){
+			AtomizerItems.registerItemModels();
 			RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
 			ModelResourceLocation mrl;
 			

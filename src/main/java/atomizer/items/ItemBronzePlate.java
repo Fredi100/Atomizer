@@ -6,21 +6,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemBronzePlate extends Item{
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "bronzePlate";
+	public static String UNLOCALIZED_ITEM_NAME = "bronzePlate";
 	
 	public ItemBronzePlate(){
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMaterials);
 		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
-	}
-	
-	/**
-	 * Gibt den Namen des Items zurück
-	 * 
-	 * @return Der Name des Blocks
-	 */
-	public String getName(){
-		return UNLOCALIZED_ITEM_NAME;
 	}
 }

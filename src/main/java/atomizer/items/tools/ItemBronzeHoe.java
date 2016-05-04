@@ -15,14 +15,4 @@ public class ItemBronzeHoe extends ItemHoe {
 		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
 	}
-	
-	/**
-	 * Gibt den Namen des Items zurück
-	 * 
-	 * @return Der Name des Blocks
-	 */
-	public String getName(){
-		return UNLOCALIZED_ITEM_NAME;
-	}
-
 }

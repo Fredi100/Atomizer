@@ -10,20 +10,9 @@ public class ItemBronzeAxe extends ItemAxe {
 	
 	public ItemBronzeAxe(ToolMaterial toolMaterial) {
 		super(toolMaterial);
-		
 		setCreativeTab(CreativeTabs.tabTools);
 		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
 	}
-	
-	/**
-	 * Gibt den Namen des Items zurück
-	 * 
-	 * @return Der Name des Blocks
-	 */
-	public String getName(){
-		return UNLOCALIZED_ITEM_NAME;
-	}
-
 }
 

@@ -15,13 +15,4 @@ public class ItemLaser2 extends Item{
 		setCreativeTab(CreativeTabs.tabMisc);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
 	}
-	
-	/**
-	 * Gibt den Namen des Items zurück
-	 * 
-	 * @return Der Name des Blocks
-	 */
-	public String getName(){
-		return UNLOCALIZED_ITEM_NAME;
-	}
 }

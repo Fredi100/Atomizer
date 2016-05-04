@@ -2,35 +2,15 @@ package atomizer.items;
 
 import java.util.TreeMap;
 
-import atomizer.items.armor.ItemBronzeArmor;
-import atomizer.items.armor.ItemCopperArmor;
-import atomizer.items.armor.ItemSilverArmor;
-import atomizer.items.armor.ItemTinArmor;
-import atomizer.items.tools.ItemBronzeAxe;
-import atomizer.items.tools.ItemBronzeHoe;
-import atomizer.items.tools.ItemBronzePickaxe;
-import atomizer.items.tools.ItemBronzeShovel;
-import atomizer.items.tools.ItemBronzeSword;
-import atomizer.items.tools.ItemCopperAxe;
-import atomizer.items.tools.ItemCopperHoe;
-import atomizer.items.tools.ItemCopperPickaxe;
-import atomizer.items.tools.ItemCopperShovel;
-import atomizer.items.tools.ItemCopperSword;
-import atomizer.items.tools.ItemSilverAxe;
-import atomizer.items.tools.ItemSilverHoe;
-import atomizer.items.tools.ItemSilverPickaxe;
-import atomizer.items.tools.ItemSilverShovel;
-import atomizer.items.tools.ItemSilverSword;
-import atomizer.items.tools.ItemTinAxe;
-import atomizer.items.tools.ItemTinHoe;
-import atomizer.items.tools.ItemTinPickaxe;
-import atomizer.items.tools.ItemTinShovel;
-import atomizer.items.tools.ItemTinSword;
+import atomizer.items.armor.*;
+import atomizer.items.tools.*;
 import atomizer.lib.Constants;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraftforge.client.EnumHelperClient;
 import net.minecraftforge.common.util.EnumHelper;
 
 /**
@@ -102,62 +82,73 @@ public class AtomizerItems {
 		items.put("bronzeChest",new ItemBronzeArmor("bronzeChest",bronzeArmorMaterial,1));
 		items.put("bronzeLeggings",new ItemBronzeArmor("bronzeLeggings",bronzeArmorMaterial,2));
 		items.put("bronzeBoots",new ItemBronzeArmor("bronzeBoots",bronzeArmorMaterial,3));
-		items.put("bronzeAxe", new ItemBronzeAxe(bronzeToolMaterial));
-		items.put("bronzePickaxe", new ItemBronzePickaxe(bronzeToolMaterial));
-		items.put("bronzeShovel", new ItemBronzeShovel(bronzeToolMaterial));
-		items.put("bronzeHoe", new ItemBronzeHoe(bronzeToolMaterial));
-		items.put("bronzeSword", new ItemBronzeSword(bronzeToolMaterial));
-		items.put("bronzeIngot", new ItemBronzeIngot());
-		items.put("bronzePlate", new ItemBronzePlate());
+		items.put(ItemBronzeAxe.UNLOCALIZED_ITEM_NAME, new ItemBronzeAxe(bronzeToolMaterial));
+		items.put(ItemBronzePickaxe.UNLOCALIZED_ITEM_NAME, new ItemBronzePickaxe(bronzeToolMaterial));
+		items.put(ItemBronzeShovel.UNLOCALIZED_ITEM_NAME, new ItemBronzeShovel(bronzeToolMaterial));
+		items.put(ItemBronzeHoe.UNLOCALIZED_ITEM_NAME, new ItemBronzeHoe(bronzeToolMaterial));
+		items.put(ItemBronzeSword.UNLOCALIZED_ITEM_NAME, new ItemBronzeSword(bronzeToolMaterial));
+		items.put(ItemBronzeIngot.UNLOCALIZED_ITEM_NAME, new ItemBronzeIngot());
+		items.put(ItemBronzePlate.UNLOCALIZED_ITEM_NAME, new ItemBronzePlate());
 		
 		/* Copper */
 		items.put("copperHelmet",new ItemCopperArmor("copperHelmet",copperArmorMaterial,0));
 		items.put("copperChest",new ItemCopperArmor("copperChest",copperArmorMaterial,1));
 		items.put("copperLeggings",new ItemCopperArmor("copperLeggings",copperArmorMaterial,2));
 		items.put("copperBoots",new ItemCopperArmor("copperBoots",copperArmorMaterial,3));
-		items.put("copperAxe", new ItemCopperAxe(copperToolMaterial));
-		items.put("copperPickaxe", new ItemCopperPickaxe(copperToolMaterial));
-		items.put("copperShovel", new ItemCopperShovel(copperToolMaterial));
-		items.put("copperHoe", new ItemCopperHoe(copperToolMaterial));
-		items.put("copperSword", new ItemCopperSword(copperToolMaterial));
-		items.put("copperIngot", new ItemCopperIngot());
-		items.put("copperPlate", new ItemCopperPlate());
-		items.put("copperRaw", new ItemCopperRaw());
+		items.put(ItemCopperAxe.UNLOCALIZED_ITEM_NAME, new ItemCopperAxe(copperToolMaterial));
+		items.put(ItemCopperPickaxe.UNLOCALIZED_ITEM_NAME, new ItemCopperPickaxe(copperToolMaterial));
+		items.put(ItemCopperShovel.UNLOCALIZED_ITEM_NAME, new ItemCopperShovel(copperToolMaterial));
+		items.put(ItemCopperHoe.UNLOCALIZED_ITEM_NAME, new ItemCopperHoe(copperToolMaterial));
+		items.put(ItemCopperSword.UNLOCALIZED_ITEM_NAME, new ItemCopperSword(copperToolMaterial));
+		items.put(ItemCopperIngot.UNLOCALIZED_ITEM_NAME, new ItemCopperIngot());
+		items.put(ItemCopperPlate.UNLOCALIZED_ITEM_NAME, new ItemCopperPlate());
+		items.put(ItemCopperRaw.UNLOCALIZED_ITEM_NAME, new ItemCopperRaw());
 		
 		/* Silver */
 		items.put("silverHelmet",new ItemSilverArmor("silverHelmet",silverArmorMaterial,0));
 		items.put("silverChest",new ItemSilverArmor("silverChest",silverArmorMaterial,1));
 		items.put("silverLeggings",new ItemSilverArmor("silverLeggings",silverArmorMaterial,2));
 		items.put("silverBoots",new ItemSilverArmor("silverBoots",silverArmorMaterial,3));
-		items.put("silverAxe", new ItemSilverAxe(silverToolMaterial));
-		items.put("silverPickaxe", new ItemSilverPickaxe(silverToolMaterial));
-		items.put("silverShovel", new ItemSilverShovel(silverToolMaterial));
-		items.put("silverHoe", new ItemSilverHoe(silverToolMaterial));
-		items.put("silverSword", new ItemSilverSword(silverToolMaterial));
-		items.put("silverIngot", new ItemSilverIngot());
-		items.put("silverPlate", new ItemSilverPlate());
-		items.put("silverRaw", new ItemSilverRaw());
+		items.put(ItemSilverAxe.UNLOCALIZED_ITEM_NAME, new ItemSilverAxe(silverToolMaterial));
+		items.put(ItemSilverPickaxe.UNLOCALIZED_ITEM_NAME, new ItemSilverPickaxe(silverToolMaterial));
+		items.put(ItemSilverShovel.UNLOCALIZED_ITEM_NAME, new ItemSilverShovel(silverToolMaterial));
+		items.put(ItemSilverHoe.UNLOCALIZED_ITEM_NAME, new ItemSilverHoe(silverToolMaterial));
+		items.put(ItemSilverSword.UNLOCALIZED_ITEM_NAME, new ItemSilverSword(silverToolMaterial));
+		items.put(ItemSilverIngot.UNLOCALIZED_ITEM_NAME, new ItemSilverIngot());
+		items.put(ItemSilverPlate.UNLOCALIZED_ITEM_NAME, new ItemSilverPlate());
+		items.put(ItemSilverRaw.UNLOCALIZED_ITEM_NAME, new ItemSilverRaw());
 		
 		/* Tin */
 		items.put("tinHelmet",new ItemTinArmor("tinHelmet",tinArmorMaterial,0));
 		items.put("tinChest",new ItemTinArmor("tinChest",tinArmorMaterial,1));
 		items.put("tinLeggings",new ItemTinArmor("tinLeggings",tinArmorMaterial,2));
 		items.put("tinBoots",new ItemTinArmor("tinBoots",tinArmorMaterial,3));
-		items.put("tinAxe", new ItemTinAxe(tinToolMaterial));
-		items.put("tinPickaxe", new ItemTinPickaxe(tinToolMaterial));
-		items.put("tinShovel", new ItemTinShovel(tinToolMaterial));
-		items.put("tinHoe", new ItemTinHoe(tinToolMaterial));
-		items.put("tinSword", new ItemTinSword(tinToolMaterial));
-		items.put("tinIngot", new ItemTinIngot());
-		items.put("tinPlate", new ItemTinPlate());
-		items.put("tinRaw", new ItemTinRaw());
+		items.put(ItemTinAxe.UNLOCALIZED_ITEM_NAME, new ItemTinAxe(tinToolMaterial));
+		items.put(ItemTinPickaxe.UNLOCALIZED_ITEM_NAME, new ItemTinPickaxe(tinToolMaterial));
+		items.put(ItemTinShovel.UNLOCALIZED_ITEM_NAME, new ItemTinShovel(tinToolMaterial));
+		items.put(ItemTinHoe.UNLOCALIZED_ITEM_NAME, new ItemTinHoe(tinToolMaterial));
+		items.put(ItemTinSword.UNLOCALIZED_ITEM_NAME, new ItemTinSword(tinToolMaterial));
+		items.put(ItemTinIngot.UNLOCALIZED_ITEM_NAME, new ItemTinIngot());
+		items.put(ItemTinPlate.UNLOCALIZED_ITEM_NAME, new ItemTinPlate());
+		items.put(ItemTinRaw.UNLOCALIZED_ITEM_NAME, new ItemTinRaw());
 		
 		/* iron */
-		items.put("ironRaw", new ItemIronRaw());
-		items.put("ironPlate",new ItemIronPlate());
+		items.put(ItemIronRaw.UNLOCALIZED_ITEM_NAME, new ItemIronRaw());
+		items.put(ItemIronPlate.UNLOCALIZED_ITEM_NAME,new ItemIronPlate());
 		
 		/* gold */
-		items.put("goldRaw",new ItemGoldRaw());
-		items.put("goldPlate", new ItemGoldPlate());
+		items.put(ItemGoldRaw.UNLOCALIZED_ITEM_NAME,new ItemGoldRaw());
+		items.put(ItemGoldPlate.UNLOCALIZED_ITEM_NAME, new ItemGoldPlate());
+	}
+	
+	public static void registerItemModels(){
+		RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
+		ModelResourceLocation mrl;
+		
+		for(Item i : items.values()){
+			mrl = new ModelResourceLocation(Constants.MODID + ":" + i.getUnlocalizedName().substring(5), "inventory");
+			renderItem.getItemModelMesher().register(i, 0, mrl);
+		}
+	
 	}
 }

@@ -11,19 +11,9 @@ public class ItemTinAxe extends ItemAxe {
 	public ItemTinAxe(ToolMaterial toolMaterial) {
 		super(toolMaterial);
 		setMaxStackSize(64);
-		setCreativeTab(CreativeTabs.tabMisc);
+		setCreativeTab(CreativeTabs.tabTools);
 		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
 	}
-	
-	/**
-	 * Gibt den Namen des Items zurück
-	 * 
-	 * @return Der Name des Blocks
-	 */
-	public String getName(){
-		return UNLOCALIZED_ITEM_NAME;
-	}
-
 }
 

@@ -15,14 +15,4 @@ public class ItemBronzeSword extends ItemSword{
 		this.setCreativeTab(CreativeTabs.tabCombat);
 		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
 	}
-	
-	/**
-	 * Gibt den Namen des Items zurück
-	 * 
-	 * @return Der Name des Blocks
-	 */
-	public String getName(){
-		return UNLOCALIZED_ITEM_NAME;
-	}
-	
 }
