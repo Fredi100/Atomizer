@@ -1,5 +1,6 @@
 package atomizer.items.tools;
 
+import atomizer.lib.Constants;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSpade;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -10,9 +11,9 @@ public class ItemTinShovel extends ItemSpade {
 
 	public ItemTinShovel(ToolMaterial toolMaterial) {
 		super(toolMaterial);
-		
+		setRegistryName(REGISTRY_NAME);
 		setCreativeTab(CreativeTabs.tabTools);
-		setUnlocalizedName(REGISTRY_NAME);
+		setUnlocalizedName(Constants.MODID + ":" + REGISTRY_NAME);
 		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}
 }

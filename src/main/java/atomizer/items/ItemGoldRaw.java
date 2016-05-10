@@ -1,5 +1,6 @@
 package atomizer.items;
 
+import atomizer.lib.Constants;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -11,7 +12,8 @@ public class ItemGoldRaw extends Item{
 	public ItemGoldRaw(){
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
-		setUnlocalizedName(REGISTRY_NAME);
+		setUnlocalizedName(Constants.MODID + ":" + REGISTRY_NAME);
+		setRegistryName(REGISTRY_NAME);
 		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}
 }

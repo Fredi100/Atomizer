@@ -170,7 +170,7 @@ public class AtomizerItems {
 		
 		for(Item i : items.values()){
 			// TODO Hier statt dem unlocalizedName registryName verwenden
-			mrl = new ModelResourceLocation(Constants.MODID + ":" + i.getUnlocalizedName().substring(5), "inventory");
+			mrl = new ModelResourceLocation(Constants.MODID + ":" + i.getRegistryName(), "inventory");
 			renderItem.getItemModelMesher().register(i, 0, mrl);
 			System.out.println("Registered: " + i.getUnlocalizedName());
 		}

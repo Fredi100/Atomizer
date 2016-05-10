@@ -10,7 +10,8 @@ public class ItemSoilPile extends Item{
 	public static final String REGISTRY_NAME = "soilPileItem";
 	
 	public ItemSoilPile(){
-		setUnlocalizedName(Constants.MODID + "_" + REGISTRY_NAME);
+		setUnlocalizedName(Constants.MODID + ":" + REGISTRY_NAME);
+		setRegistryName(REGISTRY_NAME);
 		setCreativeTab(CreativeTabs.tabMaterials);
 		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}

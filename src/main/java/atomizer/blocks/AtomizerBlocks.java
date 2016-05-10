@@ -59,9 +59,9 @@ public final class AtomizerBlocks {
 		ModelResourceLocation mrl;
 		
 		for(Block b : blocks.values()){
-			mrl = new ModelResourceLocation(Constants.MODID + ":" + b.getUnlocalizedName().substring(5), "inventory");
+			mrl = new ModelResourceLocation(Constants.MODID + ":" + b.getRegistryName(), "inventory");
 			renderItem.getItemModelMesher().register(Item.getItemFromBlock(b), 0, mrl);
-			System.out.println("Registered: " + b.getUnlocalizedName());
+			System.out.println("Registered: " + b.getRegistryName());
 		}
 	
 	}

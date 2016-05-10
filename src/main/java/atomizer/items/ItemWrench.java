@@ -10,8 +10,8 @@ public class ItemWrench extends Item {
 	public static final String REGISTRY_NAME = "wrenchItem";
 	
 	public ItemWrench(){
-		
-		setUnlocalizedName(Constants.MODID + "_" + REGISTRY_NAME);
+		setRegistryName(REGISTRY_NAME);
+		setUnlocalizedName(Constants.MODID + ":" + Constants.MODID + "_" + REGISTRY_NAME);
 		setCreativeTab(CreativeTabs.tabTools);
 		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}

@@ -10,8 +10,8 @@ public class ItemLaser2 extends Item{
 	public static final String REGISTRY_NAME = "laser2Item";
 	
 	public ItemLaser2(){
-		
-		setUnlocalizedName(Constants.MODID + "_" + REGISTRY_NAME);
+		setRegistryName(REGISTRY_NAME);
+		setUnlocalizedName(Constants.MODID + ":" + REGISTRY_NAME);
 		setCreativeTab(CreativeTabs.tabMisc);
 		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}

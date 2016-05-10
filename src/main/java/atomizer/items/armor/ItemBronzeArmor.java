@@ -18,7 +18,8 @@ public class ItemBronzeArmor extends ItemArmor{
 	public ItemBronzeArmor(String unlocalizedName, ArmorMaterial material, int type) {
 		super(material, 0, type);
 		this.setCreativeTab(CreativeTabs.tabCombat);
-		this.setUnlocalizedName(unlocalizedName);
+		this.setUnlocalizedName(Constants.MODID + ":" + unlocalizedName);
+		setRegistryName(unlocalizedName);
 		GameRegistry.registerItem(this, unlocalizedName);
 	}
 	

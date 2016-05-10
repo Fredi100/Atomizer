@@ -16,9 +16,9 @@ public class ItemCopperArmor extends ItemArmor{
 
 	public ItemCopperArmor(String unlocalizedName, ArmorMaterial material, int type) {
 		super(material, 0, type);
-		
+		setRegistryName(unlocalizedName);
 		this.setCreativeTab(CreativeTabs.tabCombat);
-		this.setUnlocalizedName(unlocalizedName);
+		this.setUnlocalizedName(Constants.MODID + ":" + unlocalizedName);
 		GameRegistry.registerItem(this, unlocalizedName);
 	}
 	
