@@ -13,7 +13,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * @author Fredi100
  */
 public class BlockAssembler1 extends Block{
-	private final String UNLOCALIZED_BLOCK_NAME = "Assembler1Block";
+	
+	public static final String UNLOCALIZED_BLOCK_NAME = "Assembler1Block";
 	
 	/**
 	 * Konstruktor
@@ -27,7 +28,7 @@ public class BlockAssembler1 extends Block{
 		this.setHardness(2.0f);
 		this.setResistance(6.0f);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
-		this.setUnlocalizedName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		this.setUnlocalizedName(UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
 		this.isBlockContainer = true;
 		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}

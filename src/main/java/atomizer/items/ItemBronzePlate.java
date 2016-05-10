@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemBronzePlate extends Item{
 	
-	public static String UNLOCALIZED_ITEM_NAME = "bronzePlate";
+	public static final String UNLOCALIZED_ITEM_NAME = "bronzePlate";
 	
 	public ItemBronzePlate(){
 		setMaxStackSize(64);

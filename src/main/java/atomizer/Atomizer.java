@@ -72,17 +72,7 @@ public class Atomizer {
 		
 		if(event.getSide() == Side.CLIENT){
 			AtomizerItems.registerItemModels();
-			RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
-			ModelResourceLocation mrl;
-			
-			mrl = new ModelResourceLocation(Constants.MODID + ":" + ItemBronzeIngot.UNLOCALIZED_ITEM_NAME);
-			renderItem.getItemModelMesher().register(AtomizerItems.items.get(ItemBronzeIngot.UNLOCALIZED_ITEM_NAME), 0, mrl);
-		
-			mrl = new ModelResourceLocation(Constants.MODID + ":" + TGMBlock.UNLOCALIZED_BLOCK_NAME);
-			renderItem.getItemModelMesher().register(Item.getItemFromBlock(AtomizerBlocks.tgmBlock), 0, mrl);
 		}
-		
-		
 		
 		proxy.registerTileEntities();
 		// TODO muss auf die neue Minecraft Version aktualisiert werden

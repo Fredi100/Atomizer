@@ -5,7 +5,60 @@ import java.util.List;
 import java.util.Map;
 
 import atomizer.blocks.AtomizerBlocks;
+import atomizer.blocks.BlockAssembler1;
+import atomizer.blocks.BlockAssembler2;
+import atomizer.blocks.BlockAssembler3;
+import atomizer.blocks.BlockSoil;
+import atomizer.blocks.BlockTest;
 import atomizer.items.AtomizerItems;
+import atomizer.items.ItemBronzeIngot;
+import atomizer.items.ItemBronzePlate;
+import atomizer.items.ItemCopperIngot;
+import atomizer.items.ItemCopperPlate;
+import atomizer.items.ItemCopperRaw;
+import atomizer.items.ItemGlassShard;
+import atomizer.items.ItemGoldPlate;
+import atomizer.items.ItemGoldRaw;
+import atomizer.items.ItemIronPlate;
+import atomizer.items.ItemIronRaw;
+import atomizer.items.ItemLaser1;
+import atomizer.items.ItemLaser2;
+import atomizer.items.ItemLaser3;
+import atomizer.items.ItemNetherRaw;
+import atomizer.items.ItemSandRaw;
+import atomizer.items.ItemSilverIngot;
+import atomizer.items.ItemSilverPlate;
+import atomizer.items.ItemSilverRaw;
+import atomizer.items.ItemSoilPile;
+import atomizer.items.ItemStoneIngot;
+import atomizer.items.ItemStoneRaw;
+import atomizer.items.ItemTinIngot;
+import atomizer.items.ItemTinPlate;
+import atomizer.items.ItemTinRaw;
+import atomizer.items.ItemWoodenPlank;
+import atomizer.items.armor.ItemBronzeArmor;
+import atomizer.items.armor.ItemCopperArmor;
+import atomizer.items.armor.ItemSilverArmor;
+import atomizer.items.armor.ItemTinArmor;
+import atomizer.items.tools.ItemBronzeAxe;
+import atomizer.items.tools.ItemBronzeHoe;
+import atomizer.items.tools.ItemBronzePickaxe;
+import atomizer.items.tools.ItemBronzeShovel;
+import atomizer.items.tools.ItemBronzeSword;
+import atomizer.items.tools.ItemCopperAxe;
+import atomizer.items.tools.ItemCopperHoe;
+import atomizer.items.tools.ItemCopperPickaxe;
+import atomizer.items.tools.ItemCopperShovel;
+import atomizer.items.tools.ItemCopperSword;
+import atomizer.items.tools.ItemSilverAxe;
+import atomizer.items.tools.ItemSilverPickaxe;
+import atomizer.items.tools.ItemSilverShovel;
+import atomizer.items.tools.ItemSilverSword;
+import atomizer.items.tools.ItemTinAxe;
+import atomizer.items.tools.ItemTinHoe;
+import atomizer.items.tools.ItemTinPickaxe;
+import atomizer.items.tools.ItemTinShovel;
+import atomizer.items.tools.ItemTinSword;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -25,92 +78,104 @@ public class AtomizerRecipes {
 
 		// Rohes Eisen zu Eisenbarren
 		// Eisenerz zu Eisenbarren ersetzt
-		GameRegistry.addSmelting(AtomizerItems.items.get("ironRaw"), new ItemStack(Items.iron_ingot), 0.7F);
+		GameRegistry.addSmelting(AtomizerItems.items.get(ItemIronRaw.UNLOCALIZED_ITEM_NAME),
+				new ItemStack(Items.iron_ingot), 0.7F);
+
 		// Rohes Gold zu Goldbarren
 		// Golderz zu Goldbarren ersetzt
-		GameRegistry.addSmelting(AtomizerItems.items.get("goldRaw"), new ItemStack(Items.gold_ingot), 1.0F);
+		GameRegistry.addSmelting(AtomizerItems.items.get(ItemGoldRaw.UNLOCALIZED_ITEM_NAME),
+				new ItemStack(Items.gold_ingot), 1.0F);
+
 		// Sandhaufen zu Glasscherbe
-		GameRegistry.addSmelting(AtomizerItems.items.get("sandPile"),
-				new ItemStack(AtomizerItems.items.get("glassShard")), 0.35F);
+		GameRegistry.addSmelting(AtomizerItems.items.get(ItemSandRaw.UNLOCALIZED_ITEM_NAME),
+				new ItemStack(AtomizerItems.items.get(ItemGlassShard.UNLOCALIZED_ITEM_NAME)), 0.35F);
 		// Steinbrocken zu Steinbarren
-		GameRegistry.addSmelting(AtomizerItems.items.get("stoneRaw"),
-				new ItemStack(AtomizerItems.items.get("stoneIngot")), 0.1F);
+		GameRegistry.addSmelting(AtomizerItems.items.get(ItemStoneRaw.UNLOCALIZED_ITEM_NAME),
+				new ItemStack(AtomizerItems.items.get(ItemStoneIngot.UNLOCALIZED_ITEM_NAME)), 0.1F);
 		// Netherbrocken zu Netherziegel
 		// Netherstein zu Netherziegel ersetzt
-		GameRegistry.addSmelting(AtomizerItems.items.get("netherRaw"), new ItemStack(Items.netherbrick), 0.35F);
+		GameRegistry.addSmelting(AtomizerItems.items.get(ItemNetherRaw.UNLOCALIZED_ITEM_NAME),
+				new ItemStack(Items.netherbrick), 0.35F);
 		// Rohes Kupfer zu Kupferbarren
-		GameRegistry.addSmelting(AtomizerItems.items.get("copperRaw"),
-				new ItemStack(AtomizerItems.items.get("copperIngot")), 0.7F);
+		GameRegistry.addSmelting(AtomizerItems.items.get(ItemCopperRaw.UNLOCALIZED_ITEM_NAME),
+				new ItemStack(AtomizerItems.items.get(ItemCopperIngot.UNLOCALIZED_ITEM_NAME)), 0.7F);
 		// Rohes Zinn zu Zinnbarren
-		GameRegistry.addSmelting(AtomizerItems.items.get("tinRaw"), new ItemStack(AtomizerItems.items.get("tinIngot")),
-				0.7F);
+		GameRegistry.addSmelting(AtomizerItems.items.get(ItemTinRaw.UNLOCALIZED_ITEM_NAME),
+				new ItemStack(AtomizerItems.items.get(ItemTinIngot.UNLOCALIZED_ITEM_NAME)), 0.7F);
 
 		// Rohes Silber zu Silberbarren
-		GameRegistry.addSmelting(AtomizerItems.items.get("silverRaw"),
-				new ItemStack(AtomizerItems.items.get("silverIngot")), 1.0F);
+		GameRegistry.addSmelting(AtomizerItems.items.get(ItemSilverRaw.UNLOCALIZED_ITEM_NAME),
+				new ItemStack(AtomizerItems.items.get(ItemSilverIngot.UNLOCALIZED_ITEM_NAME)), 1.0F);
 
 		// Wooden Planks
 		// TODO Muss noch in allen Holzvarianten gemacht werden
-		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get("woodenPlank"), 9),
+		GameRegistry.addShapelessRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME), 9),
 				new Object[] { new ItemStack(Blocks.log, 1, 0) });
-		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get("woodenPlank"), 9),
+		GameRegistry.addShapelessRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME), 9),
 				new Object[] { new ItemStack(Blocks.log, 1, 1) });
-		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get("woodenPlank"), 9),
+		GameRegistry.addShapelessRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME), 9),
 				new Object[] { new ItemStack(Blocks.log, 1, 2) });
-		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get("woodenPlank"), 9),
+		GameRegistry.addShapelessRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME), 9),
 				new Object[] { new ItemStack(Blocks.log, 1, 3) });
-		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get("woodenPlank"), 9),
+		GameRegistry.addShapelessRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME), 9),
 				new Object[] { new ItemStack(Blocks.log2, 1, 0) });
-		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get("woodenPlank"), 9),
+		GameRegistry.addShapelessRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME), 9),
 				new Object[] { new ItemStack(Blocks.log2, 1, 1) });
 
 		// Wooden Plank Block
 		// TODO Muss noch in allen Holzvarianten gemacht werden
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.planks),
-				new Object[] { "###", "###", "###", '#', AtomizerItems.items.get("woodenPlank") });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.planks), new Object[] { "###", "###", "###", '#',
+				AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME) });
 
 		// Wooden Planks
 		// TODO Muss noch in allen Holzvarianten gemacht werden
-		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get("woodenPlank"), 9),
+		GameRegistry.addShapelessRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME), 9),
 				new Object[] { Blocks.planks });
 
 		// Wooden Button
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.wooden_button),
-				new Object[] { AtomizerItems.items.get("woodenPlank") });
+				new Object[] { AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME) });
 
 		// Sticks
 		GameRegistry.addRecipe(new ItemStack(Items.stick, 4),
-				new Object[] { "#", "#", '#', AtomizerItems.items.get("woodenPlank") });
+				new Object[] { "#", "#", '#', AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME) });
 
 		// Crafting Table
 		// TODO Muss noch für alle Holzvariante gemacht werden
 		GameRegistry.addRecipe(new ItemStack(Blocks.crafting_table),
-				new Object[] { "##", "##", '#', AtomizerItems.items.get("woodenPlank") });
+				new Object[] { "##", "##", '#', AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME) });
 
 		// Furnace
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.furnace),
-				new Object[] { "###", "# #", "###", '#', AtomizerItems.items.get("stoneRaw") });
+				new Object[] { "###", "# #", "###", '#', AtomizerItems.items.get(ItemStoneRaw.UNLOCALIZED_ITEM_NAME) });
 
 		// Chest
 		// TODO Muss noch für alle Holzvarianten gemacht werden
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.chest),
-				new Object[] { "###", "# #", "###", '#', AtomizerItems.items.get("woodenPlank") });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.chest), new Object[] { "###", "# #", "###", '#',
+				AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME) });
 
 		// WoodenSlab
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.wooden_slab),
-				new Object[] { "###", '#', AtomizerItems.items.get("woodenPlank") });
+				new Object[] { "###", '#', AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME) });
 
 		// Cobblestone Slab
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_slab, 1, 3),
-				new Object[] { "   ", "   ", "###", '#', AtomizerItems.items.get("stoneRaw") });
+				new Object[] { "   ", "   ", "###", '#', AtomizerItems.items.get(ItemStoneRaw.UNLOCALIZED_ITEM_NAME) });
 
 		// Stone Slab
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_slab, 1, 0),
-				new Object[] { "   ", "   ", "###", '#', AtomizerItems.items.get("stoneRaw") });
+				new Object[] { "   ", "   ", "###", '#', AtomizerItems.items.get(ItemStoneRaw.UNLOCALIZED_ITEM_NAME) });
 
 		// Glass Pane
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.glass_pane, 8),
-				new Object[] { "   ", "###", "###", '#', AtomizerItems.items.get("glassShard") });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.glass_pane, 8), new Object[] { "   ", "###", "###", '#',
+				AtomizerItems.items.get(ItemGlassShard.UNLOCALIZED_ITEM_NAME) });
 
 		// Glass Pane
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.glass_pane, 64),
@@ -119,20 +184,20 @@ public class AtomizerRecipes {
 		// Stair
 		// TODO Muss in allen Holz und in allen Steinvarianten gemacht werden
 		// Oak Stairs
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.oak_stairs),
-				new Object[] { "  #", " ##", "###", '#', AtomizerItems.items.get("woodenPlank") });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.oak_stairs), new Object[] { "  #", " ##", "###", '#',
+				AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME) });
 
 		// Cobblestone Stairs
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_stairs),
-				new Object[] { "  #", " ##", "###", '#', AtomizerItems.items.get("stoneIngot") });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_stairs), new Object[] { "  #", " ##", "###", '#',
+				AtomizerItems.items.get(ItemStoneIngot.UNLOCALIZED_ITEM_NAME) });
 
 		// Stonebrick Stair
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_brick_stairs),
-				new Object[] { "  #", " ##", "###", '#', AtomizerItems.items.get("stoneIngot") });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_brick_stairs), new Object[] { "  #", " ##", "###", '#',
+				AtomizerItems.items.get(ItemStoneIngot.UNLOCALIZED_ITEM_NAME) });
 
 		// Stonebrick Block
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stonebrick),
-				new Object[] { "###", "###", "###", '#', AtomizerItems.items.get("stoneIngot") });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stonebrick), new Object[] { "###", "###", "###", '#',
+				AtomizerItems.items.get(ItemStoneIngot.UNLOCALIZED_ITEM_NAME) });
 
 		// TODO Alle Ressourcenblöcke
 		// Bronze Block
@@ -141,249 +206,285 @@ public class AtomizerRecipes {
 		/* Bronze Tools */
 
 		// Bronze Pickaxe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzePickaxe")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("bronzeIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzePickaxe.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Bronze Axe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeAxe")),
-				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get("bronzeIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeAxe.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Bronze Shovel
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeShovel")),
-				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get("bronzeIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeShovel.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Bronze Hoe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeHoe")),
-				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get("bronzeIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeHoe.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		/* Silver Tools */
 
 		// Silver Pickaxe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverPickaxe")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("silverIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverPickaxe.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Silver Axe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverAxe")),
-				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get("silverIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverAxe.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Silver Shovel
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverShovel")),
-				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get("silverIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverShovel.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Silver Hoe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverHoe")),
-				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get("silverIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverAxe.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		/* Copper Tools */
 
 		// Copper Pickaxe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperPickaxe")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("copperIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperPickaxe.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Copper Axe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperAxe")),
-				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get("copperIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperAxe.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Copper Shovel
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperShovel")),
-				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get("copperIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperShovel.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Copper Hoe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperHoe")),
-				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get("copperIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperHoe.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		/* Tin Tools */
 
 		// Tin Pickaxe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinPickaxe")),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get("tinIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinPickaxe.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Tin Axe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinAxe")),
-				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get("tinIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinAxe.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Tin Shovel
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinShovel")),
-				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get("tinIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinShovel.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Tin Hoe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinHoe")),
-				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get("tinIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinHoe.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Bucket
-		GameRegistry.addShapedRecipe(new ItemStack(Items.bucket),
-				new Object[] { "   ", "# #", " # ", '#', AtomizerItems.items.get("ironPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.bucket), new Object[] { "   ", "# #", " # ", '#',
+				AtomizerItems.items.get(ItemIronPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Compass
-		GameRegistry.addShapedRecipe(new ItemStack(Items.compass),
-				new Object[] { " # ", "#R#", " # ", '#', AtomizerItems.items.get("ironPlate"), 'R', Items.redstone });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.compass), new Object[] { " # ", "#R#", " # ", '#',
+				AtomizerItems.items.get(ItemIronPlate.UNLOCALIZED_ITEM_NAME), 'R', Items.redstone });
 
 		// Watch
-		GameRegistry.addShapedRecipe(new ItemStack(Items.clock),
-				new Object[] { " # ", "#R#", " # ", '#', AtomizerItems.items.get("goldPlate"), 'R', Items.redstone });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.clock), new Object[] { " # ", "#R#", " # ", '#',
+				AtomizerItems.items.get(ItemGoldPlate.UNLOCALIZED_ITEM_NAME), 'R', Items.redstone });
 
 		/* Bronze Armor */
 
 		// Bronze Sword
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeSword")),
-				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get("bronzeIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeSword.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Bronze Ingot
-		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get("bronzeIngot"), 4),
-				new Object[] { AtomizerItems.items.get("copperIngot"), AtomizerItems.items.get("copperIngot"),
-						AtomizerItems.items.get("copperIngot"), AtomizerItems.items.get("tinIngot") });
+		GameRegistry.addShapelessRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemBronzeIngot.UNLOCALIZED_ITEM_NAME), 4),
+				new Object[] { AtomizerItems.items.get(ItemCopperIngot.UNLOCALIZED_ITEM_NAME),
+						AtomizerItems.items.get(ItemCopperIngot.UNLOCALIZED_ITEM_NAME),
+						AtomizerItems.items.get(ItemCopperIngot.UNLOCALIZED_ITEM_NAME),
+						AtomizerItems.items.get(ItemTinIngot.UNLOCALIZED_ITEM_NAME) });
 
 		// Bronze Plate
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzePlate"), 4),
-				new Object[] { "##", "##", '#', AtomizerItems.items.get("bronzeIngot") });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzePlate.UNLOCALIZED_ITEM_NAME), 4),
+				new Object[] { "##", "##", '#', AtomizerItems.items.get(ItemBronzeIngot.UNLOCALIZED_ITEM_NAME) });
 
 		// Bronze Helmet
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeHelmet")),
-				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get("bronzePlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_HELMET)), new Object[] {
+						"   ", "###", "# #", '#', AtomizerItems.items.get(ItemBronzePlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Bronze Chest
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeChest")),
-				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get("bronzePlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_CHEST)), new Object[] {
+						"# #", "###", "###", '#', AtomizerItems.items.get(ItemBronzePlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Bronze Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeLeggings")),
-				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get("bronzePlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS)), new Object[] {
+						"###", "# #", "# #", '#', AtomizerItems.items.get(ItemBronzePlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Bronze Boots
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("bronzeBoots")),
-				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get("bronzePlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_BOOTS)), new Object[] {
+						"   ", "# #", "# #", '#', AtomizerItems.items.get(ItemBronzePlate.UNLOCALIZED_ITEM_NAME) });
 
 		/* Silver Armor */
 
 		// Silver Sword
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverSword")),
-				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get("silverIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverSword.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Silver Plate
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverPlate"), 4),
-				new Object[] { "##", "##", '#', AtomizerItems.items.get("silverIngot") });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverPlate.UNLOCALIZED_ITEM_NAME), 4),
+				new Object[] { "##", "##", '#', AtomizerItems.items.get(ItemSilverIngot.UNLOCALIZED_ITEM_NAME) });
 
 		// Silver Helmet
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverHelmet")),
-				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get("silverPlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_HELMET)), new Object[] {
+						"   ", "###", "# #", '#', AtomizerItems.items.get(ItemSilverPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Silver Chest
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverChest")),
-				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get("silverPlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_CHEST)), new Object[] {
+						"# #", "###", "###", '#', AtomizerItems.items.get(ItemSilverPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Silver Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverLeggings")),
-				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get("silverPlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS)), new Object[] {
+						"###", "# #", "# #", '#', AtomizerItems.items.get(ItemSilverPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Silver Boots
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("silverBoots")),
-				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get("silverPlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_BOOTS)), new Object[] {
+						"   ", "# #", "# #", '#', AtomizerItems.items.get(ItemSilverPlate.UNLOCALIZED_ITEM_NAME) });
 
 		/* Copper Armor */
 
 		// Copper Sword
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperSword")),
-				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get("copperIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperSword.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Copper Plate
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperPlate"), 4),
-				new Object[] { "##", "##", '#', AtomizerItems.items.get("copperIngot") });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperPlate.UNLOCALIZED_ITEM_NAME), 4),
+				new Object[] { "##", "##", '#', AtomizerItems.items.get(ItemCopperIngot.UNLOCALIZED_ITEM_NAME) });
 
 		// Copper Helmet
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperHelmet")),
-				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get("copperPlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_HELMET)), new Object[] {
+						"   ", "###", "# #", '#', AtomizerItems.items.get(ItemCopperPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Copper Chest
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperChest")),
-				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get("copperPlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_CHEST)), new Object[] {
+						"# #", "###", "###", '#', AtomizerItems.items.get(ItemCopperPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Copper Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperLeggings")),
-				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get("copperPlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS)), new Object[] {
+						"###", "# #", "# #", '#', AtomizerItems.items.get(ItemCopperPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Copper Boots
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("copperBoots")),
-				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get("copperPlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_BOOTS)), new Object[] {
+						"   ", "# #", "# #", '#', AtomizerItems.items.get(ItemCopperPlate.UNLOCALIZED_ITEM_NAME) });
 
 		/* Tin Armor */
 
 		// Tin Sword
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinSword")),
-				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get("tinIngot"), '|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinSword.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.UNLOCALIZED_ITEM_NAME),
+						'|', Items.stick });
 
 		// Tin Plate
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinPlate"), 4),
-				new Object[] { "##", "##", '#', AtomizerItems.items.get("tinIngot") });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinPlate.UNLOCALIZED_ITEM_NAME), 4),
+				new Object[] { "##", "##", '#', AtomizerItems.items.get(ItemTinIngot.UNLOCALIZED_ITEM_NAME) });
 
 		// Tin Helmet
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinHelmet")),
-				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get("tinPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinArmor.UNLOCALIZED_ITEM_NAME_HELMET)),
+				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get(ItemTinPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Tin Chest
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinChest")),
-				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get("tinPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinArmor.UNLOCALIZED_ITEM_NAME_CHEST)),
+				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get(ItemTinPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Tin Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinLeggings")),
-				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get("tinPlate") });
+		GameRegistry.addShapedRecipe(
+				new ItemStack(AtomizerItems.items.get(ItemTinArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS)),
+				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get(ItemTinPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Tin Boots
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("tinBoots")),
-				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get("tinPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinArmor.UNLOCALIZED_ITEM_NAME_BOOTS)),
+				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get(ItemTinPlate.UNLOCALIZED_ITEM_NAME) });
 
 		/* Gold Armor */
 
 		// Gold Plate
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("goldPlate"), 4),
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemGoldPlate.UNLOCALIZED_ITEM_NAME), 4),
 				new Object[] { "##", "##", '#', Items.gold_ingot });
 
 		// Gold Helmet
-		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_helmet),
-				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get("goldPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_helmet), new Object[] { "   ", "###", "# #", '#',
+				AtomizerItems.items.get(ItemGoldPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Gold Chest
-		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_chestplate),
-				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get("goldPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_chestplate), new Object[] { "# #", "###", "###", '#',
+				AtomizerItems.items.get(ItemGoldPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Gold Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_leggings),
-				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get("goldPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_leggings), new Object[] { "###", "# #", "# #", '#',
+				AtomizerItems.items.get(ItemGoldPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Gold Boots
-		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_boots),
-				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get("goldPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_boots), new Object[] { "   ", "# #", "# #", '#',
+				AtomizerItems.items.get(ItemGoldPlate.UNLOCALIZED_ITEM_NAME) });
 
 		/* Iron Armor */
 
 		// Iron Plate
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get("ironPlate"), 4),
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemIronPlate.UNLOCALIZED_ITEM_NAME), 4),
 				new Object[] { "##", "##", '#', Items.iron_ingot });
 
 		// Iron Helmet
-		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_helmet),
-				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get("ironPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_helmet), new Object[] { "   ", "###", "# #", '#',
+				AtomizerItems.items.get(ItemIronPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Iron Chest
-		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_chestplate),
-				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get("ironPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_chestplate), new Object[] { "# #", "###", "###", '#',
+				AtomizerItems.items.get(ItemIronPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Iron Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_leggings),
-				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get("ironPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_leggings), new Object[] { "###", "# #", "# #", '#',
+				AtomizerItems.items.get(ItemIronPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Iron Boots
-		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_boots),
-				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get("ironPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_boots), new Object[] { "   ", "# #", "# #", '#',
+				AtomizerItems.items.get(ItemIronPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Minecart
-		GameRegistry.addShapedRecipe(new ItemStack(Items.minecart),
-				new Object[] { "   ", "# #", "I#I", '#', AtomizerItems.items.get("ironPlate"), 'I', Items.iron_ingot });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.minecart), new Object[] { "   ", "# #", "I#I", '#',
+				AtomizerItems.items.get(ItemIronPlate.UNLOCALIZED_ITEM_NAME), 'I', Items.iron_ingot });
 
 		// TODO Alle Schienen ???
 
 		// Boat
-		GameRegistry.addShapedRecipe(new ItemStack(Items.boat),
-				new Object[] { "   ", "# #", "###", '#', AtomizerItems.items.get("woodenPlank") });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.boat), new Object[] { "   ", "# #", "###", '#',
+				AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME) });
 
 		// TODO Alle Türen
 
@@ -400,65 +501,66 @@ public class AtomizerRecipes {
 		// TODO Alle Maschinen
 
 		// TODO Alle Schalen
-		GameRegistry.addShapedRecipe(new ItemStack(Items.bowl, 3),
-				new Object[] { "   ", "# #", " # ", '#', AtomizerItems.items.get("woodenPlank") });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.bowl, 3), new Object[] { "   ", "# #", " # ", '#',
+				AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME) });
 
 		// Brewing Stand
-		GameRegistry.addShapedRecipe(new ItemStack(Items.brewing_stand),
-				new Object[] { "   ", " B ", "SSS", 'S', AtomizerItems.items.get("stoneIngot"), 'B', Items.blaze_rod });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.brewing_stand), new Object[] { "   ", " B ", "SSS", 'S',
+				AtomizerItems.items.get(ItemStoneIngot.UNLOCALIZED_ITEM_NAME), 'B', Items.blaze_rod });
 
 		// TODO Bücherregale
 
 		// Cauldron
-		GameRegistry.addShapedRecipe(new ItemStack(Items.cauldron),
-				new Object[] { "# #", "# #", "###", '#', AtomizerItems.items.get("ironPlate") });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.cauldron), new Object[] { "# #", "# #", "###", '#',
+				AtomizerItems.items.get(ItemIronPlate.UNLOCALIZED_ITEM_NAME) });
 
 		// Sign
-		GameRegistry.addShapedRecipe(new ItemStack(Items.sign),
-				new Object[] { "###", "###", " S ", '#', AtomizerItems.items.get("woodenPlank"), 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.sign), new Object[] { "###", "###", " S ", '#',
+				AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME), 'S', Items.stick });
 
 		// Bed
 		GameRegistry.addShapedRecipe(new ItemStack(Items.bed), new Object[] { "   ", "WWW", "S#S", 'W', Blocks.wool,
-				'S', Items.stick, '#', AtomizerItems.items.get("woodenPlank") });
+				'S', Items.stick, '#', AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME) });
 
 		// Jukebox
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.jukebox),
-				new Object[] { "###", "#D#", "###", '#', AtomizerItems.items.get("woodenPlank"), 'D', Items.diamond });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.jukebox), new Object[] { "###", "#D#", "###", '#',
+				AtomizerItems.items.get(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME), 'D', Items.diamond });
 
 		/* Test-Rezept */
-		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.testBlock), new Object[] { "IDI", "DPD", "IDI", 'I',
+		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockTest.UNLOCALIZED_BLOCK_NAME)), new Object[] { "IDI", "DPD", "IDI", 'I',
 				Items.iron_ingot, 'D', Items.diamond, 'P', Items.iron_pickaxe });
 
 		/* Recipes */
 
 		// SoilePileItem
-		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.soilBlock),
-				new Object[] { "SSS", "SSS", "SSS", 'S', AtomizerItems.items.get("soilPileItem") });
+		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockSoil.UNLOCALIZED_BLOCK_NAME)),
+				new Object[] { "SSS", "SSS", "SSS", 'S', AtomizerItems.items.get(ItemSoilPile.UNLOCALIZED_ITEM_NAME) });
 		// Laser1Item
-		GameRegistry.addRecipe(new ItemStack(AtomizerItems.items.get("laser1Item")), new Object[] { "   ", "RIG", "   ",
-				'R', Items.redstone, 'I', Items.iron_ingot, 'G', Items.gold_ingot });
+		GameRegistry.addRecipe(new ItemStack(AtomizerItems.items.get(ItemLaser1.UNLOCALIZED_ITEM_NAME)), new Object[] {
+				"   ", "RIG", "   ", 'R', Items.redstone, 'I', Items.iron_ingot, 'G', Items.gold_ingot });
 		// Laser2Item
-		GameRegistry.addRecipe(new ItemStack(AtomizerItems.items.get("laser2Item")), new Object[] { "   ", "ELG", "   ",
-				'E', Items.emerald, 'L', AtomizerItems.items.get("laser1Item"), 'G', Items.gold_ingot });
+		GameRegistry.addRecipe(new ItemStack(AtomizerItems.items.get(ItemLaser2.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "   ", "ELG", "   ", 'E', Items.emerald, 'L',
+						AtomizerItems.items.get(ItemLaser1.UNLOCALIZED_ITEM_NAME), 'G', Items.gold_ingot });
 		// Laser3Item
-		GameRegistry.addRecipe(new ItemStack(AtomizerItems.items.get("laser3Item")), new Object[] { "   ", "DLG", "   ",
-				'D', Items.diamond, 'L', AtomizerItems.items.get("laser2Item"), 'G', Items.gold_ingot });
+		GameRegistry.addRecipe(new ItemStack(AtomizerItems.items.get(ItemLaser3.UNLOCALIZED_ITEM_NAME)),
+				new Object[] { "   ", "DLG", "   ", 'D', Items.diamond, 'L',
+						AtomizerItems.items.get(ItemLaser2.UNLOCALIZED_ITEM_NAME), 'G', Items.gold_ingot });
 		// Assembler1Block
-		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.assembler1Block),
+		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockAssembler1.UNLOCALIZED_BLOCK_NAME)),
 				new Object[] { "GLG", "SCS", "GRG", 'C', Blocks.crafting_table, 'S', Blocks.stone, 'G',
-						Items.gold_ingot, 'L', AtomizerItems.items.get("laser1Item"), 'R', Items.redstone });
+						Items.gold_ingot, 'L', AtomizerItems.items.get(ItemLaser1.UNLOCALIZED_ITEM_NAME), 'R',
+						Items.redstone });
 		// Assembler2Block
-		GameRegistry
-				.addRecipe(new ItemStack(AtomizerBlocks.assembler2Block),
-						new Object[] { "GLG", "ICI", "GRG", 'C', AtomizerBlocks.assembler1Block, 'I', Blocks.iron_block,
-								'G', Items.gold_ingot, 'L', AtomizerItems.items.get("laser2Item"), 'R',
-								Blocks.redstone_block });
+		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockAssembler2.UNLOCALIZED_BLOCK_NAME)),
+				new Object[] { "GLG", "ICI", "GRG", 'C', AtomizerBlocks.blocks.get(BlockAssembler1.UNLOCALIZED_BLOCK_NAME), 'I', Blocks.iron_block, 'G',
+						Items.gold_ingot, 'L', AtomizerItems.items.get(ItemLaser2.UNLOCALIZED_ITEM_NAME), 'R',
+						Blocks.redstone_block });
 		// Assembler3Block
-		GameRegistry
-				.addRecipe(new ItemStack(AtomizerBlocks.assembler3Block),
-						new Object[] { "GLG", "DCD", "GRG", 'C', AtomizerBlocks.assembler2Block, 'D',
-								Blocks.diamond_block, 'G', Items.gold_ingot, 'L', AtomizerItems.items.get("laser3Item"),
-								'R', Blocks.redstone_block });
+		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockAssembler3.UNLOCALIZED_BLOCK_NAME)),
+				new Object[] { "GLG", "DCD", "GRG", 'C', AtomizerBlocks.blocks.get(BlockAssembler2.UNLOCALIZED_BLOCK_NAME), 'D', Blocks.diamond_block, 'G',
+						Items.gold_ingot, 'L', AtomizerItems.items.get(ItemLaser3.UNLOCALIZED_ITEM_NAME), 'R',
+						Blocks.redstone_block });
 	}
 
 	/**

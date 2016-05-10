@@ -9,13 +9,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemSilverArmor extends ItemArmor{
 	
-	public String unlocalizedName;
+	public static final String UNLOCALIZED_ITEM_NAME_CHEST = "silverChest";
+	public static final String UNLOCALIZED_ITEM_NAME_HELMET = "silverHelmet";
+	public static final String UNLOCALIZED_ITEM_NAME_LEGGINGS = "silverLeggings";
+	public static final String UNLOCALIZED_ITEM_NAME_BOOTS = "silverBoots";
 
 	public ItemSilverArmor(String unlocalizedName, ArmorMaterial material, int type) {
 		super(material, 0, type);
-		
 		this.setCreativeTab(CreativeTabs.tabCombat);
-		this.unlocalizedName = unlocalizedName;
 		this.setUnlocalizedName(unlocalizedName);
 		GameRegistry.registerItem(this, unlocalizedName);
 	}

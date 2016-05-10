@@ -10,13 +10,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 // TODO Muss noch auf die neue Minecraft Version upgedatet werden
 public class ItemBronzeArmor extends ItemArmor{
 	
-	public String unlocalizedName;
+	public static final String UNLOCALIZED_ITEM_NAME_CHEST = "bronzeChest";
+	public static final String UNLOCALIZED_ITEM_NAME_HELMET = "bronzeHelmet";
+	public static final String UNLOCALIZED_ITEM_NAME_LEGGINGS = "bronzeLeggings";
+	public static final String UNLOCALIZED_ITEM_NAME_BOOTS = "bronzeBoots";
 
 	public ItemBronzeArmor(String unlocalizedName, ArmorMaterial material, int type) {
 		super(material, 0, type);
-		
 		this.setCreativeTab(CreativeTabs.tabCombat);
-		this.unlocalizedName = unlocalizedName;
 		this.setUnlocalizedName(unlocalizedName);
 		GameRegistry.registerItem(this, unlocalizedName);
 	}

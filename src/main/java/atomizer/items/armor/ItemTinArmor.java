@@ -9,13 +9,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemTinArmor extends ItemArmor{
 	
-	public String unlocalizedName;
+	public static final String UNLOCALIZED_ITEM_NAME_CHEST = "tinChest";
+	public static final String UNLOCALIZED_ITEM_NAME_HELMET = "tinHelmet";
+	public static final String UNLOCALIZED_ITEM_NAME_LEGGINGS = "tinLeggings";
+	public static final String UNLOCALIZED_ITEM_NAME_BOOTS = "tinBoots";
 
 	public ItemTinArmor(String unlocalizedName, ArmorMaterial material, int type) {
 		super(material, 0, type);
-		
 		this.setCreativeTab(CreativeTabs.tabCombat);
-		this.unlocalizedName = unlocalizedName;
 		this.setUnlocalizedName(unlocalizedName);
 		GameRegistry.registerItem(this, unlocalizedName);
 	}

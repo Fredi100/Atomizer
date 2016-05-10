@@ -8,12 +8,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockSoil extends Block{
 	
-	private static String UNLOCALIZED_BLOCK_NAME = "soilBlock";
+	public static final String UNLOCALIZED_BLOCK_NAME = "soilBlock";
 
 	protected BlockSoil() {
 		super(Material.rock);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
-		this.setUnlocalizedName(Constants.MODID + "_" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		this.setUnlocalizedName(UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
 		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}
 	

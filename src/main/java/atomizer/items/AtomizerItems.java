@@ -2,8 +2,30 @@ package atomizer.items;
 
 import java.util.TreeMap;
 
-import atomizer.items.armor.*;
-import atomizer.items.tools.*;
+import atomizer.items.armor.ItemBronzeArmor;
+import atomizer.items.armor.ItemCopperArmor;
+import atomizer.items.armor.ItemSilverArmor;
+import atomizer.items.armor.ItemTinArmor;
+import atomizer.items.tools.ItemBronzeAxe;
+import atomizer.items.tools.ItemBronzeHoe;
+import atomizer.items.tools.ItemBronzePickaxe;
+import atomizer.items.tools.ItemBronzeShovel;
+import atomizer.items.tools.ItemBronzeSword;
+import atomizer.items.tools.ItemCopperAxe;
+import atomizer.items.tools.ItemCopperHoe;
+import atomizer.items.tools.ItemCopperPickaxe;
+import atomizer.items.tools.ItemCopperShovel;
+import atomizer.items.tools.ItemCopperSword;
+import atomizer.items.tools.ItemSilverAxe;
+import atomizer.items.tools.ItemSilverHoe;
+import atomizer.items.tools.ItemSilverPickaxe;
+import atomizer.items.tools.ItemSilverShovel;
+import atomizer.items.tools.ItemSilverSword;
+import atomizer.items.tools.ItemTinAxe;
+import atomizer.items.tools.ItemTinHoe;
+import atomizer.items.tools.ItemTinPickaxe;
+import atomizer.items.tools.ItemTinShovel;
+import atomizer.items.tools.ItemTinSword;
 import atomizer.lib.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderItem;
@@ -78,10 +100,10 @@ public class AtomizerItems {
 		items.put(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME,new ItemWoodenPlank());
 		
 		/* Bronze */
-		items.put("bronzeHelmet",new ItemBronzeArmor("bronzeHelmet",bronzeArmorMaterial,0));
-		items.put("bronzeChest",new ItemBronzeArmor("bronzeChest",bronzeArmorMaterial,1));
-		items.put("bronzeLeggings",new ItemBronzeArmor("bronzeLeggings",bronzeArmorMaterial,2));
-		items.put("bronzeBoots",new ItemBronzeArmor("bronzeBoots",bronzeArmorMaterial,3));
+		items.put(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_HELMET,new ItemBronzeArmor(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_HELMET,bronzeArmorMaterial,0));
+		items.put(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_CHEST,new ItemBronzeArmor(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_CHEST,bronzeArmorMaterial,1));
+		items.put(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,new ItemBronzeArmor(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,bronzeArmorMaterial,2));
+		items.put(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_BOOTS,new ItemBronzeArmor(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_BOOTS,bronzeArmorMaterial,3));
 		items.put(ItemBronzeAxe.UNLOCALIZED_ITEM_NAME, new ItemBronzeAxe(bronzeToolMaterial));
 		items.put(ItemBronzePickaxe.UNLOCALIZED_ITEM_NAME, new ItemBronzePickaxe(bronzeToolMaterial));
 		items.put(ItemBronzeShovel.UNLOCALIZED_ITEM_NAME, new ItemBronzeShovel(bronzeToolMaterial));
@@ -91,10 +113,10 @@ public class AtomizerItems {
 		items.put(ItemBronzePlate.UNLOCALIZED_ITEM_NAME, new ItemBronzePlate());
 		
 		/* Copper */
-		items.put("copperHelmet",new ItemCopperArmor("copperHelmet",copperArmorMaterial,0));
-		items.put("copperChest",new ItemCopperArmor("copperChest",copperArmorMaterial,1));
-		items.put("copperLeggings",new ItemCopperArmor("copperLeggings",copperArmorMaterial,2));
-		items.put("copperBoots",new ItemCopperArmor("copperBoots",copperArmorMaterial,3));
+		items.put(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_HELMET,new ItemCopperArmor(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_HELMET,copperArmorMaterial,0));
+		items.put(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_CHEST,new ItemCopperArmor(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_CHEST,copperArmorMaterial,1));
+		items.put(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,new ItemCopperArmor(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,copperArmorMaterial,2));
+		items.put(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_BOOTS,new ItemCopperArmor(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_BOOTS,copperArmorMaterial,3));
 		items.put(ItemCopperAxe.UNLOCALIZED_ITEM_NAME, new ItemCopperAxe(copperToolMaterial));
 		items.put(ItemCopperPickaxe.UNLOCALIZED_ITEM_NAME, new ItemCopperPickaxe(copperToolMaterial));
 		items.put(ItemCopperShovel.UNLOCALIZED_ITEM_NAME, new ItemCopperShovel(copperToolMaterial));
@@ -105,10 +127,10 @@ public class AtomizerItems {
 		items.put(ItemCopperRaw.UNLOCALIZED_ITEM_NAME, new ItemCopperRaw());
 		
 		/* Silver */
-		items.put("silverHelmet",new ItemSilverArmor("silverHelmet",silverArmorMaterial,0));
-		items.put("silverChest",new ItemSilverArmor("silverChest",silverArmorMaterial,1));
-		items.put("silverLeggings",new ItemSilverArmor("silverLeggings",silverArmorMaterial,2));
-		items.put("silverBoots",new ItemSilverArmor("silverBoots",silverArmorMaterial,3));
+		items.put(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_HELMET,new ItemSilverArmor(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_HELMET,silverArmorMaterial,0));
+		items.put(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_CHEST,new ItemSilverArmor(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_CHEST,silverArmorMaterial,1));
+		items.put(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,new ItemSilverArmor(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,silverArmorMaterial,2));
+		items.put(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_BOOTS,new ItemSilverArmor(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_BOOTS,silverArmorMaterial,3));
 		items.put(ItemSilverAxe.UNLOCALIZED_ITEM_NAME, new ItemSilverAxe(silverToolMaterial));
 		items.put(ItemSilverPickaxe.UNLOCALIZED_ITEM_NAME, new ItemSilverPickaxe(silverToolMaterial));
 		items.put(ItemSilverShovel.UNLOCALIZED_ITEM_NAME, new ItemSilverShovel(silverToolMaterial));
@@ -119,10 +141,10 @@ public class AtomizerItems {
 		items.put(ItemSilverRaw.UNLOCALIZED_ITEM_NAME, new ItemSilverRaw());
 		
 		/* Tin */
-		items.put("tinHelmet",new ItemTinArmor("tinHelmet",tinArmorMaterial,0));
-		items.put("tinChest",new ItemTinArmor("tinChest",tinArmorMaterial,1));
-		items.put("tinLeggings",new ItemTinArmor("tinLeggings",tinArmorMaterial,2));
-		items.put("tinBoots",new ItemTinArmor("tinBoots",tinArmorMaterial,3));
+		items.put(ItemTinArmor.UNLOCALIZED_ITEM_NAME_HELMET,new ItemTinArmor(ItemTinArmor.UNLOCALIZED_ITEM_NAME_HELMET,tinArmorMaterial,0));
+		items.put(ItemTinArmor.UNLOCALIZED_ITEM_NAME_CHEST,new ItemTinArmor(ItemTinArmor.UNLOCALIZED_ITEM_NAME_CHEST,tinArmorMaterial,1));
+		items.put(ItemTinArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,new ItemTinArmor(ItemTinArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,tinArmorMaterial,2));
+		items.put(ItemTinArmor.UNLOCALIZED_ITEM_NAME_BOOTS,new ItemTinArmor(ItemTinArmor.UNLOCALIZED_ITEM_NAME_BOOTS,tinArmorMaterial,3));
 		items.put(ItemTinAxe.UNLOCALIZED_ITEM_NAME, new ItemTinAxe(tinToolMaterial));
 		items.put(ItemTinPickaxe.UNLOCALIZED_ITEM_NAME, new ItemTinPickaxe(tinToolMaterial));
 		items.put(ItemTinShovel.UNLOCALIZED_ITEM_NAME, new ItemTinShovel(tinToolMaterial));
@@ -142,12 +164,15 @@ public class AtomizerItems {
 	}
 	
 	public static void registerItemModels(){
+		System.out.println("Atomizer is registering its models now!");
 		RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
 		ModelResourceLocation mrl;
 		
 		for(Item i : items.values()){
+			// TODO Hier statt dem unlocalizedName registryName verwenden
 			mrl = new ModelResourceLocation(Constants.MODID + ":" + i.getUnlocalizedName().substring(5), "inventory");
 			renderItem.getItemModelMesher().register(i, 0, mrl);
+			System.out.println("Registered: " + i.getUnlocalizedName());
 		}
 	
 	}

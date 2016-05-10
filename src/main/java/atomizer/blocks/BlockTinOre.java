@@ -2,14 +2,27 @@ package atomizer.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockTinOre extends Block{
+	
+	public static final String UNLOCALIZED_BLOCK_NAME = "tinOreBlock";
 
 	protected BlockTinOre() {
 		super(Material.rock);
-		// TODO Auto-generated constructor stub
+		this.setCreativeTab(CreativeTabs.tabBlock);//Weißt dem Block ein Tab zu um ihn anzuzeigen
+		this.setUnlocalizedName(UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}
 	
-	// TODO Hier noch alles machen
+	/**
+	 * Gibt den Namen des Blocks zurück
+	 * 
+	 * @return Der Name des Blocks
+	 */
+	public String getName(){
+		return UNLOCALIZED_BLOCK_NAME;
+	}
 
 }
