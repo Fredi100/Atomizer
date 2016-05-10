@@ -81,86 +81,86 @@ public class AtomizerItems {
 		System.out.println("Atomizer is initializing its items now!");
 		
 		items = new TreeMap<String,Item>();
-		items.put(ItemWrench.UNLOCALIZED_ITEM_NAME,new ItemWrench());
-		items.put(ItemLaser1.UNLOCALIZED_ITEM_NAME,new ItemLaser1());
-		items.put(ItemLaser2.UNLOCALIZED_ITEM_NAME,new ItemLaser2());
-		items.put(ItemLaser3.UNLOCALIZED_ITEM_NAME,new ItemLaser3());
-		items.put(ItemSoilPile.UNLOCALIZED_ITEM_NAME,new ItemSoilPile());
-		items.put(ItemStoneHammer.UNLOCALIZED_ITEM_NAME,new ItemStoneHammer());
-		items.put(ItemDirtRaw.UNLOCALIZED_ITEM_NAME,new ItemDirtRaw());
-		items.put(ItemFlour.UNLOCALIZED_ITEM_NAME,new ItemFlour());
-		items.put(ItemGlassShard.UNLOCALIZED_ITEM_NAME,new ItemGlassShard());
-		items.put(ItemGravelRaw.UNLOCALIZED_ITEM_NAME,new ItemGravelRaw());
-		items.put(ItemIceShard.UNLOCALIZED_ITEM_NAME,new ItemIceShard());
-		items.put(ItemNetherRaw.UNLOCALIZED_ITEM_NAME,new ItemNetherRaw());
-		items.put(ItemObsidianRaw.UNLOCALIZED_ITEM_NAME,new ItemObsidianRaw());
-		items.put(ItemSandRaw.UNLOCALIZED_ITEM_NAME,new ItemSandRaw());
-		items.put(ItemStoneIngot.UNLOCALIZED_ITEM_NAME,new ItemStoneIngot());
-		items.put(ItemStoneRaw.UNLOCALIZED_ITEM_NAME,new ItemStoneRaw());
-		items.put(ItemWoodenPlank.UNLOCALIZED_ITEM_NAME,new ItemWoodenPlank());
+		items.put(ItemWrench.REGISTRY_NAME,new ItemWrench());
+		items.put(ItemLaser1.REGISTRY_NAME,new ItemLaser1());
+		items.put(ItemLaser2.REGISTRY_NAME,new ItemLaser2());
+		items.put(ItemLaser3.REGISTRY_NAME,new ItemLaser3());
+		items.put(ItemSoilPile.REGISTRY_NAME,new ItemSoilPile());
+		items.put(ItemStoneHammer.REGISTRY_NAME,new ItemStoneHammer());
+		items.put(ItemDirtRaw.REGISTRY_NAME,new ItemDirtRaw());
+		items.put(ItemFlour.REGISTRY_NAME,new ItemFlour());
+		items.put(ItemGlassShard.REGISTRY_NAME,new ItemGlassShard());
+		items.put(ItemGravelRaw.REGISTRY_NAME,new ItemGravelRaw());
+		items.put(ItemIceShard.REGISTRY_NAME,new ItemIceShard());
+		items.put(ItemNetherRaw.REGISTRY_NAME,new ItemNetherRaw());
+		items.put(ItemObsidianRaw.REGISTRY_NAME,new ItemObsidianRaw());
+		items.put(ItemSandRaw.REGISTRY_NAME,new ItemSandRaw());
+		items.put(ItemStoneIngot.REGISTRY_NAME,new ItemStoneIngot());
+		items.put(ItemStoneRaw.REGISTRY_NAME,new ItemStoneRaw());
+		items.put(ItemWoodenPlank.REGISTRY_NAME,new ItemWoodenPlank());
 		
 		/* Bronze */
-		items.put(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_HELMET,new ItemBronzeArmor(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_HELMET,bronzeArmorMaterial,0));
-		items.put(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_CHEST,new ItemBronzeArmor(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_CHEST,bronzeArmorMaterial,1));
-		items.put(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,new ItemBronzeArmor(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,bronzeArmorMaterial,2));
-		items.put(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_BOOTS,new ItemBronzeArmor(ItemBronzeArmor.UNLOCALIZED_ITEM_NAME_BOOTS,bronzeArmorMaterial,3));
-		items.put(ItemBronzeAxe.UNLOCALIZED_ITEM_NAME, new ItemBronzeAxe(bronzeToolMaterial));
-		items.put(ItemBronzePickaxe.UNLOCALIZED_ITEM_NAME, new ItemBronzePickaxe(bronzeToolMaterial));
-		items.put(ItemBronzeShovel.UNLOCALIZED_ITEM_NAME, new ItemBronzeShovel(bronzeToolMaterial));
-		items.put(ItemBronzeHoe.UNLOCALIZED_ITEM_NAME, new ItemBronzeHoe(bronzeToolMaterial));
-		items.put(ItemBronzeSword.UNLOCALIZED_ITEM_NAME, new ItemBronzeSword(bronzeToolMaterial));
-		items.put(ItemBronzeIngot.UNLOCALIZED_ITEM_NAME, new ItemBronzeIngot());
-		items.put(ItemBronzePlate.UNLOCALIZED_ITEM_NAME, new ItemBronzePlate());
+		items.put(ItemBronzeArmor.REGISTRY_NAME_HELMET,new ItemBronzeArmor(ItemBronzeArmor.REGISTRY_NAME_HELMET,bronzeArmorMaterial,0));
+		items.put(ItemBronzeArmor.REGISTRY_NAME_CHEST,new ItemBronzeArmor(ItemBronzeArmor.REGISTRY_NAME_CHEST,bronzeArmorMaterial,1));
+		items.put(ItemBronzeArmor.REGISTRY_NAME_LEGGINGS,new ItemBronzeArmor(ItemBronzeArmor.REGISTRY_NAME_LEGGINGS,bronzeArmorMaterial,2));
+		items.put(ItemBronzeArmor.REGISTRY_NAME_BOOTS,new ItemBronzeArmor(ItemBronzeArmor.REGISTRY_NAME_BOOTS,bronzeArmorMaterial,3));
+		items.put(ItemBronzeAxe.REGISTRY_NAME, new ItemBronzeAxe(bronzeToolMaterial));
+		items.put(ItemBronzePickaxe.REGISTRY_NAME, new ItemBronzePickaxe(bronzeToolMaterial));
+		items.put(ItemBronzeShovel.REGISTRY_NAME, new ItemBronzeShovel(bronzeToolMaterial));
+		items.put(ItemBronzeHoe.REGISTRY_NAME, new ItemBronzeHoe(bronzeToolMaterial));
+		items.put(ItemBronzeSword.REGISTRY_NAME, new ItemBronzeSword(bronzeToolMaterial));
+		items.put(ItemBronzeIngot.REGISTRY_NAME, new ItemBronzeIngot());
+		items.put(ItemBronzePlate.REGISTRY_NAME, new ItemBronzePlate());
 		
 		/* Copper */
-		items.put(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_HELMET,new ItemCopperArmor(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_HELMET,copperArmorMaterial,0));
-		items.put(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_CHEST,new ItemCopperArmor(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_CHEST,copperArmorMaterial,1));
-		items.put(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,new ItemCopperArmor(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,copperArmorMaterial,2));
-		items.put(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_BOOTS,new ItemCopperArmor(ItemCopperArmor.UNLOCALIZED_ITEM_NAME_BOOTS,copperArmorMaterial,3));
-		items.put(ItemCopperAxe.UNLOCALIZED_ITEM_NAME, new ItemCopperAxe(copperToolMaterial));
-		items.put(ItemCopperPickaxe.UNLOCALIZED_ITEM_NAME, new ItemCopperPickaxe(copperToolMaterial));
-		items.put(ItemCopperShovel.UNLOCALIZED_ITEM_NAME, new ItemCopperShovel(copperToolMaterial));
-		items.put(ItemCopperHoe.UNLOCALIZED_ITEM_NAME, new ItemCopperHoe(copperToolMaterial));
-		items.put(ItemCopperSword.UNLOCALIZED_ITEM_NAME, new ItemCopperSword(copperToolMaterial));
-		items.put(ItemCopperIngot.UNLOCALIZED_ITEM_NAME, new ItemCopperIngot());
-		items.put(ItemCopperPlate.UNLOCALIZED_ITEM_NAME, new ItemCopperPlate());
-		items.put(ItemCopperRaw.UNLOCALIZED_ITEM_NAME, new ItemCopperRaw());
+		items.put(ItemCopperArmor.REGISTRY_NAME_HELMET,new ItemCopperArmor(ItemCopperArmor.REGISTRY_NAME_HELMET,copperArmorMaterial,0));
+		items.put(ItemCopperArmor.REGISTRY_NAME_CHEST,new ItemCopperArmor(ItemCopperArmor.REGISTRY_NAME_CHEST,copperArmorMaterial,1));
+		items.put(ItemCopperArmor.REGISTRY_NAME_LEGGINGS,new ItemCopperArmor(ItemCopperArmor.REGISTRY_NAME_LEGGINGS,copperArmorMaterial,2));
+		items.put(ItemCopperArmor.REGISTRY_NAME_BOOTS,new ItemCopperArmor(ItemCopperArmor.REGISTRY_NAME_BOOTS,copperArmorMaterial,3));
+		items.put(ItemCopperAxe.REGISTRY_NAME, new ItemCopperAxe(copperToolMaterial));
+		items.put(ItemCopperPickaxe.REGISTRY_NAME, new ItemCopperPickaxe(copperToolMaterial));
+		items.put(ItemCopperShovel.REGISTRY_NAME, new ItemCopperShovel(copperToolMaterial));
+		items.put(ItemCopperHoe.REGISTRY_NAME, new ItemCopperHoe(copperToolMaterial));
+		items.put(ItemCopperSword.REGISTRY_NAME, new ItemCopperSword(copperToolMaterial));
+		items.put(ItemCopperIngot.REGISTRY_NAME, new ItemCopperIngot());
+		items.put(ItemCopperPlate.REGISTRY_NAME, new ItemCopperPlate());
+		items.put(ItemCopperRaw.REGISTRY_NAME, new ItemCopperRaw());
 		
 		/* Silver */
-		items.put(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_HELMET,new ItemSilverArmor(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_HELMET,silverArmorMaterial,0));
-		items.put(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_CHEST,new ItemSilverArmor(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_CHEST,silverArmorMaterial,1));
-		items.put(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,new ItemSilverArmor(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,silverArmorMaterial,2));
-		items.put(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_BOOTS,new ItemSilverArmor(ItemSilverArmor.UNLOCALIZED_ITEM_NAME_BOOTS,silverArmorMaterial,3));
-		items.put(ItemSilverAxe.UNLOCALIZED_ITEM_NAME, new ItemSilverAxe(silverToolMaterial));
-		items.put(ItemSilverPickaxe.UNLOCALIZED_ITEM_NAME, new ItemSilverPickaxe(silverToolMaterial));
-		items.put(ItemSilverShovel.UNLOCALIZED_ITEM_NAME, new ItemSilverShovel(silverToolMaterial));
-		items.put(ItemSilverHoe.UNLOCALIZED_ITEM_NAME, new ItemSilverHoe(silverToolMaterial));
-		items.put(ItemSilverSword.UNLOCALIZED_ITEM_NAME, new ItemSilverSword(silverToolMaterial));
-		items.put(ItemSilverIngot.UNLOCALIZED_ITEM_NAME, new ItemSilverIngot());
-		items.put(ItemSilverPlate.UNLOCALIZED_ITEM_NAME, new ItemSilverPlate());
-		items.put(ItemSilverRaw.UNLOCALIZED_ITEM_NAME, new ItemSilverRaw());
+		items.put(ItemSilverArmor.REGISTRY_NAME_HELMET,new ItemSilverArmor(ItemSilverArmor.REGISTRY_NAME_HELMET,silverArmorMaterial,0));
+		items.put(ItemSilverArmor.REGISTRY_NAME_CHEST,new ItemSilverArmor(ItemSilverArmor.REGISTRY_NAME_CHEST,silverArmorMaterial,1));
+		items.put(ItemSilverArmor.REGISTRY_NAME_LEGGINGS,new ItemSilverArmor(ItemSilverArmor.REGISTRY_NAME_LEGGINGS,silverArmorMaterial,2));
+		items.put(ItemSilverArmor.REGISTRY_NAME_BOOTS,new ItemSilverArmor(ItemSilverArmor.REGISTRY_NAME_BOOTS,silverArmorMaterial,3));
+		items.put(ItemSilverAxe.REGISTRY_NAME, new ItemSilverAxe(silverToolMaterial));
+		items.put(ItemSilverPickaxe.REGISTRY_NAME, new ItemSilverPickaxe(silverToolMaterial));
+		items.put(ItemSilverShovel.REGISTRY_NAME, new ItemSilverShovel(silverToolMaterial));
+		items.put(ItemSilverHoe.REGISTRY_NAME, new ItemSilverHoe(silverToolMaterial));
+		items.put(ItemSilverSword.REGISTRY_NAME, new ItemSilverSword(silverToolMaterial));
+		items.put(ItemSilverIngot.REGISTRY_NAME, new ItemSilverIngot());
+		items.put(ItemSilverPlate.REGISTRY_NAME, new ItemSilverPlate());
+		items.put(ItemSilverRaw.REGISTRY_NAME, new ItemSilverRaw());
 		
 		/* Tin */
-		items.put(ItemTinArmor.UNLOCALIZED_ITEM_NAME_HELMET,new ItemTinArmor(ItemTinArmor.UNLOCALIZED_ITEM_NAME_HELMET,tinArmorMaterial,0));
-		items.put(ItemTinArmor.UNLOCALIZED_ITEM_NAME_CHEST,new ItemTinArmor(ItemTinArmor.UNLOCALIZED_ITEM_NAME_CHEST,tinArmorMaterial,1));
-		items.put(ItemTinArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,new ItemTinArmor(ItemTinArmor.UNLOCALIZED_ITEM_NAME_LEGGINGS,tinArmorMaterial,2));
-		items.put(ItemTinArmor.UNLOCALIZED_ITEM_NAME_BOOTS,new ItemTinArmor(ItemTinArmor.UNLOCALIZED_ITEM_NAME_BOOTS,tinArmorMaterial,3));
-		items.put(ItemTinAxe.UNLOCALIZED_ITEM_NAME, new ItemTinAxe(tinToolMaterial));
-		items.put(ItemTinPickaxe.UNLOCALIZED_ITEM_NAME, new ItemTinPickaxe(tinToolMaterial));
-		items.put(ItemTinShovel.UNLOCALIZED_ITEM_NAME, new ItemTinShovel(tinToolMaterial));
-		items.put(ItemTinHoe.UNLOCALIZED_ITEM_NAME, new ItemTinHoe(tinToolMaterial));
-		items.put(ItemTinSword.UNLOCALIZED_ITEM_NAME, new ItemTinSword(tinToolMaterial));
-		items.put(ItemTinIngot.UNLOCALIZED_ITEM_NAME, new ItemTinIngot());
-		items.put(ItemTinPlate.UNLOCALIZED_ITEM_NAME, new ItemTinPlate());
-		items.put(ItemTinRaw.UNLOCALIZED_ITEM_NAME, new ItemTinRaw());
+		items.put(ItemTinArmor.REGISTRY_NAME_HELMET,new ItemTinArmor(ItemTinArmor.REGISTRY_NAME_HELMET,tinArmorMaterial,0));
+		items.put(ItemTinArmor.REGISTRY_NAME_CHEST,new ItemTinArmor(ItemTinArmor.REGISTRY_NAME_CHEST,tinArmorMaterial,1));
+		items.put(ItemTinArmor.REGISTRY_NAME_LEGGINGS,new ItemTinArmor(ItemTinArmor.REGISTRY_NAME_LEGGINGS,tinArmorMaterial,2));
+		items.put(ItemTinArmor.REGISTRY_NAME_BOOTS,new ItemTinArmor(ItemTinArmor.REGISTRY_NAME_BOOTS,tinArmorMaterial,3));
+		items.put(ItemTinAxe.REGISTRY_NAME, new ItemTinAxe(tinToolMaterial));
+		items.put(ItemTinPickaxe.REGISTRY_NAME, new ItemTinPickaxe(tinToolMaterial));
+		items.put(ItemTinShovel.REGISTRY_NAME, new ItemTinShovel(tinToolMaterial));
+		items.put(ItemTinHoe.REGISTRY_NAME, new ItemTinHoe(tinToolMaterial));
+		items.put(ItemTinSword.REGISTRY_NAME, new ItemTinSword(tinToolMaterial));
+		items.put(ItemTinIngot.REGISTRY_NAME, new ItemTinIngot());
+		items.put(ItemTinPlate.REGISTRY_NAME, new ItemTinPlate());
+		items.put(ItemTinRaw.REGISTRY_NAME, new ItemTinRaw());
 		
 		/* iron */
-		items.put(ItemIronRaw.UNLOCALIZED_ITEM_NAME, new ItemIronRaw());
-		items.put(ItemIronPlate.UNLOCALIZED_ITEM_NAME,new ItemIronPlate());
+		items.put(ItemIronRaw.REGISTRY_NAME, new ItemIronRaw());
+		items.put(ItemIronPlate.REGISTRY_NAME,new ItemIronPlate());
 		
 		/* gold */
-		items.put(ItemGoldRaw.UNLOCALIZED_ITEM_NAME,new ItemGoldRaw());
-		items.put(ItemGoldPlate.UNLOCALIZED_ITEM_NAME, new ItemGoldPlate());
+		items.put(ItemGoldRaw.REGISTRY_NAME,new ItemGoldRaw());
+		items.put(ItemGoldPlate.REGISTRY_NAME, new ItemGoldPlate());
 	}
 	
 	public static void registerItemModels(){

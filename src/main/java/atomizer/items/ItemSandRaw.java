@@ -6,12 +6,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemSandRaw extends Item{
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "sandRaw";
+	public static final String REGISTRY_NAME = "sandRaw";
 	
 	public ItemSandRaw(){
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
-		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
-		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+		setUnlocalizedName(REGISTRY_NAME);
+		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}
 }

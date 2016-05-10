@@ -6,14 +6,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemTinAxe extends ItemAxe {
 
-	public static final String UNLOCALIZED_ITEM_NAME = "tinAxe";
+	public static final String REGISTRY_NAME = "tinAxe";
 	
 	public ItemTinAxe(ToolMaterial toolMaterial) {
 		super(toolMaterial);
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabTools);
-		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
-		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+		setUnlocalizedName(REGISTRY_NAME);
+		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}
 }
 

@@ -6,13 +6,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemSilverPickaxe extends ItemPickaxe {
 
-	public static final String UNLOCALIZED_ITEM_NAME = "silverPickaxe";
+	public static final String REGISTRY_NAME = "silverPickaxe";
 	
 	public ItemSilverPickaxe(ToolMaterial toolMaterial) {
 		super(toolMaterial);
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabTools);
-		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
-		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+		setUnlocalizedName(REGISTRY_NAME);
+		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}
 }

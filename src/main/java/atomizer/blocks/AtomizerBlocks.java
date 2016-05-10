@@ -53,7 +53,7 @@ public final class AtomizerBlocks {
 	 * Vielleicht später alle Blöcke in ein Array auslagen und Variablen damit sparen
 	 */
 	
-	public static void registerItemModels(){
+	public static void registerBlockModels(){
 		System.out.println("Atomizer is registering its models now!");
 		RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
 		ModelResourceLocation mrl;

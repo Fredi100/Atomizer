@@ -6,13 +6,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemTinShovel extends ItemSpade {
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "tinShovel";
+	public static final String REGISTRY_NAME = "tinShovel";
 
 	public ItemTinShovel(ToolMaterial toolMaterial) {
 		super(toolMaterial);
 		
 		setCreativeTab(CreativeTabs.tabTools);
-		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
-		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+		setUnlocalizedName(REGISTRY_NAME);
+		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}
 }

@@ -6,13 +6,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemBronzeSword extends ItemSword{
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "bronzeSword";
+	public static final String REGISTRY_NAME = "bronzeSword";
 
 	public ItemBronzeSword(ToolMaterial material) {
 		super(material);
 		
-		this.setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
+		this.setUnlocalizedName(REGISTRY_NAME);
 		this.setCreativeTab(CreativeTabs.tabCombat);
-		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}
 }

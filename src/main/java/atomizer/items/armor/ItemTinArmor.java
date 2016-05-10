@@ -9,10 +9,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemTinArmor extends ItemArmor{
 	
-	public static final String UNLOCALIZED_ITEM_NAME_CHEST = "tinChest";
-	public static final String UNLOCALIZED_ITEM_NAME_HELMET = "tinHelmet";
-	public static final String UNLOCALIZED_ITEM_NAME_LEGGINGS = "tinLeggings";
-	public static final String UNLOCALIZED_ITEM_NAME_BOOTS = "tinBoots";
+	public static final String REGISTRY_NAME_CHEST = "tinChest";
+	public static final String REGISTRY_NAME_HELMET = "tinHelmet";
+	public static final String REGISTRY_NAME_LEGGINGS = "tinLeggings";
+	public static final String REGISTRY_NAME_BOOTS = "tinBoots";
 
 	public ItemTinArmor(String unlocalizedName, ArmorMaterial material, int type) {
 		super(material, 0, type);

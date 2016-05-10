@@ -9,10 +9,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemSilverArmor extends ItemArmor{
 	
-	public static final String UNLOCALIZED_ITEM_NAME_CHEST = "silverChest";
-	public static final String UNLOCALIZED_ITEM_NAME_HELMET = "silverHelmet";
-	public static final String UNLOCALIZED_ITEM_NAME_LEGGINGS = "silverLeggings";
-	public static final String UNLOCALIZED_ITEM_NAME_BOOTS = "silverBoots";
+	public static final String REGISTRY_NAME_CHEST = "silverChest";
+	public static final String REGISTRY_NAME_HELMET = "silverHelmet";
+	public static final String REGISTRY_NAME_LEGGINGS = "silverLeggings";
+	public static final String REGISTRY_NAME_BOOTS = "silverBoots";
 
 	public ItemSilverArmor(String unlocalizedName, ArmorMaterial material, int type) {
 		super(material, 0, type);

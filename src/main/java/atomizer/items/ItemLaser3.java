@@ -7,12 +7,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemLaser3 extends Item{
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "laser3Item";
+	public static final String REGISTRY_NAME = "laser3Item";
 	
 	public ItemLaser3(){
 		
-		setUnlocalizedName(Constants.MODID + "_" + UNLOCALIZED_ITEM_NAME);
+		setUnlocalizedName(Constants.MODID + "_" + REGISTRY_NAME);
 		setCreativeTab(CreativeTabs.tabMisc);
-		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}
 }

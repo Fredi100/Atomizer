@@ -6,12 +6,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemBronzePlate extends Item{
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "bronzePlate";
+	public static final String REGISTRY_NAME = "bronzePlate";
 	
 	public ItemBronzePlate(){
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMaterials);
-		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
-		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+		setUnlocalizedName(REGISTRY_NAME);
+		setRegistryName(REGISTRY_NAME);
+		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}
 }

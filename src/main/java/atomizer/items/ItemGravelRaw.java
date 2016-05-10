@@ -6,12 +6,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemGravelRaw extends Item{
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "gravelRaw";
+	public static final String REGISTRY_NAME = "gravelRaw";
 	
 	public ItemGravelRaw(){
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
-		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
-		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+		setUnlocalizedName(REGISTRY_NAME);
+		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}
 }

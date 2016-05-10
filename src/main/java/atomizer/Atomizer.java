@@ -72,6 +72,7 @@ public class Atomizer {
 		
 		if(event.getSide() == Side.CLIENT){
 			AtomizerItems.registerItemModels();
+			AtomizerBlocks.registerBlockModels();
 		}
 		
 		proxy.registerTileEntities();

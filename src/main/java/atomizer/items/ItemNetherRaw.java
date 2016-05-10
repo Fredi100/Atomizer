@@ -6,12 +6,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemNetherRaw extends Item{
 	
-	public static final String UNLOCALIZED_ITEM_NAME = "netherRaw";
+	public static final String REGISTRY_NAME = "netherRaw";
 	
 	public ItemNetherRaw(){
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMaterials);
-		setUnlocalizedName(UNLOCALIZED_ITEM_NAME);
-		GameRegistry.registerItem(this, UNLOCALIZED_ITEM_NAME);
+		setUnlocalizedName(REGISTRY_NAME);
+		GameRegistry.registerItem(this, REGISTRY_NAME);
 	}
 }
