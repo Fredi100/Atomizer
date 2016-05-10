@@ -33,6 +33,7 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 
 /**
@@ -164,14 +165,15 @@ public class AtomizerItems {
 	}
 	
 	public static void registerItemModels(){
+		// TODO In die Proxy Klassen verlagern
 		System.out.println("Atomizer is registering its models now!");
 		RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
 		ModelResourceLocation mrl;
 		
 		for(Item i : items.values()){
-			// TODO Hier statt dem unlocalizedName registryName verwenden
-			mrl = new ModelResourceLocation(Constants.MODID + ":" + i.getRegistryName(), "inventory");
+			mrl = new ModelResourceLocation(i.getRegistryName(), "inventory");
 			renderItem.getItemModelMesher().register(i, 0, mrl);
+			//ModelLoader.setCustomModelResourceLocation(i, 0, mrl);
 			System.out.println("Registered: " + i.getUnlocalizedName());
 		}
 	

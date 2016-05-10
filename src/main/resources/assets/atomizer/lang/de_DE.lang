@@ -1,113 +1,113 @@
-tile.atomizer_tgmBlock.name=TGM Block
-tile.atomizer_itBlock.name=IT Block
-tile.atomizer_Assembler1Block.name=Assembler Stufe 1
-tile.atomizer_Assembler2Block.name=Assembler Stufe 2
-tile.atomizer_Assembler3Block.name=Assembler Stufe 3
-tile.atomizer_Disassembler1Block.name=Disassembler Stufe 1
-tile.atomizer_Disassembler2Block.name=Disassembler Stufe 2
-tile.atomizer_Disassembler3Block.name=Disassembler Stufe 3
-tile.atomizer_Speicher2Block.name=Tank
-tile.atomizer_Speicher3Block.name=Magnetfeldtank
-tile.atomizer_Transport1Block.name=Transportrohr Stufe 1
-tile.atomizer_Transport2Block.name=Transportrohr Stufe 2
-tile.atomizer_Transport3Block.name=Magnetfeldroehre
+tile.atomizer:tgmBlock.name=TGM Block
+tile.atomizer:itBlock.name=IT Block
+tile.atomizer:Assembler1Block.name=Assembler Stufe 1
+tile.atomizer:Assembler2Block.name=Assembler Stufe 2
+tile.atomizer:Assembler3Block.name=Assembler Stufe 3
+tile.atomizer:Disassembler1Block.name=Disassembler Stufe 1
+tile.atomizer:Disassembler2Block.name=Disassembler Stufe 2
+tile.atomizer:Disassembler3Block.name=Disassembler Stufe 3
+tile.atomizer:Speicher2Block.name=Tank
+tile.atomizer:Speicher3Block.name=Magnetfeldtank
+tile.atomizer:Transport1Block.name=Transportrohr Stufe 1
+tile.atomizer:Transport2Block.name=Transportrohr Stufe 2
+tile.atomizer:Transport3Block.name=Magnetfeldroehre
 
 <--! Bearbeiten !-->
-tile.atomizer_soilBlock.name=Ackerboden
-item.atomizer_SoilPileItem.name=Haufen Ackerboden
+tile.atomizer:soilBlock.name=Ackerboden
+item.atomizer:SoilPileitem.atomizer:name=Haufen Ackerboden
 
-tile.TestBlock.name=Atomizer Block
+tile.atomizer:TestBlock.name=Atomizer Block
 
 
-item.atomizer_wrenchItem.name=Schraubenschluessel
+item.atomizer:wrenchitem.atomizer:name=Schraubenschluessel
 
-item.atomizer_laser1Item.name=Laser Stufe 1
-item.atomizer_laser2Item.name=Laser Stufe 2
-item.atomizer_laser3Item.name=Laser Stufe 3
+item.atomizer:laser1item.atomizer:name=Laser Stufe 1
+item.atomizer:laser2item.atomizer:name=Laser Stufe 2
+item.atomizer:laser3item.atomizer:name=Laser Stufe 3
 
-item.woodenPlank.name=Holzbrett
+item.atomizer:woodenPlank.name=Holzbrett
 
-item.stoneIngot.name=Steinziegel
+item.atomizer:stoneIngot.name=Steinziegel
 
 < Brocken >
-item.stoneRaw.name=Steinbrocken
-item.netherRaw.name=Netherrackbrocken
-item.obsidianRaw.name=Obsidianbrocken
+item.atomizer:stoneRaw.name=Steinbrocken
+item.atomizer:netherRaw.name=Netherrackbrocken
+item.atomizer:obsidianRaw.name=Obsidianbrocken
 
 < Haufen >
-item.gravelRaw.name=Kieshaufen
-item.dirtRaw.name=Erdhaufen
-item.sandRaw.name=Sandhaufen
+item.atomizer:gravelRaw.name=Kieshaufen
+item.atomizer:dirtRaw.name=Erdhaufen
+item.atomizer:sandRaw.name=Sandhaufen
 
 < Scherben >
-item.iceShard.name=Eisscherbe
-item.glassShard.name=Glasscherbe
+item.atomizer:iceShard.name=Eisscherbe
+item.atomizer:glassShard.name=Glasscherbe
 
-item.flourBag.name=Mehlsack
+item.atomizer:flourBag.name=Mehlsack
 
 < Bronze >
-item.bronzeHelmet.name=Bronze Helm
-item.bronzeChest.name=Bronze Brustplatte
-item.bronzeLeggings.name=Bronze Hose
-item.bronzeBoots.name=Bronze Schuhe
-item.bronzeAxe.name=Bronze Axt
-item.bronzePickaxe.name=Bronze Spitzhacke
-item.bronzeShovel.name=Bronze Schaufel
-item.bronzeHoe.name=Bronze Hacke
-item.bronzeSword.name=Bronze Schwert
-item.bronzeIngot.name=Bronze Barren
-item.bronzePlate.name=Bronzeplatte
-item.bronzeRaw.name=Rohes Bronze
+item.atomizer:bronzeHelmet.name=Bronze Helm
+item.atomizer:bronzeChest.name=Bronze Brustplatte
+item.atomizer:bronzeLeggings.name=Bronze Hose
+item.atomizer:bronzeBoots.name=Bronze Schuhe
+item.atomizer:bronzeAxe.name=Bronze Axt
+item.atomizer:bronzePickaxe.name=Bronze Spitzhacke
+item.atomizer:bronzeShovel.name=Bronze Schaufel
+item.atomizer:bronzeHoe.name=Bronze Hacke
+item.atomizer:bronzeSword.name=Bronze Schwert
+item.atomizer:bronzeIngot.name=Bronze Barren
+item.atomizer:bronzePlate.name=Bronzeplatte
+item.atomizer:bronzeRaw.name=Rohes Bronze
 
 < Kupfer >
-item.copperHelmet.name=Kupfer Helm
-item.copperChest.name=Kupfer Brustplatte
-item.copperLeggings.name=Kupfer Hose
-item.copperBoots.name=Kupfer Schuhe
-item.copperAxe.name=Kupfer Axt
-item.copperPickaxe.name=Kupfer Spitzhacke
-item.copperShovel.name=Kupfer Schaufel
-item.copperHoe.name=Kupfer Hacke
-item.copperSword.name=Kupfer Schwert
-item.copperIngot.name=Kupfer Barren
-item.copperPlate.name=Kupferplatte
-item.copperRaw.name=Rohes Kupfer
+item.atomizer:copperHelmet.name=Kupfer Helm
+item.atomizer:copperChest.name=Kupfer Brustplatte
+item.atomizer:copperLeggings.name=Kupfer Hose
+item.atomizer:copperBoots.name=Kupfer Schuhe
+item.atomizer:copperAxe.name=Kupfer Axt
+item.atomizer:copperPickaxe.name=Kupfer Spitzhacke
+item.atomizer:copperShovel.name=Kupfer Schaufel
+item.atomizer:copperHoe.name=Kupfer Hacke
+item.atomizer:copperSword.name=Kupfer Schwert
+item.atomizer:copperIngot.name=Kupfer Barren
+item.atomizer:copperPlate.name=Kupferplatte
+item.atomizer:copperRaw.name=Rohes Kupfer
 
 < Zin >
-item.tinHelmet.name=Zin Helm
-item.tinChest.name=Zin Brustplatte
-item.tinLeggings.name=Zin Hose
-item.tinBoots.name=Zin Schuhe
-item.tinAxe.name=Zin Axt
-item.tinPickaxe.name=Zin Spitzhacke
-item.tinShovel.name=Zin Schaufel
-item.tinHoe.name=Zin Hacke
-item.tinSword.name=Zin Schwert
-item.tinIngot.name=Zin Barren
-item.tinPlate.name=Zinplatte
-item.tinRaw.name=Rohes Zin
+item.atomizer:tinHelmet.name=Zin Helm
+item.atomizer:tinChest.name=Zin Brustplatte
+item.atomizer:tinLeggings.name=Zin Hose
+item.atomizer:tinBoots.name=Zin Schuhe
+item.atomizer:tinAxe.name=Zin Axt
+item.atomizer:tinPickaxe.name=Zin Spitzhacke
+item.atomizer:tinShovel.name=Zin Schaufel
+item.atomizer:tinHoe.name=Zin Hacke
+item.atomizer:tinSword.name=Zin Schwert
+item.atomizer:tinIngot.name=Zin Barren
+item.atomizer:tinPlate.name=Zinplatte
+item.atomizer:tinRaw.name=Rohes Zin
 
 < Silber >
-item.silverHelmet.name=Silber Helm
-item.silverChest.name=Silber Brustplatte
-item.silverLeggings.name=Silber Hose
-item.silverBoots.name=Silber Schuhe
-item.silverAxe.name=Silber Axt
-item.silverPickaxe.name=Silber Spitzhacke
-item.silverShovel.name=Silber Schaufel
-item.silverHoe.name=Silber Hacke
-item.silverSword.name=Silber Schwert
-item.silverIngot.name=Silber Barren
-item.silverPlate.name=Silberplatte
-item.silverRaw.name=Rohes Silber
+item.atomizer:silverHelmet.name=Silber Helm
+item.atomizer:silverChest.name=Silber Brustplatte
+item.atomizer:silverLeggings.name=Silber Hose
+item.atomizer:silverBoots.name=Silber Schuhe
+item.atomizer:silverAxe.name=Silber Axt
+item.atomizer:silverPickaxe.name=Silber Spitzhacke
+item.atomizer:silverShovel.name=Silber Schaufel
+item.atomizer:silverHoe.name=Silber Hacke
+item.atomizer:silverSword.name=Silber Schwert
+item.atomizer:silverIngot.name=Silber Barren
+item.atomizer:silverPlate.name=Silberplatte
+item.atomizer:silverRaw.name=Rohes Silber
 
 < Gold >
-item.goldPlate.name=Goldplatte
+item.atomizer:goldPlate.name=Goldplatte
 <!-- Bearbeiten !-->
-item.goldRaw.name=Rohes Gold
+item.atomizer:goldRaw.name=Rohes Gold
 
 < Eisen >
-item.atomizer_ironRaw.name=Rohes Eisen
-item.ironPlate.name=Eisenplatte
+item.atomizer:ironRaw.name=Rohes Eisen
+item.atomizer:ironPlate.name=Eisenplatte
 
 itemGroup.tabName=Tab

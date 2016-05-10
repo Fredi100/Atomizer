@@ -8,6 +8,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
 
 /**
  * Kümmert sich um das Erstellen und Initialisieren der einzelnen Blöcke
@@ -50,18 +51,21 @@ public final class AtomizerBlocks {
 	}
 	
 	/**
-	 * Vielleicht später alle Blöcke in ein Array auslagen und Variablen damit sparen
+	 * Vielleicht später alle Blöcke in ein Array auslagern und Variablen damit sparen
 	 */
 	
 	public static void registerBlockModels(){
+		// TODO In die Proxy Klassen verlagern
 		System.out.println("Atomizer is registering its models now!");
 		RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
 		ModelResourceLocation mrl;
 		
 		for(Block b : blocks.values()){
-			mrl = new ModelResourceLocation(Constants.MODID + ":" + b.getRegistryName(), "inventory");
+			mrl = new ModelResourceLocation(b.getRegistryName(), "inventory");
 			renderItem.getItemModelMesher().register(Item.getItemFromBlock(b), 0, mrl);
 			System.out.println("Registered: " + b.getRegistryName());
+			
+			//ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(b), 0, mrl);
 		}
 	
 	}
