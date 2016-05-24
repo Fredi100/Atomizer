@@ -30,7 +30,7 @@ public final class AtomizerBlocks {
 		blocks.put(BlockTest.UNLOCALIZED_BLOCK_NAME, new BlockTest());
 		blocks.put(ITBlock.UNLOCALIZED_BLOCK_NAME, new ITBlock());
 		blocks.put(TGMBlock.REGISTRY_NAME, new TGMBlock());
-		
+		/*
 		blocks.put(BlockAssembler1.UNLOCALIZED_BLOCK_NAME, new BlockAssembler1());
 		blocks.put(BlockAssembler2.UNLOCALIZED_BLOCK_NAME, new BlockAssembler2());
 		blocks.put(BlockAssembler3.UNLOCALIZED_BLOCK_NAME, new BlockAssembler3());
@@ -43,7 +43,7 @@ public final class AtomizerBlocks {
 		blocks.put(BlockSpeicher2.UNLOCALIZED_BLOCK_NAME, new BlockSpeicher2());
 		blocks.put(BlockSpeicher3.UNLOCALIZED_BLOCK_NAME, new BlockSpeicher3());
 		blocks.put(BlockSoil.UNLOCALIZED_BLOCK_NAME, new BlockSoil());
-		
+		*/
 		//Ores
 		blocks.put(BlockCopperOre.UNLOCALIZED_BLOCK_NAME, new BlockCopperOre());
 		blocks.put(BlockTinOre.UNLOCALIZED_BLOCK_NAME, new BlockTinOre());

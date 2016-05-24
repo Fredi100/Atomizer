@@ -66,10 +66,11 @@ public class Atomizer {
 	 */
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
+		/*
 		AtomizerRecipes.recipeRemover();
 		AtomizerRecipes.smeltingRemover();
 		AtomizerRecipes.init();
-		
+		*/
 		if(event.getSide() == Side.CLIENT){
 			AtomizerItems.registerItemModels();
 			AtomizerBlocks.registerBlockModels();
