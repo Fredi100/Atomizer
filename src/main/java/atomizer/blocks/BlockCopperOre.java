@@ -13,7 +13,7 @@ public class BlockCopperOre extends Block{
 	protected BlockCopperOre() {
 		super(Material.rock);
 		this.setCreativeTab(CreativeTabs.tabBlock);
-		setUnlocalizedName(UNLOCALIZED_BLOCK_NAME);
+		setUnlocalizedName(Constants.MODID + ":" + UNLOCALIZED_BLOCK_NAME);
 		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);
 	}
 	

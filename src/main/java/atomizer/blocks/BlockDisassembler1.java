@@ -19,7 +19,7 @@ public class BlockDisassembler1 extends BlockContainer{ //Hier sp‰ter BlockConta
 		this.setHardness(2.0f);
 		this.setResistance(6.0f);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
-		this.setUnlocalizedName(UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		this.setUnlocalizedName(Constants.MODID + ":" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
 		//this.isBlockContainer = true;
 		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}

@@ -29,7 +29,7 @@ public final class AtomizerBlocks {
 		
 		blocks.put(BlockTest.UNLOCALIZED_BLOCK_NAME, new BlockTest());
 		blocks.put(ITBlock.UNLOCALIZED_BLOCK_NAME, new ITBlock());
-		blocks.put(TGMBlock.UNLOCALIZED_BLOCK_NAME, new TGMBlock());
+		blocks.put(TGMBlock.REGISTRY_NAME, new TGMBlock());
 		
 		blocks.put(BlockAssembler1.UNLOCALIZED_BLOCK_NAME, new BlockAssembler1());
 		blocks.put(BlockAssembler2.UNLOCALIZED_BLOCK_NAME, new BlockAssembler2());

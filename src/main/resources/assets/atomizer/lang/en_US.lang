@@ -1,5 +1,12 @@
 tile.atomizer:tgmBlock.name=TGM Block
 tile.atomizer:itBlock.name=IT Block
+tile.atomizer:silverOreBlock.name = Silver Ore
+tile.atomizer:copperOreBlock.name = Copper Ore
+tile.atomizer:tinOreBlock.name = Tin Ore
+tile.atomizer:SilverBlock.name = Silver Block
+tile.atomizer:copperBlock.name = Copper Block
+tile.atomizer:bronzeBlock.name = Bronze Block
+tile.atomizer:tinBlock.name = Tin Block
 tile.atomizer:Assembler1Block.name=Assembler Stage 1
 tile.atomizer:Assembler2Block.name=Assembler Stage 2
 tile.atomizer:Assembler3Block.name=Assembler Stage 3

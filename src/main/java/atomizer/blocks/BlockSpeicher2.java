@@ -13,7 +13,7 @@ public class BlockSpeicher2 extends Block{
 	public BlockSpeicher2(){
 		super(Material.rock);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
-		this.setUnlocalizedName(UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		this.setUnlocalizedName(Constants.MODID + ":" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
 		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}
 	

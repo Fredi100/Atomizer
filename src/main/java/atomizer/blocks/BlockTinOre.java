@@ -1,5 +1,6 @@
 package atomizer.blocks;
 
+import atomizer.lib.Constants;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -12,7 +13,7 @@ public class BlockTinOre extends Block{
 	protected BlockTinOre() {
 		super(Material.rock);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
-		this.setUnlocalizedName(UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		this.setUnlocalizedName(Constants.MODID + ":" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
 		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
 	}
 	
@@ -24,5 +25,4 @@ public class BlockTinOre extends Block{
 	public String getName(){
 		return UNLOCALIZED_BLOCK_NAME;
 	}
-
 }

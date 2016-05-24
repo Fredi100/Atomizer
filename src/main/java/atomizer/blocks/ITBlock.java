@@ -15,7 +15,7 @@ public class ITBlock extends Block /*extends BlockContainer*/{
 		super(Material.ground);
         this.setHardness(0.5F);
         this.setStepSound(Block.soundTypeGravel);
-        this.setUnlocalizedName(this.UNLOCALIZED_BLOCK_NAME);
+        this.setUnlocalizedName(Constants.MODID + ":" + UNLOCALIZED_BLOCK_NAME);
         this.setCreativeTab(CreativeTabs.tabBlock);
         GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);
     }
