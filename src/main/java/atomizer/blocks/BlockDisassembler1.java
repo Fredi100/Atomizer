@@ -12,25 +12,17 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 // TODO Hier auf neue Minecraft Version updaten
 public class BlockDisassembler1 extends BlockContainer{ //Hier später BlockContainer
 	
-	public static final String UNLOCALIZED_BLOCK_NAME = "Disassembler1Block";
+	public static final String REGISTRY_NAME = "disassembler1Block";
 	
 	public BlockDisassembler1(){
 		super(Material.iron);
 		this.setHardness(2.0f);
 		this.setResistance(6.0f);
 		this.setCreativeTab(CreativeTabs.tabBlock);//Weißt dem Block ein Tab zu um ihn anzuzeigen
-		this.setUnlocalizedName(Constants.MODID + ":" + UNLOCALIZED_BLOCK_NAME);//Gibt dem Block einen internen Namen
+		this.setUnlocalizedName(Constants.MODID + ":" + REGISTRY_NAME);//Gibt dem Block einen internen Namen
+		this.setRegistryName(REGISTRY_NAME);
 		//this.isBlockContainer = true;
-		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);//Registriert den Block im Spiel
-	}
-	
-	/**
-	 * Gibt den Namen des Blocks zurück
-	 * 
-	 * @return Der Name des Blocks
-	 */
-	public String getName(){
-		return UNLOCALIZED_BLOCK_NAME;
+		GameRegistry.registerBlock(this, REGISTRY_NAME);//Registriert den Block im Spiel
 	}
 
 	@Override

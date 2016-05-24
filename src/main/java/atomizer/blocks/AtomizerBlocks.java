@@ -30,20 +30,20 @@ public final class AtomizerBlocks {
 		blocks.put(BlockTest.UNLOCALIZED_BLOCK_NAME, new BlockTest());
 		blocks.put(ITBlock.UNLOCALIZED_BLOCK_NAME, new ITBlock());
 		blocks.put(TGMBlock.REGISTRY_NAME, new TGMBlock());
-		/*
-		blocks.put(BlockAssembler1.UNLOCALIZED_BLOCK_NAME, new BlockAssembler1());
-		blocks.put(BlockAssembler2.UNLOCALIZED_BLOCK_NAME, new BlockAssembler2());
-		blocks.put(BlockAssembler3.UNLOCALIZED_BLOCK_NAME, new BlockAssembler3());
-		blocks.put(BlockDisassembler1.UNLOCALIZED_BLOCK_NAME, new BlockDisassembler1());
-		blocks.put(BlockDisassembler2.UNLOCALIZED_BLOCK_NAME, new BlockDisassembler2());
-		blocks.put(BlockDisassembler3.UNLOCALIZED_BLOCK_NAME, new BlockDisassembler3());
-		blocks.put(BlockTransport1.UNLOCALIZED_BLOCK_NAME, new BlockTransport1());
-		blocks.put(BlockTransport2.UNLOCALIZED_BLOCK_NAME, new BlockTransport2());
-		blocks.put(BlockTransport3.UNLOCALIZED_BLOCK_NAME, new BlockTransport3());
-		blocks.put(BlockSpeicher2.UNLOCALIZED_BLOCK_NAME, new BlockSpeicher2());
-		blocks.put(BlockSpeicher3.UNLOCALIZED_BLOCK_NAME, new BlockSpeicher3());
-		blocks.put(BlockSoil.UNLOCALIZED_BLOCK_NAME, new BlockSoil());
-		*/
+		
+		//blocks.put(BlockAssembler1.UNLOCALIZED_BLOCK_NAME, new BlockAssembler1());
+		//blocks.put(BlockAssembler2.UNLOCALIZED_BLOCK_NAME, new BlockAssembler2());
+		//blocks.put(BlockAssembler3.UNLOCALIZED_BLOCK_NAME, new BlockAssembler3());
+		blocks.put(BlockDisassembler1.REGISTRY_NAME, new BlockDisassembler1());
+		//blocks.put(BlockDisassembler2.UNLOCALIZED_BLOCK_NAME, new BlockDisassembler2());
+		//blocks.put(BlockDisassembler3.UNLOCALIZED_BLOCK_NAME, new BlockDisassembler3());
+		//blocks.put(BlockTransport1.UNLOCALIZED_BLOCK_NAME, new BlockTransport1());
+		//blocks.put(BlockTransport2.UNLOCALIZED_BLOCK_NAME, new BlockTransport2());
+		//blocks.put(BlockTransport3.UNLOCALIZED_BLOCK_NAME, new BlockTransport3());
+		//blocks.put(BlockSpeicher2.UNLOCALIZED_BLOCK_NAME, new BlockSpeicher2());
+		//blocks.put(BlockSpeicher3.UNLOCALIZED_BLOCK_NAME, new BlockSpeicher3());
+		//blocks.put(BlockSoil.UNLOCALIZED_BLOCK_NAME, new BlockSoil());
+		
 		//Ores
 		blocks.put(BlockCopperOre.UNLOCALIZED_BLOCK_NAME, new BlockCopperOre());
 		blocks.put(BlockTinOre.UNLOCALIZED_BLOCK_NAME, new BlockTinOre());

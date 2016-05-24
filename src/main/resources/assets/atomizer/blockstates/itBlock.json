@@ -1,0 +1,11 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "normal": [{
+            "textures": {
+                "all": "atomizer:blocks/ITBlock"
+            },
+            "model": "cube_all"
+        }]
+    }
+}
