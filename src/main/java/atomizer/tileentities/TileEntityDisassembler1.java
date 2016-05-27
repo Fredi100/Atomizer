@@ -1,14 +1,24 @@
 
 package atomizer.tileentities;
 
+import java.util.ArrayList;
+
+import atomizer.lib.Constants;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IChatComponent;
+import net.minecraft.util.ITickable;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import scala.collection.TraversableOnce.OnceCanBuildFrom;
 
-public class TileEntityDisassembler1 extends TileEntity implements IInventory {
+public class TileEntityDisassembler1 extends TileEntity implements ITickable, IInventory {
 
 	public static final String UNLOCALIZED_TILEENTITY_NAME = "Disassembler1TileEntity";
 
@@ -22,8 +32,32 @@ public class TileEntityDisassembler1 extends TileEntity implements IInventory {
 
 	private String customName;
 
+	/* Dient nur zu Testzwecken */
+	private boolean aBoolean;
+	private byte aByte;
+	private short aShort;
+	private int anInt;
+	private long aLong;
+	private float aFloat;
+	private double aDouble;
+	private String aString;
+	private byte[] aByteArray;
+	private int[] anIntArray;
+
+	private ItemStack anItemStack;
+
+	private ArrayList aList = new ArrayList();
+
 	public TileEntityDisassembler1() {
 		this.inventory = new ItemStack[this.getSizeInventory()];
+	}
+
+	/**
+	 * Gets called every tick. 20 times per second
+	 */
+	@Override
+	public void update() {
+		
 	}
 
 	/**
@@ -34,59 +68,93 @@ public class TileEntityDisassembler1 extends TileEntity implements IInventory {
 	public void writeToNBT(NBTTagCompound compound) {
 		super.writeToNBT(compound);
 
-		// Item Stack
-		NBTTagCompound inputStack = new NBTTagCompound();
-		this.inputStack.writeToNBT(inputStack);
-		compound.setTag(INPUT_STACK_TAG, inputStack);
+		/* Dient nur zu Testzwecken */
+		// Primitives:
+		compound.setBoolean("aBoolean", this.aBoolean);
+		compound.setByte("aByte", this.aByte);
+		compound.setShort("aShort", this.aShort);
+		compound.setInteger("anInt", this.anInt);
+		compound.setLong("aLong", this.aLong);
+		compound.setFloat("aFloat", this.aFloat);
+		compound.setDouble("aDouble", this.aDouble);
+		compound.setString("aString", this.aString);
+		compound.setByteArray("aByteArray", this.aByteArray);
+		compound.setIntArray("anIntArray", this.anIntArray);
 
-		NBTTagCompound outputStack = new NBTTagCompound();
-		this.outputStack.writeToNBT(outputStack);
-		compound.setTag(OUTPUT_STACK_TAG, outputStack);
+		// Item Stack:
+		NBTTagCompound stack = new NBTTagCompound();
+		this.anItemStack.writeToNBT(stack);
+		compound.setTag("anItemStack", stack);
 
+		NBTTagList list = new NBTTagList();
+	    for (int i = 0; i < this.getSizeInventory(); ++i) {
+	        if (this.getStackInSlot(i) != null) {
+	            NBTTagCompound stackTag = new NBTTagCompound();
+	            stackTag.setByte("Slot", (byte) i);
+	            this.getStackInSlot(i).writeToNBT(stackTag);
+	            list.appendTag(stackTag);
+	        }
+	    }
+	    compound.setTag("Items", list);
+
+	    if (this.hasCustomName()) {
+	    	compound.setString("CustomName", this.getCustomName());
+	    }
 	}
 
 	/**
 	 * Dient dem Lesen von Werten der TileEntity
 	 * 
 	 */
+
 	@Override
 	public void readFromNBT(NBTTagCompound compound) {
 		super.readFromNBT(compound);
 
-		// ItemStack
-		NBTTagCompound stack = compound.getCompoundTag(INPUT_STACK_TAG);
-		this.inputStack = ItemStack.loadItemStackFromNBT(stack);
+		/* Dient nur zu Testzwecken */
+		// Primitives:
+		this.aBoolean = compound.getBoolean("aBoolean");
+		this.aByte = compound.getByte("aByte");
+		this.aShort = compound.getShort("aShort");
+		this.anInt = compound.getInteger("anInt");
+		this.aLong = compound.getLong("aLong");
+		this.aFloat = compound.getFloat("aFloat");
+		this.aDouble = compound.getDouble("aDouble");
+		this.aString = compound.getString("aString");
+		this.aByteArray = compound.getByteArray("aByteArray");
+		this.anIntArray = compound.getIntArray("anIntArray");
 
-		stack = compound.getCompoundTag(OUTPUT_STACK_TAG);
-		this.outputStack = ItemStack.loadItemStackFromNBT(stack);
+		// ItemStack:
+		this.anItemStack = ItemStack.loadItemStackFromNBT(compound.getCompoundTag("anItemStack"));
+
+		NBTTagList list = compound.getTagList("Items", 10);
+	    for (int i = 0; i < list.tagCount(); ++i) {
+	        NBTTagCompound stackTag = list.getCompoundTagAt(i);
+	        int slot = stackTag.getByte("Slot") & 255;
+	        this.setInventorySlotContents(slot, ItemStack.loadItemStackFromNBT(stackTag));
+	    }
+
+	    if (compound.hasKey("CustomName", 8)) {
+	        this.setCustomName(compound.getString("CustomName"));
+	    }
 	}
 
 	public String getCustomName() {
-		return this.customName;
+		return this.hasCustomName() ? this.customName : "container.tutorial_tile_entity";
 	}
 
 	public void setCustomName(String customName) {
 		this.customName = customName;
 	}
 
-	/*
-	 * private int fill;
-	 * 
-	 * public static final String publicName = "tileEntityAssembler1"; private
-	 * String name = "tileEntityAssembler1";
-	 * 
-	 * public String getName(){ return name; }
-	 * 
-	 * @Override public void writeToNBT(NBTTagCompound par1){
-	 * super.writeToNBT(par1); par1.setInteger("fill", fill); }
-	 * 
-	 * @Override public void readFromNBT(NBTTagCompound par1){
-	 * super.readFromNBT(par1); this.fill = par1.getInteger("fill"); }
-	 * 
-	 * //Zum drauf zugreifen auf die Daten von egal wo TileEntityYour tile =
-	 * (TileEntityYour) world.getBlockTileEntity(i, j, k); if (tile != null){
-	 * int l = tile.customField; }
-	 */
+	private int fill;
+
+	public static final String publicName = "tileEntityAssembler1";
+	private String name = "tileEntityAssembler1";
+
+	public String getName() {
+		return name;
+	}
 
 	public boolean isUsableByPlayer(EntityPlayer playerIn) {
 		// TODO Auto-generated method stub
@@ -99,8 +167,7 @@ public class TileEntityDisassembler1 extends TileEntity implements IInventory {
 	 * @return Die Größe des Inventars als int;
 	 */
 	@Override
-	public int getSizeInventory() {
-		// Die Größe des Inventars
+	public int getSizeInventory() { // Die Größe des Inventars
 		return 9;
 	}
 
@@ -132,7 +199,6 @@ public class TileEntityDisassembler1 extends TileEntity implements IInventory {
 	public ItemStack decrStackSize(int index, int count) {
 		if (this.getStackInSlot(index) != null) {
 			ItemStack itemstack;
-
 			if (this.getStackInSlot(index).stackSize <= count) {
 				itemstack = this.getStackInSlot(index);
 				this.setInventorySlotContents(index, null);
@@ -144,7 +210,6 @@ public class TileEntityDisassembler1 extends TileEntity implements IInventory {
 				if (this.getStackInSlot(index).stackSize <= 0) {
 					this.setInventorySlotContents(index, null);
 				} else {
-					// Just to show that changes happened
 					this.setInventorySlotContents(index, this.getStackInSlot(index));
 				}
 
@@ -181,10 +246,12 @@ public class TileEntityDisassembler1 extends TileEntity implements IInventory {
 	}
 
 	/**
-	 * Gibt die maximale Stack größe zurück die in einem Slot vorhanden sein darf.
+	 * Gibt die maximale Stack größe zurück die in einem Slot vorhanden sein
+	 * darf.
 	 * 
 	 * @return Die maximale Anzahl an Items in einem Slot
 	 */
+
 	@Override
 	public int getInventoryStackLimit() {
 		return 64;
@@ -192,73 +259,57 @@ public class TileEntityDisassembler1 extends TileEntity implements IInventory {
 
 	@Override
 	public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-		// TODO Auto-generated method stub
 		return false;
-	}
-
-	@Override
-	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
 	public boolean hasCustomName() {
-		// TODO Auto-generated method stub
-		return false;
+		return this.customName != null && !this.customName.equals("");
 	}
 
 	@Override
 	public IChatComponent getDisplayName() {
-		// TODO Auto-generated method stub
-		return null;
+		//No idea what this does
+		return this.hasCustomName() ? new ChatComponentText(this.getName()) : new ChatComponentTranslation(this.getName());
 	}
 
 	@Override
 	public ItemStack removeStackFromSlot(int index) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public void openInventory(EntityPlayer player) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void closeInventory(EntityPlayer player) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public int getField(int id) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public void setField(int id, int value) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public int getFieldCount() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public boolean isUseableByPlayer(EntityPlayer player) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

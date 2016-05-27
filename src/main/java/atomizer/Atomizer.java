@@ -1,7 +1,6 @@
 package atomizer;
 
 import atomizer.blocks.AtomizerBlocks;
-import atomizer.blocks.TGMBlock;
 import atomizer.fluids.AtomizerFluids;
 import atomizer.items.AtomizerItems;
 import atomizer.items.ItemBronzeIngot;
@@ -22,15 +21,16 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
- * Die Hauptklasse der Minecraft Modifikation Atomizer
+ * Main-Class of this mod
  * 
  * @author Alfred Emsenhuber(Fredi100)
- *
+ * @version 2016-05-25
  */
 @Mod(modid = Constants.MODID, name = Constants.MODNAME, version = Constants.VERSION)
 // Signalisiert der API das es sich bei folgender Klasse um eine
@@ -66,15 +66,17 @@ public class Atomizer {
 	 */
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
-		/*
+		
 		AtomizerRecipes.recipeRemover();
 		AtomizerRecipes.smeltingRemover();
 		AtomizerRecipes.init();
-		*/
+		
 		if(event.getSide() == Side.CLIENT){
 			AtomizerItems.registerItemModels();
 			AtomizerBlocks.registerBlockModels();
 		}
+		
+		NetworkRegistry.INSTANCE.registerGuiHandler(this.instance, new AtomizerGuiHandler());
 		
 		proxy.registerTileEntities();
 		// TODO muss auf die neue Minecraft Version aktualisiert werden

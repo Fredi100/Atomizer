@@ -4,11 +4,23 @@
         "normal": [{
             "textures": {
                 "down": "atomizer:blocks/Disassembler1Block_Down",
-				"up": "atomizer:block/Disassembler1Block_Up",
-				"north": "atomizer:block/Disassembler1Block_North",
-				"south": "atomizer:block/Disassembler1Block_South",
-				"east": "atomizer:block/Disassembler1Block_East",
-				"west": "atomizer:block/Disassembler1Block_West"
+				"up": "atomizer:blocks/Disassembler1Block_Up",
+				"north": "atomizer:blocks/Disassembler1Block_North",
+				"south": "atomizer:blocks/Disassembler1Block_South",
+				"east": "atomizer:blocks/Disassembler1Block_East",
+				"west": "atomizer:blocks/Disassembler1Block_West"
+            },
+            "model": "minecraft:cube",
+			"particle": "atomizer:blocks/Disassembler1Block_North"
+        }],
+        "inventory": [{
+            "textures": {
+                "down": "atomizer:blocks/Disassembler1Block_Down",
+                "up": "atomizer:blocks/Disassembler1Block_Up",
+                "north": "atomizer:blocks/Disassembler1Block_North",
+                "south": "atomizer:blocks/Disassembler1Block_South",
+                "east": "atomizer:blocks/Disassembler1Block_East",
+                "west": "atomizer:blocks/Disassembler1Block_West"
             },
             "model": "minecraft:cube"
         }]
