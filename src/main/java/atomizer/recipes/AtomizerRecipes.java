@@ -78,13 +78,13 @@ public class AtomizerRecipes {
 
 		// Rohes Eisen zu Eisenbarren
 		// Eisenerz zu Eisenbarren ersetzt
-		GameRegistry.addSmelting(AtomizerItems.items.get(ItemIronRaw.REGISTRY_NAME),
-				new ItemStack(Items.iron_ingot), 0.7F);
+		GameRegistry.addSmelting(AtomizerItems.items.get(ItemIronRaw.REGISTRY_NAME), new ItemStack(Items.iron_ingot),
+				0.7F);
 
 		// Rohes Gold zu Goldbarren
 		// Golderz zu Goldbarren ersetzt
-		GameRegistry.addSmelting(AtomizerItems.items.get(ItemGoldRaw.REGISTRY_NAME),
-				new ItemStack(Items.gold_ingot), 1.0F);
+		GameRegistry.addSmelting(AtomizerItems.items.get(ItemGoldRaw.REGISTRY_NAME), new ItemStack(Items.gold_ingot),
+				1.0F);
 
 		// Sandhaufen zu Glasscherbe
 		GameRegistry.addSmelting(AtomizerItems.items.get(ItemSandRaw.REGISTRY_NAME),
@@ -94,8 +94,8 @@ public class AtomizerRecipes {
 				new ItemStack(AtomizerItems.items.get(ItemStoneIngot.REGISTRY_NAME)), 0.1F);
 		// Netherbrocken zu Netherziegel
 		// Netherstein zu Netherziegel ersetzt
-		GameRegistry.addSmelting(AtomizerItems.items.get(ItemNetherRaw.REGISTRY_NAME),
-				new ItemStack(Items.netherbrick), 0.35F);
+		GameRegistry.addSmelting(AtomizerItems.items.get(ItemNetherRaw.REGISTRY_NAME), new ItemStack(Items.netherbrick),
+				0.35F);
 		// Rohes Kupfer zu Kupferbarren
 		GameRegistry.addSmelting(AtomizerItems.items.get(ItemCopperRaw.REGISTRY_NAME),
 				new ItemStack(AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME)), 0.7F);
@@ -109,34 +109,27 @@ public class AtomizerRecipes {
 
 		// Wooden Planks
 		// TODO Muss noch in allen Holzvarianten gemacht werden
-		GameRegistry.addShapelessRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
+		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
 				new Object[] { new ItemStack(Blocks.log, 1, 0) });
-		GameRegistry.addShapelessRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
+		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
 				new Object[] { new ItemStack(Blocks.log, 1, 1) });
-		GameRegistry.addShapelessRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
+		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
 				new Object[] { new ItemStack(Blocks.log, 1, 2) });
-		GameRegistry.addShapelessRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
+		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
 				new Object[] { new ItemStack(Blocks.log, 1, 3) });
-		GameRegistry.addShapelessRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
+		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
 				new Object[] { new ItemStack(Blocks.log2, 1, 0) });
-		GameRegistry.addShapelessRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
+		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
 				new Object[] { new ItemStack(Blocks.log2, 1, 1) });
 
 		// Wooden Plank Block
 		// TODO Muss noch in allen Holzvarianten gemacht werden
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.planks), new Object[] { "###", "###", "###", '#',
-				AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.planks),
+				new Object[] { "###", "###", "###", '#', AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME) });
 
 		// Wooden Planks
 		// TODO Muss noch in allen Holzvarianten gemacht werden
-		GameRegistry.addShapelessRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
+		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 9),
 				new Object[] { Blocks.planks });
 
 		// Wooden Button
@@ -158,8 +151,8 @@ public class AtomizerRecipes {
 
 		// Chest
 		// TODO Muss noch für alle Holzvarianten gemacht werden
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.chest), new Object[] { "###", "# #", "###", '#',
-				AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.chest),
+				new Object[] { "###", "# #", "###", '#', AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME) });
 
 		// WoodenSlab
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.wooden_slab),
@@ -174,8 +167,8 @@ public class AtomizerRecipes {
 				new Object[] { "   ", "   ", "###", '#', AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME) });
 
 		// Glass Pane
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.glass_pane, 8), new Object[] { "   ", "###", "###", '#',
-				AtomizerItems.items.get(ItemGlassShard.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.glass_pane, 8),
+				new Object[] { "   ", "###", "###", '#', AtomizerItems.items.get(ItemGlassShard.REGISTRY_NAME) });
 
 		// Glass Pane
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.glass_pane, 64),
@@ -184,20 +177,20 @@ public class AtomizerRecipes {
 		// Stair
 		// TODO Muss in allen Holz und in allen Steinvarianten gemacht werden
 		// Oak Stairs
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.oak_stairs), new Object[] { "  #", " ##", "###", '#',
-				AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.oak_stairs),
+				new Object[] { "  #", " ##", "###", '#', AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME) });
 
 		// Cobblestone Stairs
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_stairs), new Object[] { "  #", " ##", "###", '#',
-				AtomizerItems.items.get(ItemStoneIngot.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_stairs),
+				new Object[] { "  #", " ##", "###", '#', AtomizerItems.items.get(ItemStoneIngot.REGISTRY_NAME) });
 
 		// Stonebrick Stair
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_brick_stairs), new Object[] { "  #", " ##", "###", '#',
-				AtomizerItems.items.get(ItemStoneIngot.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_brick_stairs),
+				new Object[] { "  #", " ##", "###", '#', AtomizerItems.items.get(ItemStoneIngot.REGISTRY_NAME) });
 
 		// Stonebrick Block
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stonebrick), new Object[] { "###", "###", "###", '#',
-				AtomizerItems.items.get(ItemStoneIngot.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.stonebrick),
+				new Object[] { "###", "###", "###", '#', AtomizerItems.items.get(ItemStoneIngot.REGISTRY_NAME) });
 
 		// TODO Alle Ressourcenblöcke
 		// Bronze Block
@@ -207,93 +200,84 @@ public class AtomizerRecipes {
 
 		// Bronze Pickaxe
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzePickaxe.REGISTRY_NAME)),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME),
-						'|', Items.stick });
+				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME), '|',
+						Items.stick });
 
 		// Bronze Axe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeAxe.REGISTRY_NAME)),
-				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME),
-						'|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeAxe.REGISTRY_NAME)), new Object[] {
+				"## ", "#| ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME), '|', Items.stick });
 
 		// Bronze Shovel
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeShovel.REGISTRY_NAME)),
-				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME),
-						'|', Items.stick });
+				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME), '|',
+						Items.stick });
 
 		// Bronze Hoe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeHoe.REGISTRY_NAME)),
-				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME),
-						'|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeHoe.REGISTRY_NAME)), new Object[] {
+				"## ", " | ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME), '|', Items.stick });
 
 		/* Silver Tools */
 
 		// Silver Pickaxe
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverPickaxe.REGISTRY_NAME)),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME),
-						'|', Items.stick });
+				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME), '|',
+						Items.stick });
 
 		// Silver Axe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverAxe.REGISTRY_NAME)),
-				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME),
-						'|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverAxe.REGISTRY_NAME)), new Object[] {
+				"## ", "#| ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME), '|', Items.stick });
 
 		// Silver Shovel
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverShovel.REGISTRY_NAME)),
-				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME),
-						'|', Items.stick });
+				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME), '|',
+						Items.stick });
 
 		// Silver Hoe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverAxe.REGISTRY_NAME)),
-				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME),
-						'|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverAxe.REGISTRY_NAME)), new Object[] {
+				"## ", " | ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME), '|', Items.stick });
 
 		/* Copper Tools */
 
 		// Copper Pickaxe
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperPickaxe.REGISTRY_NAME)),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME),
-						'|', Items.stick });
+				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME), '|',
+						Items.stick });
 
 		// Copper Axe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperAxe.REGISTRY_NAME)),
-				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME),
-						'|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperAxe.REGISTRY_NAME)), new Object[] {
+				"## ", "#| ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME), '|', Items.stick });
 
 		// Copper Shovel
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperShovel.REGISTRY_NAME)),
-				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME),
-						'|', Items.stick });
+				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME), '|',
+						Items.stick });
 
 		// Copper Hoe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperHoe.REGISTRY_NAME)),
-				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME),
-						'|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperHoe.REGISTRY_NAME)), new Object[] {
+				"## ", " | ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME), '|', Items.stick });
 
 		/* Tin Tools */
 
 		// Tin Pickaxe
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinPickaxe.REGISTRY_NAME)),
-				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME),
-						'|', Items.stick });
+				new Object[] { "###", " | ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME), '|',
+						Items.stick });
 
 		// Tin Axe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinAxe.REGISTRY_NAME)),
-				new Object[] { "## ", "#| ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME),
-						'|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinAxe.REGISTRY_NAME)), new Object[] {
+				"## ", "#| ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME), '|', Items.stick });
 
 		// Tin Shovel
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinShovel.REGISTRY_NAME)),
-				new Object[] { " # ", " | ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME),
-						'|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinShovel.REGISTRY_NAME)), new Object[] {
+				" # ", " | ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME), '|', Items.stick });
 
 		// Tin Hoe
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinHoe.REGISTRY_NAME)),
-				new Object[] { "## ", " | ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME),
-						'|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinHoe.REGISTRY_NAME)), new Object[] {
+				"## ", " | ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME), '|', Items.stick });
 
 		// Bucket
-		GameRegistry.addShapedRecipe(new ItemStack(Items.bucket), new Object[] { "   ", "# #", " # ", '#',
-				AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.bucket),
+				new Object[] { "   ", "# #", " # ", '#', AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME) });
 
 		// Compass
 		GameRegistry.addShapedRecipe(new ItemStack(Items.compass), new Object[] { " # ", "#R#", " # ", '#',
@@ -307,12 +291,11 @@ public class AtomizerRecipes {
 
 		// Bronze Sword
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeSword.REGISTRY_NAME)),
-				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME),
-						'|', Items.stick });
+				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME), '|',
+						Items.stick });
 
 		// Bronze Ingot
-		GameRegistry.addShapelessRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME), 4),
+		GameRegistry.addShapelessRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME), 4),
 				new Object[] { AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME),
 						AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME),
 						AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME),
@@ -323,93 +306,80 @@ public class AtomizerRecipes {
 				new Object[] { "##", "##", '#', AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME) });
 
 		// Bronze Helmet
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemBronzeArmor.REGISTRY_NAME_HELMET)), new Object[] {
-						"   ", "###", "# #", '#', AtomizerItems.items.get(ItemBronzePlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeArmor.REGISTRY_NAME_HELMET)),
+				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get(ItemBronzePlate.REGISTRY_NAME) });
 
 		// Bronze Chest
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemBronzeArmor.REGISTRY_NAME_CHEST)), new Object[] {
-						"# #", "###", "###", '#', AtomizerItems.items.get(ItemBronzePlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeArmor.REGISTRY_NAME_CHEST)),
+				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get(ItemBronzePlate.REGISTRY_NAME) });
 
 		// Bronze Leggings
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemBronzeArmor.REGISTRY_NAME_LEGGINGS)), new Object[] {
-						"###", "# #", "# #", '#', AtomizerItems.items.get(ItemBronzePlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeArmor.REGISTRY_NAME_LEGGINGS)),
+				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get(ItemBronzePlate.REGISTRY_NAME) });
 
 		// Bronze Boots
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemBronzeArmor.REGISTRY_NAME_BOOTS)), new Object[] {
-						"   ", "# #", "# #", '#', AtomizerItems.items.get(ItemBronzePlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemBronzeArmor.REGISTRY_NAME_BOOTS)),
+				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get(ItemBronzePlate.REGISTRY_NAME) });
 
 		/* Silver Armor */
 
 		// Silver Sword
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverSword.REGISTRY_NAME)),
-				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME),
-						'|', Items.stick });
+				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME), '|',
+						Items.stick });
 
 		// Silver Plate
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverPlate.REGISTRY_NAME), 4),
 				new Object[] { "##", "##", '#', AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME) });
 
 		// Silver Helmet
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemSilverArmor.REGISTRY_NAME_HELMET)), new Object[] {
-						"   ", "###", "# #", '#', AtomizerItems.items.get(ItemSilverPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverArmor.REGISTRY_NAME_HELMET)),
+				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get(ItemSilverPlate.REGISTRY_NAME) });
 
 		// Silver Chest
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemSilverArmor.REGISTRY_NAME_CHEST)), new Object[] {
-						"# #", "###", "###", '#', AtomizerItems.items.get(ItemSilverPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverArmor.REGISTRY_NAME_CHEST)),
+				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get(ItemSilverPlate.REGISTRY_NAME) });
 
 		// Silver Leggings
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemSilverArmor.REGISTRY_NAME_LEGGINGS)), new Object[] {
-						"###", "# #", "# #", '#', AtomizerItems.items.get(ItemSilverPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverArmor.REGISTRY_NAME_LEGGINGS)),
+				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get(ItemSilverPlate.REGISTRY_NAME) });
 
 		// Silver Boots
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemSilverArmor.REGISTRY_NAME_BOOTS)), new Object[] {
-						"   ", "# #", "# #", '#', AtomizerItems.items.get(ItemSilverPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemSilverArmor.REGISTRY_NAME_BOOTS)),
+				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get(ItemSilverPlate.REGISTRY_NAME) });
 
 		/* Copper Armor */
 
 		// Copper Sword
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperSword.REGISTRY_NAME)),
-				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME),
-						'|', Items.stick });
+				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME), '|',
+						Items.stick });
 
 		// Copper Plate
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME), 4),
 				new Object[] { "##", "##", '#', AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME) });
 
 		// Copper Helmet
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemCopperArmor.REGISTRY_NAME_HELMET)), new Object[] {
-						"   ", "###", "# #", '#', AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperArmor.REGISTRY_NAME_HELMET)),
+				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME) });
 
 		// Copper Chest
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemCopperArmor.REGISTRY_NAME_CHEST)), new Object[] {
-						"# #", "###", "###", '#', AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperArmor.REGISTRY_NAME_CHEST)),
+				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME) });
 
 		// Copper Leggings
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemCopperArmor.REGISTRY_NAME_LEGGINGS)), new Object[] {
-						"###", "# #", "# #", '#', AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperArmor.REGISTRY_NAME_LEGGINGS)),
+				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME) });
 
 		// Copper Boots
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemCopperArmor.REGISTRY_NAME_BOOTS)), new Object[] {
-						"   ", "# #", "# #", '#', AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemCopperArmor.REGISTRY_NAME_BOOTS)),
+				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME) });
 
 		/* Tin Armor */
 
 		// Tin Sword
-		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinSword.REGISTRY_NAME)),
-				new Object[] { " # ", " # ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME),
-						'|', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinSword.REGISTRY_NAME)), new Object[] {
+				" # ", " # ", " | ", '#', AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME), '|', Items.stick });
 
 		// Tin Plate
 		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinPlate.REGISTRY_NAME), 4),
@@ -424,8 +394,7 @@ public class AtomizerRecipes {
 				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get(ItemTinPlate.REGISTRY_NAME) });
 
 		// Tin Leggings
-		GameRegistry.addShapedRecipe(
-				new ItemStack(AtomizerItems.items.get(ItemTinArmor.REGISTRY_NAME_LEGGINGS)),
+		GameRegistry.addShapedRecipe(new ItemStack(AtomizerItems.items.get(ItemTinArmor.REGISTRY_NAME_LEGGINGS)),
 				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get(ItemTinPlate.REGISTRY_NAME) });
 
 		// Tin Boots
@@ -439,20 +408,20 @@ public class AtomizerRecipes {
 				new Object[] { "##", "##", '#', Items.gold_ingot });
 
 		// Gold Helmet
-		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_helmet), new Object[] { "   ", "###", "# #", '#',
-				AtomizerItems.items.get(ItemGoldPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_helmet),
+				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get(ItemGoldPlate.REGISTRY_NAME) });
 
 		// Gold Chest
-		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_chestplate), new Object[] { "# #", "###", "###", '#',
-				AtomizerItems.items.get(ItemGoldPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_chestplate),
+				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get(ItemGoldPlate.REGISTRY_NAME) });
 
 		// Gold Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_leggings), new Object[] { "###", "# #", "# #", '#',
-				AtomizerItems.items.get(ItemGoldPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_leggings),
+				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get(ItemGoldPlate.REGISTRY_NAME) });
 
 		// Gold Boots
-		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_boots), new Object[] { "   ", "# #", "# #", '#',
-				AtomizerItems.items.get(ItemGoldPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.golden_boots),
+				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get(ItemGoldPlate.REGISTRY_NAME) });
 
 		/* Iron Armor */
 
@@ -461,20 +430,20 @@ public class AtomizerRecipes {
 				new Object[] { "##", "##", '#', Items.iron_ingot });
 
 		// Iron Helmet
-		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_helmet), new Object[] { "   ", "###", "# #", '#',
-				AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_helmet),
+				new Object[] { "   ", "###", "# #", '#', AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME) });
 
 		// Iron Chest
-		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_chestplate), new Object[] { "# #", "###", "###", '#',
-				AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_chestplate),
+				new Object[] { "# #", "###", "###", '#', AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME) });
 
 		// Iron Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_leggings), new Object[] { "###", "# #", "# #", '#',
-				AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_leggings),
+				new Object[] { "###", "# #", "# #", '#', AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME) });
 
 		// Iron Boots
-		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_boots), new Object[] { "   ", "# #", "# #", '#',
-				AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_boots),
+				new Object[] { "   ", "# #", "# #", '#', AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME) });
 
 		// Minecart
 		GameRegistry.addShapedRecipe(new ItemStack(Items.minecart), new Object[] { "   ", "# #", "I#I", '#',
@@ -483,8 +452,8 @@ public class AtomizerRecipes {
 		// TODO Alle Schienen ???
 
 		// Boat
-		GameRegistry.addShapedRecipe(new ItemStack(Items.boat), new Object[] { "   ", "# #", "###", '#',
-				AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.boat),
+				new Object[] { "   ", "# #", "###", '#', AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME) });
 
 		// TODO Alle Türen
 
@@ -501,8 +470,8 @@ public class AtomizerRecipes {
 		// TODO Alle Maschinen
 
 		// TODO Alle Schalen
-		GameRegistry.addShapedRecipe(new ItemStack(Items.bowl, 3), new Object[] { "   ", "# #", " # ", '#',
-				AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.bowl, 3),
+				new Object[] { "   ", "# #", " # ", '#', AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME) });
 
 		// Brewing Stand
 		GameRegistry.addShapedRecipe(new ItemStack(Items.brewing_stand), new Object[] { "   ", " B ", "SSS", 'S',
@@ -511,8 +480,8 @@ public class AtomizerRecipes {
 		// TODO Bücherregale
 
 		// Cauldron
-		GameRegistry.addShapedRecipe(new ItemStack(Items.cauldron), new Object[] { "# #", "# #", "###", '#',
-				AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME) });
+		GameRegistry.addShapedRecipe(new ItemStack(Items.cauldron),
+				new Object[] { "# #", "# #", "###", '#', AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME) });
 
 		// Sign
 		GameRegistry.addShapedRecipe(new ItemStack(Items.sign), new Object[] { "###", "###", " S ", '#',
@@ -527,8 +496,9 @@ public class AtomizerRecipes {
 				AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 'D', Items.diamond });
 
 		/* Test-Rezept */
-		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockTest.UNLOCALIZED_BLOCK_NAME)), new Object[] { "IDI", "DPD", "IDI", 'I',
-				Items.iron_ingot, 'D', Items.diamond, 'P', Items.iron_pickaxe });
+		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockTest.UNLOCALIZED_BLOCK_NAME)),
+				new Object[] { "IDI", "DPD", "IDI", 'I', Items.iron_ingot, 'D', Items.diamond, 'P',
+						Items.iron_pickaxe });
 
 		/* Recipes */
 
@@ -536,8 +506,8 @@ public class AtomizerRecipes {
 		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockSoil.UNLOCALIZED_BLOCK_NAME)),
 				new Object[] { "SSS", "SSS", "SSS", 'S', AtomizerItems.items.get(ItemSoilPile.REGISTRY_NAME) });
 		// Laser1Item
-		GameRegistry.addRecipe(new ItemStack(AtomizerItems.items.get(ItemLaser1.REGISTRY_NAME)), new Object[] {
-				"   ", "RIG", "   ", 'R', Items.redstone, 'I', Items.iron_ingot, 'G', Items.gold_ingot });
+		GameRegistry.addRecipe(new ItemStack(AtomizerItems.items.get(ItemLaser1.REGISTRY_NAME)), new Object[] { "   ",
+				"RIG", "   ", 'R', Items.redstone, 'I', Items.iron_ingot, 'G', Items.gold_ingot });
 		// Laser2Item
 		GameRegistry.addRecipe(new ItemStack(AtomizerItems.items.get(ItemLaser2.REGISTRY_NAME)),
 				new Object[] { "   ", "ELG", "   ", 'E', Items.emerald, 'L',
@@ -553,18 +523,20 @@ public class AtomizerRecipes {
 						Items.redstone });
 		// Assembler2Block
 		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockAssembler2.UNLOCALIZED_BLOCK_NAME)),
-				new Object[] { "GLG", "ICI", "GRG", 'C', AtomizerBlocks.blocks.get(BlockAssembler1.UNLOCALIZED_BLOCK_NAME), 'I', Blocks.iron_block, 'G',
+				new Object[] { "GLG", "ICI", "GRG", 'C',
+						AtomizerBlocks.blocks.get(BlockAssembler1.UNLOCALIZED_BLOCK_NAME), 'I', Blocks.iron_block, 'G',
 						Items.gold_ingot, 'L', AtomizerItems.items.get(ItemLaser2.REGISTRY_NAME), 'R',
 						Blocks.redstone_block });
 		// Assembler3Block
 		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockAssembler3.UNLOCALIZED_BLOCK_NAME)),
-				new Object[] { "GLG", "DCD", "GRG", 'C', AtomizerBlocks.blocks.get(BlockAssembler2.UNLOCALIZED_BLOCK_NAME), 'D', Blocks.diamond_block, 'G',
-						Items.gold_ingot, 'L', AtomizerItems.items.get(ItemLaser3.REGISTRY_NAME), 'R',
+				new Object[] { "GLG", "DCD", "GRG", 'C',
+						AtomizerBlocks.blocks.get(BlockAssembler2.UNLOCALIZED_BLOCK_NAME), 'D', Blocks.diamond_block,
+						'G', Items.gold_ingot, 'L', AtomizerItems.items.get(ItemLaser3.REGISTRY_NAME), 'R',
 						Blocks.redstone_block });
 	}
 
 	/**
-	 * Enfertn alle Schmelzrezepte die wir ersetzten damit wir unsere Rezepte
+	 * Enfernt alle Schmelzrezepte die wir ersetzten damit wir unsere Rezepte
 	 * einfügen können
 	 */
 	public static void smeltingRemover() {
@@ -572,6 +544,27 @@ public class AtomizerRecipes {
 		furnace.remove(Blocks.iron_ore);
 		furnace.remove(Blocks.gold_ore);
 		furnace.remove(Blocks.netherrack);
+	}
+
+	/**
+	 * Creates all Assembler Recipes
+	 */
+	public static void assemblerRecipes() {
+		ItemStack[] in = { new ItemStack(AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME), 5) };
+		ItemStack[] out = { new ItemStack(AtomizerItems.items.get(ItemCopperArmor.REGISTRY_NAME_HELMET), 1) };
+		new AtomizerRecipe("aCopperHelmetRecipe", in, out);
+		//TODO Rezepte auch abspeichern
+	}
+
+	/**
+	 * Creates all Disassembler Recipes
+	 */
+	public static void disassemblerRecipes() {
+		ItemStack[] in = { new ItemStack(Blocks.iron_ore, 1) };
+		ItemStack[] out = { new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5),
+				new ItemStack(AtomizerItems.items.get(ItemIronRaw.REGISTRY_NAME), 4) };
+		new AtomizerRecipe("dIronOre", in, out);
+		//TODO Rezepte auch abspeichern
 	}
 
 	/**
