@@ -6,12 +6,17 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-// TODO Muss noch auf die neue Minecraft Version upgedatet werden
-public class ITBlock extends Block /*extends BlockContainer*/{
+/**
+ * IT Block
+ * 
+ * @author Alfred Emsenhuber(Fredi100)
+ * @version 2016-05-25
+ */
+public class BlockIT extends Block/*Container*/{
 	/* Konstanten */
 	public static final String UNLOCALIZED_BLOCK_NAME = "itBlock";
 	
-	public ITBlock(){
+	public BlockIT(){
 		super(Material.ground);
         this.setHardness(0.5F);
         this.setStepSound(Block.soundTypeGravel);

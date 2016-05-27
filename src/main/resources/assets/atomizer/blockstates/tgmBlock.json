@@ -3,7 +3,9 @@
     "variants": {
         "normal": [{
             "textures": {
-                "all": "atomizer:blocks/TGMBlock"
+                "all": "atomizer:blocks/TGMBlock",
+				
+				"particle": "atomizer:blocks/TGMBlock"
             },
             "model": "cube_all"
         }]

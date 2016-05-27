@@ -5,7 +5,14 @@
             "textures": {
                 "all": "atomizer:blocks/ITBlock"
             },
+            "model": "cube_all",
+			"particle": "atomizer:blocks/ITBlock"
+        }],
+		"inventory": [{
+			"textures": {
+				"all": "atomizer:blocks/ITBlock"
+			},
             "model": "cube_all"
-        }]
+		}]
     }
 }

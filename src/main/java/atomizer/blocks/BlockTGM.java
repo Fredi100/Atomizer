@@ -14,14 +14,19 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-// TODO Muss noch auf die neue Minecraft version upgedatet werden
-public class TGMBlock extends Block /*extends BlockContainer*/{
+/**
+ * TGMBlock
+ * 
+ * @author Alfred Emsenhuber(Fredi100)
+ * @version 2016-05-25
+ */
+public class BlockTGM extends Block/*Container*/{
 	/* Konstanten */
 	
 	public static final String REGISTRY_NAME = "tgmBlock";
 	//public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 		
-    public TGMBlock(){
+    public BlockTGM(){
         super(Material.ground);
         this.setHardness(0.5F);
         this.setStepSound(Block.soundTypeGravel);
