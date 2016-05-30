@@ -23,13 +23,20 @@ public class GuiDisassembler1 extends GuiContainer {
 		this.ySize = 166;
 	}
 	
+	/**
+	 * Zeichne hier zum Beispiel die Strings in der GUI
+	 */
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY){
-		String s = this.te.UNLOCALIZED_TILEENTITY_NAME;
+		//TODO Hier dynamische den Namen vergeben
+		String s = "Disassembler";
 		this.fontRendererObj.drawString(s, this.xSize / 2 - this.fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
         this.fontRendererObj.drawString(this.playerInv.getDisplayName().getUnformattedText(), 8, this.ySize - 96 + 2, 4210752);
 	}
 
+	/**
+	 * Zeichne hier den kompletten Hintergrund der GUI
+	 */
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
 		GlStateManager.color(1.0F, 1.0F, 1.0F);
