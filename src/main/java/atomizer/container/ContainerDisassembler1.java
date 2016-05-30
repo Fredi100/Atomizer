@@ -36,7 +36,7 @@ public class ContainerDisassembler1 extends Container{
 
 	@Override
 	public boolean canInteractWith(EntityPlayer playerIn) {
-		return this.te.isUsableByPlayer(playerIn);
+		return false; //this.te.isUsableByPlayer(playerIn);
 	}
 
 }
