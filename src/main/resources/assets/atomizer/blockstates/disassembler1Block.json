@@ -3,24 +3,24 @@
     "variants": {
         "normal": [{
             "textures": {
-                "down": "atomizer:blocks/Disassembler1Block_Down",
-				"up": "atomizer:blocks/Disassembler1Block_Up",
-				"north": "atomizer:blocks/Disassembler1Block_North",
-				"south": "atomizer:blocks/Disassembler1Block_South",
-				"east": "atomizer:blocks/Disassembler1Block_East",
-				"west": "atomizer:blocks/Disassembler1Block_West"
+                "down": "atomizer:blocks/disassembler1Block_Down",
+				"up": "atomizer:blocks/disassembler1Block_Up",
+				"north": "atomizer:blocks/disassembler1Block_North",
+				"south": "atomizer:blocks/disassembler1Block_South",
+				"east": "atomizer:blocks/disassembler1Block_East",
+				"west": "atomizer:blocks/disassembler1Block_West"
             },
             "model": "minecraft:cube",
-			"particle": "atomizer:blocks/Disassembler1Block_North"
+			"particle": "atomizer:blocks/disassembler1Block_North"
         }],
         "inventory": [{
             "textures": {
-                "down": "atomizer:blocks/Disassembler1Block_Down",
-                "up": "atomizer:blocks/Disassembler1Block_Up",
-                "north": "atomizer:blocks/Disassembler1Block_North",
-                "south": "atomizer:blocks/Disassembler1Block_South",
-                "east": "atomizer:blocks/Disassembler1Block_East",
-                "west": "atomizer:blocks/Disassembler1Block_West"
+                "down": "atomizer:blocks/disassembler1Block_Down",
+                "up": "atomizer:blocks/disassembler1Block_Up",
+                "north": "atomizer:blocks/disassembler1Block_North",
+                "south": "atomizer:blocks/disassembler1Block_South",
+                "east": "atomizer:blocks/disassembler1Block_East",
+                "west": "atomizer:blocks/disassembler1Block_West"
             },
             "model": "minecraft:cube"
         }]

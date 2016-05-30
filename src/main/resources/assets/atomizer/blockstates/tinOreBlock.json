@@ -1,0 +1,18 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "normal": [{
+            "textures": {
+                "all": "atomizer:blocks/tinOreBlock"
+            },
+            "model": "cube_all",
+			"particle": "atomizer:blocks/tinOreBlock"
+        }],
+		"inventory": [{
+			"textures": {
+				"all": "atomizer:blocks/tinOreBlock"
+			},
+            "model": "cube_all"
+		}]
+    }
+}

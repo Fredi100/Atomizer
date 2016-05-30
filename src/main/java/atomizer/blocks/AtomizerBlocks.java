@@ -28,7 +28,6 @@ public final class AtomizerBlocks {
 		
 		blocks = new TreeMap<String, Block>();
 		
-		blocks.put(BlockTest.UNLOCALIZED_BLOCK_NAME, new BlockTest());
 		blocks.put(BlockIT.UNLOCALIZED_BLOCK_NAME, new BlockIT());
 		blocks.put(BlockTGM.REGISTRY_NAME, new BlockTGM());
 		
@@ -38,9 +37,6 @@ public final class AtomizerBlocks {
 		blocks.put(BlockDisassembler1.REGISTRY_NAME, new BlockDisassembler1());
 		blocks.put(BlockDisassembler2.UNLOCALIZED_BLOCK_NAME, new BlockDisassembler2());
 		blocks.put(BlockDisassembler3.UNLOCALIZED_BLOCK_NAME, new BlockDisassembler3());
-		blocks.put(BlockTransport1.UNLOCALIZED_BLOCK_NAME, new BlockTransport1());
-		blocks.put(BlockTransport2.UNLOCALIZED_BLOCK_NAME, new BlockTransport2());
-		blocks.put(BlockTransport3.UNLOCALIZED_BLOCK_NAME, new BlockTransport3());
 		blocks.put(BlockSpeicher2.UNLOCALIZED_BLOCK_NAME, new BlockSpeicher2());
 		blocks.put(BlockSpeicher3.UNLOCALIZED_BLOCK_NAME, new BlockSpeicher3());
 		blocks.put(BlockSoil.UNLOCALIZED_BLOCK_NAME, new BlockSoil());

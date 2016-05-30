@@ -1,0 +1,28 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "normal": [{
+            "textures": {
+                "down": "atomizer:blocks/disassembler2Block_Down",
+				"up": "atomizer:blocks/disassembler2Block_Up",
+				"north": "atomizer:blocks/disassembler2Block_North",
+				"south": "atomizer:blocks/disassembler2Block_South",
+				"east": "atomizer:blocks/disassembler2Block_East",
+				"west": "atomizer:blocks/disassembler2Block_West"
+            },
+            "model": "minecraft:cube",
+			"particle": "atomizer:blocks/disassembler2Block_North"
+        }],
+        "inventory": [{
+            "textures": {
+                "down": "atomizer:blocks/disassembler2Block_Down",
+                "up": "atomizer:blocks/disassembler2Block_Up",
+                "north": "atomizer:blocks/disassembler2Block_North",
+                "south": "atomizer:blocks/disassembler2Block_South",
+                "east": "atomizer:blocks/disassembler2Block_East",
+                "west": "atomizer:blocks/disassembler2Block_West"
+            },
+            "model": "minecraft:cube"
+        }]
+    }
+}

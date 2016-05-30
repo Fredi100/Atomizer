@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class BlockAssembler1 extends Block{
 	
-	public static final String UNLOCALIZED_BLOCK_NAME = "Assembler1Block";
+	public static final String UNLOCALIZED_BLOCK_NAME = "assembler1Block";
 	
 	/**
 	 * Konstruktor

@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockAssembler2 extends Block{
 	
-	public static final String UNLOCALIZED_BLOCK_NAME = "Assembler2Block";
+	public static final String UNLOCALIZED_BLOCK_NAME = "assembler2Block";
 	
 	public BlockAssembler2(){
 		super(Material.rock);

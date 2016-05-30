@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockSpeicher2 extends Block{
 	
-	public static final String UNLOCALIZED_BLOCK_NAME = "Speicher2Block";
+	public static final String UNLOCALIZED_BLOCK_NAME = "speicher2Block";
 	
 	public BlockSpeicher2(){
 		super(Material.rock);

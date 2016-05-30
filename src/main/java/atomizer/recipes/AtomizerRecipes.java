@@ -9,7 +9,6 @@ import atomizer.blocks.BlockAssembler1;
 import atomizer.blocks.BlockAssembler2;
 import atomizer.blocks.BlockAssembler3;
 import atomizer.blocks.BlockSoil;
-import atomizer.blocks.BlockTest;
 import atomizer.items.AtomizerItems;
 import atomizer.items.ItemBronzeIngot;
 import atomizer.items.ItemBronzePlate;
@@ -525,12 +524,6 @@ public class AtomizerRecipes {
 		// Jukebox
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.jukebox), new Object[] { "###", "#D#", "###", '#',
 				AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 'D', Items.diamond });
-
-		/* Test-Rezept */
-		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockTest.UNLOCALIZED_BLOCK_NAME)), new Object[] { "IDI", "DPD", "IDI", 'I',
-				Items.iron_ingot, 'D', Items.diamond, 'P', Items.iron_pickaxe });
-
-		/* Recipes */
 
 		// SoilePileItem
 		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockSoil.UNLOCALIZED_BLOCK_NAME)),

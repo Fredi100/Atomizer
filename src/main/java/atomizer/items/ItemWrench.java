@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemWrench extends Item {
 	
-	public static final String REGISTRY_NAME = "wrenchItem";
+	public static final String REGISTRY_NAME = "wrench";
 	
 	public ItemWrench(){
 		setRegistryName(REGISTRY_NAME);

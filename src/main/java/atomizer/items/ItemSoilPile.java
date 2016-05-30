@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemSoilPile extends Item{
 	
-	public static final String REGISTRY_NAME = "soilPileItem";
+	public static final String REGISTRY_NAME = "soilPile";
 	
 	public ItemSoilPile(){
 		setUnlocalizedName(Constants.MODID + ":" + REGISTRY_NAME);
