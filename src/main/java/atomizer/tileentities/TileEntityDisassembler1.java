@@ -46,8 +46,7 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 	private ArrayList aList = new ArrayList();
 
 	public TileEntityDisassembler1() {
-		ish = new ItemStackHandler();
-		ish.setSize(4);
+		ish = new ItemStackHandler(4);
 	}
 
 	/**
@@ -88,7 +87,7 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 	@Override
 	public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
 		if (capability == ITEM_HANDLER_CAPABILITY) {
-			return null; // TODO ?????
+			return (T) ish;
 		}
 		return null;
 	}
