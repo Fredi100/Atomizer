@@ -59,9 +59,11 @@ public class BlockDisassembler1 extends BlockContainer {
 	@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side,
 			float hitX, float hitY, float hitZ) {
+		System.out.println("Block activated");
 		if (!world.isRemote) {
 			player.openGui(Atomizer.instance, AtomizerGuiHandler.DISASSEMBLER_RANK_1_GUI, world, pos.getX(), pos.getY(),
 					pos.getZ());
+			System.out.println("Opened gui");
 			return true;
 		}
 		return false;

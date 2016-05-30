@@ -28,18 +28,6 @@ import scala.collection.TraversableOnce.OnceCanBuildFrom;
 public class TileEntityDisassembler1 extends TileEntity implements ITickable{
 
 	public static final String UNLOCALIZED_TILEENTITY_NAME = "Disassembler1TileEntity";
-
-	/* Dient nur zu Testzwecken */
-	private boolean aBoolean;
-	private byte aByte;
-	private short aShort;
-	private int anInt;
-	private long aLong;
-	private float aFloat;
-	private double aDouble;
-	private String aString;
-	private byte[] aByteArray;
-	private int[] anIntArray;
 	
 	private ItemStackHandler ish;
 	
@@ -67,19 +55,6 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable{
 	@Override
 	public void writeToNBT(NBTTagCompound compound) {
 		super.writeToNBT(compound);
-
-		/* Dient nur zu Testzwecken */
-		// Primitives:
-		compound.setBoolean("aBoolean", this.aBoolean);
-		compound.setByte("aByte", this.aByte);
-		compound.setShort("aShort", this.aShort);
-		compound.setInteger("anInt", this.anInt);
-		compound.setLong("aLong", this.aLong);
-		compound.setFloat("aFloat", this.aFloat);
-		compound.setDouble("aDouble", this.aDouble);
-		compound.setString("aString", this.aString);
-		compound.setByteArray("aByteArray", this.aByteArray);
-		compound.setIntArray("anIntArray", this.anIntArray);
 	}
 	
 	/**
@@ -112,19 +87,6 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable{
 	@Override
 	public void readFromNBT(NBTTagCompound compound) {
 		super.readFromNBT(compound);
-
-		/* Dient nur zu Testzwecken */
-		// Primitives:
-		this.aBoolean = compound.getBoolean("aBoolean");
-		this.aByte = compound.getByte("aByte");
-		this.aShort = compound.getShort("aShort");
-		this.anInt = compound.getInteger("anInt");
-		this.aLong = compound.getLong("aLong");
-		this.aFloat = compound.getFloat("aFloat");
-		this.aDouble = compound.getDouble("aDouble");
-		this.aString = compound.getString("aString");
-		this.aByteArray = compound.getByteArray("aByteArray");
-		this.anIntArray = compound.getIntArray("anIntArray");
 		
 	}
 	

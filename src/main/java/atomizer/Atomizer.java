@@ -8,6 +8,7 @@ import atomizer.items.ItemBronzeIngot;
 import atomizer.lib.Constants;
 import atomizer.proxy.CommonProxy;
 import atomizer.recipes.AtomizerRecipes;
+import atomizer.tileentities.AtomizerTileEntities;
 import atomizer.world.AtomizerWorldGen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderItem;
@@ -78,8 +79,9 @@ public class Atomizer {
 		}
 		
 		NetworkRegistry.INSTANCE.registerGuiHandler(this.instance, new AtomizerGuiHandler());
-		
+		//AtomizerTileEntities.init();
 		proxy.registerTileEntities();
+		proxy.init(event);
 		// TODO muss auf die neue Minecraft Version aktualisiert werden
 		GameRegistry.registerWorldGenerator(new AtomizerWorldGen(), 0);
 	}
