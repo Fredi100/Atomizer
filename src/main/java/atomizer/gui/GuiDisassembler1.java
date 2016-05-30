@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class GuiDisassembler1 extends GuiContainer {
 	
-	private static final ResourceLocation disassemblerGuiTextures = new ResourceLocation("atomizer:textures/gui/GuiAssembler1.png");
+	private static final ResourceLocation disassemblerGuiTextures = new ResourceLocation("atomizer:textures/gui/guiDisassembler1.png");
 
 	private TileEntityDisassembler1 te;
 	private IInventory playerInv;
