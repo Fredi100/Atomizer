@@ -22,7 +22,4 @@ public class GuiDisassembler1 extends GuiContainer{
 		ResourceLocation resource = new ResourceLocation("atomizer:textures/gui/GuiAssembler1.png");
 		this.mc.getTextureManager().bindTexture(resource);
 	}
-	
-	
-
 }

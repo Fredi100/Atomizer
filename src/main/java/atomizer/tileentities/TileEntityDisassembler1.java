@@ -125,7 +125,11 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable{
 		this.aString = compound.getString("aString");
 		this.aByteArray = compound.getByteArray("aByteArray");
 		this.anIntArray = compound.getIntArray("anIntArray");
-
-		}
+		
+	}
+	
+	public boolean isUsableByPlayer(EntityPlayer playerIn){
+		return true;
+	}
 
 }
