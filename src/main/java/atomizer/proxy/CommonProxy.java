@@ -10,13 +10,14 @@ import net.minecraftforge.fml.common.network.IGuiHandler;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class CommonProxy{
-	
-	public void registerTileEntities(){
-		GameRegistry.registerTileEntity(TileEntityDisassembler1.class, TileEntityDisassembler1.UNLOCALIZED_TILEENTITY_NAME);
+public class CommonProxy {
+
+	public void registerTileEntities() {
+		GameRegistry.registerTileEntity(TileEntityDisassembler1.class,
+				TileEntityDisassembler1.UNLOCALIZED_TILEENTITY_NAME);
 	}
-	
+
 	public void init(FMLInitializationEvent e) {
-	    NetworkRegistry.INSTANCE.registerGuiHandler(Atomizer.instance, new AtomizerGuiHandler());
+		NetworkRegistry.INSTANCE.registerGuiHandler(Atomizer.instance, new AtomizerGuiHandler());
 	}
 }

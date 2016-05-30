@@ -7,11 +7,11 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 
-public class GuiDisassembler1 extends GuiContainer{
+public class GuiDisassembler1 extends GuiContainer {
 
 	public GuiDisassembler1(IInventory playerInv, TileEntityDisassembler1 te) {
 		super(new ContainerDisassembler1(playerInv, te));
-		
+
 		this.xSize = 176;
 		this.ySize = 166;
 	}

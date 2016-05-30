@@ -68,18 +68,18 @@ public class Atomizer {
 	 */
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
-		
+
 		AtomizerRecipes.recipeRemover();
 		AtomizerRecipes.smeltingRemover();
 		AtomizerRecipes.init();
-		
-		if(event.getSide() == Side.CLIENT){
+
+		if (event.getSide() == Side.CLIENT) {
 			AtomizerItems.registerItemModels();
 			AtomizerBlocks.registerBlockModels();
 		}
-		
+
 		NetworkRegistry.INSTANCE.registerGuiHandler(this.instance, new AtomizerGuiHandler());
-		//AtomizerTileEntities.init();
+		// AtomizerTileEntities.init();
 		proxy.registerTileEntities();
 		proxy.init(event);
 		// TODO muss auf die neue Minecraft Version aktualisiert werden
