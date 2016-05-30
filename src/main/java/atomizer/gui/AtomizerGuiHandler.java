@@ -1,8 +1,7 @@
-package atomizer;
+package atomizer.gui;
 
 import atomizer.container.ContainerDisassembler1;
 import atomizer.tileentities.TileEntityDisassembler1;
-import gui.GuiDisassembler1;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
@@ -27,5 +26,4 @@ public class AtomizerGuiHandler implements IGuiHandler{
 		}
 		return null;
 	}
-
 }

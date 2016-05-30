@@ -2,6 +2,7 @@ package atomizer;
 
 import atomizer.blocks.AtomizerBlocks;
 import atomizer.fluids.AtomizerFluids;
+import atomizer.gui.AtomizerGuiHandler;
 import atomizer.items.AtomizerItems;
 import atomizer.items.ItemBronzeIngot;
 import atomizer.lib.Constants;

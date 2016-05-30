@@ -1,7 +1,7 @@
 package atomizer.blocks;
 
 import atomizer.Atomizer;
-import atomizer.AtomizerGuiHandler;
+import atomizer.gui.AtomizerGuiHandler;
 import atomizer.lib.Constants;
 import atomizer.tileentities.TileEntityDisassembler1;
 import net.minecraft.block.Block;
@@ -33,17 +33,13 @@ public class BlockDisassembler1 extends BlockContainer {
 		super(Material.iron);
 		this.setHardness(2.0f);
 		this.setResistance(6.0f);
-		this.setCreativeTab(CreativeTabs.tabBlock);// Weiﬂt dem Block ein Tab zu
-													// um ihn anzuzeigen
-		this.setUnlocalizedName(Constants.MODID + ":" + REGISTRY_NAME);// Gibt
-																		// dem
-																		// Block
-																		// einen
-																		// internen
-																		// Namen
+		// Weiﬂt dem Block ein Tab zu um ihn anzuzeigen
+		this.setCreativeTab(CreativeTabs.tabBlock);
+		// Gibt dem Block einen internen Namen
+		this.setUnlocalizedName(Constants.MODID + ":" + REGISTRY_NAME);
 		this.setRegistryName(REGISTRY_NAME);
-		GameRegistry.registerBlock(this, REGISTRY_NAME);// Registriert den Block
-														// im Spiel
+		// Registriert den Block im Spiel
+		GameRegistry.registerBlock(this, REGISTRY_NAME);
 	}
 
 	@Override
@@ -70,10 +66,4 @@ public class BlockDisassembler1 extends BlockContainer {
 		}
 		return false;
 	}
-
-	/*
-	 * @Override public TileEntity createNewTileEntity(World world, int
-	 * metadata) { // TODO Auto-generated method stub return new
-	 * TileEntityDisassembler1(); }
-	 */
 }

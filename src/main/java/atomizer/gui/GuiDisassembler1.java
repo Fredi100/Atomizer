@@ -1,4 +1,4 @@
-package gui;
+package atomizer.gui;
 
 import atomizer.container.ContainerDisassembler1;
 import atomizer.tileentities.TileEntityDisassembler1;
