@@ -1,5 +1,7 @@
 package atomizer.blocks;
 
+import java.util.Random;
+
 import atomizer.Atomizer;
 import atomizer.gui.AtomizerGuiHandler;
 import atomizer.lib.Constants;
@@ -7,9 +9,11 @@ import atomizer.tileentities.TileEntityDisassembler1;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
@@ -25,7 +29,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class BlockDisassembler1 extends BlockContainer {
 
 	public static final String REGISTRY_NAME = "disassembler1Block";
-
+	
+	//public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+	private static boolean keepInventory;
+	
 	/**
 	 * Sets all of the values of this block
 	 */
@@ -38,8 +45,17 @@ public class BlockDisassembler1 extends BlockContainer {
 		// Gibt dem Block einen internen Namen
 		this.setUnlocalizedName(Constants.MODID + ":" + REGISTRY_NAME);
 		this.setRegistryName(REGISTRY_NAME);
+		//this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		// Registriert den Block im Spiel
 		GameRegistry.registerBlock(this, REGISTRY_NAME);
+	}
+	
+	/**
+	 * Gibt beim Abbau dieses Blocks einen Disassembler als Item zurück
+	 */
+	@Override
+	public Item getItemDropped(IBlockState state, Random rand, int fortune){
+		return Item.getItemFromBlock(AtomizerBlocks.blocks.get(BlockDisassembler1.REGISTRY_NAME));
 	}
 
 	@Override
@@ -57,15 +73,16 @@ public class BlockDisassembler1 extends BlockContainer {
 	}
 
 	@Override
-	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side,
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side,
 			float hitX, float hitY, float hitZ) {
 		System.out.println("Block activated");
-		if (!world.isRemote) {
-			player.openGui(Atomizer.instance, AtomizerGuiHandler.DISASSEMBLER_RANK_1_GUI, world, pos.getX(), pos.getY(),
+		if (!worldIn.isRemote) {
+			playerIn.openGui(Atomizer.instance, AtomizerGuiHandler.DISASSEMBLER_RANK_1_GUI, worldIn, pos.getX(), pos.getY(),
 					pos.getZ());
 			System.out.println("Opened gui");
 			return true;
 		}
-		return false;
+		
+		return true;
 	}
 }
