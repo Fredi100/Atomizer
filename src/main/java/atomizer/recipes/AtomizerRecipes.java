@@ -3,6 +3,7 @@ package atomizer.recipes;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import atomizer.blocks.AtomizerBlocks;
 import atomizer.blocks.BlockAssembler1;
@@ -68,6 +69,9 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class AtomizerRecipes {
+
+	public static TreeMap<String, RecipeDisassembler> disassembler;
+	// public static TreeMap<String,RecipeAssembler> assembler;
 
 	/**
 	 * Initialisiert alle Rezepte
@@ -494,16 +498,6 @@ public class AtomizerRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.jukebox), new Object[] { "###", "#D#", "###", '#',
 				AtomizerItems.items.get(ItemWoodenPlank.REGISTRY_NAME), 'D', Items.diamond });
 
-<<<<<<< HEAD
-=======
-		/* Test-Rezept */
-		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockTest.UNLOCALIZED_BLOCK_NAME)),
-				new Object[] { "IDI", "DPD", "IDI", 'I', Items.iron_ingot, 'D', Items.diamond, 'P',
-						Items.iron_pickaxe });
-
-		/* Recipes */
-
->>>>>>> refs/remotes/origin/atomrecipe
 		// SoilePileItem
 		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockSoil.UNLOCALIZED_BLOCK_NAME)),
 				new Object[] { "SSS", "SSS", "SSS", 'S', AtomizerItems.items.get(ItemSoilPile.REGISTRY_NAME) });
@@ -554,19 +548,18 @@ public class AtomizerRecipes {
 	public static void assemblerRecipes() {
 		ItemStack[] in = { new ItemStack(AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME), 5) };
 		ItemStack[] out = { new ItemStack(AtomizerItems.items.get(ItemCopperArmor.REGISTRY_NAME_HELMET), 1) };
-		new AtomizerRecipe("aCopperHelmetRecipe", in, out);
-		//TODO Rezepte auch abspeichern
+		//new AtomizerRecipe("aCopperHelmetRecipe", in, out);
+		// TODO Rezepte auch abspeichern
 	}
 
 	/**
 	 * Creates all Disassembler Recipes
 	 */
 	public static void disassemblerRecipes() {
-		ItemStack[] in = { new ItemStack(Blocks.iron_ore, 1) };
+		disassembler = new TreeMap<String,RecipeDisassembler>();
 		ItemStack[] out = { new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5),
 				new ItemStack(AtomizerItems.items.get(ItemIronRaw.REGISTRY_NAME), 4) };
-		new AtomizerRecipe("dIronOre", in, out);
-		//TODO Rezepte auch abspeichern
+		disassembler.put("dIronOre", new RecipeDisassembler("dIronOre", new ItemStack(Item.getItemFromBlock(Blocks.iron_ore), 1), out, null));
 	}
 
 	/**

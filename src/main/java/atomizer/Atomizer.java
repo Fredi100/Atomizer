@@ -72,6 +72,7 @@ public class Atomizer {
 		AtomizerRecipes.recipeRemover();
 		AtomizerRecipes.smeltingRemover();
 		AtomizerRecipes.init();
+		AtomizerRecipes.disassemblerRecipes();
 
 		if (event.getSide() == Side.CLIENT) {
 			AtomizerItems.registerItemModels();

@@ -30,11 +30,12 @@ public class ContainerDisassembler1 extends Container{
 	public ContainerDisassembler1(IInventory playerInv, TileEntityDisassembler1 te) {
 		this.te = te;
 		
-		//Disassembler 1, Slot 0-3, Slot IDs 0-3
+		//Disassembler 1, Slot 0-4, Slot IDs 0-4
 		this.addSlotToContainer(new SlotItemHandler(te.getItemStackHandler(),te.SLOT_INPUT,35,32));//Input Field
 		this.addSlotToContainer(new SlotDisassemblerFuel(te.getItemStackHandler(),te.SLOT_FUEL,70,59));//Fuel Field
-		this.addSlotToContainer(new SlotDisassemblerOutput(te.getItemStackHandler(),te.SLOT_OUTPUT,125,31));//Ouput Field
-		this.addSlotToContainer(new SlotDisassemblerOutput(te.getItemStackHandler(),te.SLOT_LUCK,125,59));//Luck Field
+		this.addSlotToContainer(new SlotDisassemblerOutput(te.getItemStackHandler(),te.SLOT_OUTPUT1,119,31));//Ouput Field
+		this.addSlotToContainer(new SlotDisassemblerOutput(te.getItemStackHandler(),te.SLOT_OUTPUT2,147,31));//Ouput Field
+		this.addSlotToContainer(new SlotDisassemblerOutput(te.getItemStackHandler(),te.SLOT_LUCK,133,59));//Luck Field
 		
 		//Player Inventory, Slot 0-8, Slot IDs 0-8
 		for(int x = 0; x < 9; x++){
