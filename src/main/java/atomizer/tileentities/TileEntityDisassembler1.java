@@ -8,10 +8,12 @@ import javax.swing.plaf.basic.BasicComboBoxUI.ItemHandler;
 import atomizer.lib.Constants;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumFacing;
@@ -27,18 +29,16 @@ import scala.collection.TraversableOnce.OnceCanBuildFrom;
 
 public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 
-	/*
-	 * 
-	 * 
-	 * You have your te *
-	 * You have capabilities in it for the IItemHandler
-	 * You have something implementing IItemHandler like your ItemStackHandler *
-	 * You use SlotItemHandler in your Container and give them the ItemStackHandler
-	 * 
-	 */
 	public static final String UNLOCALIZED_TILEENTITY_NAME = "Disassembler1TileEntity";
 
+	public static final int SLOT_INPUT = 0;
+	public static final int SLOT_FUEL = 1;
+	public static final int SLOT_OUTPUT = 2;
+	public static final int SLOT_LUCK = 3;
+
 	private ItemStackHandler ish;
+	private int disassemblerFuelTime;
+	private int disassemblerChrushingTime;
 
 	@CapabilityInject(ItemHandler.class)
 	static Capability<ItemHandler> ITEM_HANDLER_CAPABILITY = null;
@@ -50,14 +50,64 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 	}
 
 	/**
-	 * Gets called every tick. 20 times per second
+	 * Gets called every tick. 20 times per seconds
 	 */
 	@Override
 	public void update() {
+		System.out.println("FuleTime: " + this.disassemblerFuelTime);
+		System.out.println("CrushingTime: " + this.disassemblerChrushingTime);
+		
+		ItemStack input = this.ish.getStackInSlot(SLOT_INPUT);
 
+		// If this TE has crushingTime left and has FuleTime left
+		// it is considered crushing right now. Therefore
+		// the crushing time will be decreased by one.
+		// If it is not crushing anymore, the crushing time will
+		// be set back to 100
+		if (this.isCrushing()) {
+			--this.disassemblerChrushingTime;
+		} else {
+			this.disassemblerChrushingTime = 100;
+		}
+
+		// If this TE has fuelTime left,
+		// it will get reduced by one
+		if (this.hasFuel()) {
+			--this.disassemblerFuelTime;
+		}
+
+		// If the crushingTime meets 0 it should check, if there is any Fuel and
+		// then consumes one of this fuel and refreshes the chrushingTime
+		if (this.disassemblerFuelTime < 1) {
+			ItemStack fuel = this.ish.getStackInSlot(SLOT_FUEL);
+			if (fuel != null && TileEntityFurnace.isItemFuel(fuel)) {
+				this.disassemblerFuelTime = TileEntityFurnace.getItemBurnTime(fuel);
+				this.ish.extractItem(SLOT_FUEL, 1, false);
+			}
+		}
+
+		if (!this.worldObj.isRemote) {
+			
+			if(this.isCrushing())// && DisassemblerRecipe.inputItem == input){
+			{
+			}
+		}
 	}
-	
-	public ItemStackHandler getItemStackHandler(){
+
+	/**
+	 * Checks whether or not this TileEntity has crushing time left
+	 * 
+	 * @return If the TileEntity is still crushing
+	 */
+	public boolean hasFuel() {
+		return this.disassemblerFuelTime > 0;
+	}
+
+	public boolean isCrushing() {
+		return this.disassemblerChrushingTime > 0 && this.hasFuel();
+	}
+
+	public ItemStackHandler getItemStackHandler() {
 		return ish;
 	}
 
@@ -105,5 +155,4 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 	public boolean isUsableByPlayer(EntityPlayer playerIn) {
 		return true;
 	}
-
 }
