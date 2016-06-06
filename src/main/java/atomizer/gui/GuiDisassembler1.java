@@ -44,5 +44,14 @@ public class GuiDisassembler1 extends GuiContainer {
 		int i = (this.width - this.xSize) / 2;
 		int j = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(i, j, 0, 0, this.xSize, this.ySize);
+		
+		/*
+		if(te.hasFuel()){
+			int fuelMax = te.getMaxFuelTime();
+			int fuel = te.getFuelTime();
+			
+			//fuelMax / 15 * 1
+		}
+		*/
 	}
 }

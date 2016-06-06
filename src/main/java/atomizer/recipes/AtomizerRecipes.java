@@ -679,4 +679,35 @@ public class AtomizerRecipes {
 			}
 		}
 	}
+	
+	public static boolean containsDisassemblerRecipe(ItemStack item){
+		if(item == null || item.getItem() == null){
+			//Given Item does not exist
+			return false;
+		}
+		for(RecipeDisassembler rp : disassembler.values()){
+			ItemStack input = rp.getInput();
+			if(input != null && input.getItem() != null){
+				if(input.getItem() == item.getItem()){
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	public static RecipeDisassembler getDisassemblerRecipe(ItemStack item){
+		if(item == null || item.getItem() == null){
+			return null;
+		}
+		for(RecipeDisassembler rp : disassembler.values()){
+			ItemStack input = rp.getInput();
+			if(input != null && input.getItem() != null){
+				if(input.getItem() == item.getItem()){
+					return rp;
+				}
+			}
+		}
+		return null;
+	}
 }
