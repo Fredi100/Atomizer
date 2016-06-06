@@ -1,23 +1,27 @@
-# Eclipse
+# eclipse
 bin
 *.launch
 .settings
 .metadata
 .classpath
 .project
-eclipse/.recommenders
-run/*
 
-# Gradle
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
 build
 .gradle
-gradlew
-gradlew.bat
-gradle/
 
-# Forge
-LICENSE-fml.txt
+# other
+eclipse
+run
+
 CREDITS-fml.txt
-MinecraftForge-Credits.txt
 README.txt
-MinecraftForge-License.txt
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
