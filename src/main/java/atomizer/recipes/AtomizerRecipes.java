@@ -51,6 +51,7 @@ import atomizer.items.tools.ItemCopperPickaxe;
 import atomizer.items.tools.ItemCopperShovel;
 import atomizer.items.tools.ItemCopperSword;
 import atomizer.items.tools.ItemSilverAxe;
+import atomizer.items.tools.ItemSilverHoe;
 import atomizer.items.tools.ItemSilverPickaxe;
 import atomizer.items.tools.ItemSilverShovel;
 import atomizer.items.tools.ItemSilverSword;
@@ -558,6 +559,7 @@ public class AtomizerRecipes {
 	public static void disassemblerRecipes() {
 		disassembler = new TreeMap<String,RecipeDisassembler>();
 		ItemStack[] out = new ItemStack[2];
+		ItemStack in;
 		/* IronOreBlock */
 		out[0] = new ItemStack(AtomizerItems.items.get(ItemIronRaw.REGISTRY_NAME), 4);
 		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
@@ -566,6 +568,218 @@ public class AtomizerRecipes {
 		/* CoalOreBlock */
 		out[0] = new ItemStack(Items.coal,4);
 		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
+		disassembler.put("dCoalOre", new RecipeDisassembler("dCoalOre", new ItemStack(Item.getItemFromBlock(Blocks.coal_ore), 1), out, null));
+		
+		
+		/* IronShovelItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME), 1);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(Items.iron_shovel,1);
+		disassembler.put("dIronShovel",new RecipeDisassembler("dIronShovel", in, out, null));
+		
+		/* IronPickaxeItem */
+		out[0] = new ItemStack(Items.iron_ingot,3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(Items.iron_pickaxe,1);
+		disassembler.put("dIronPickaxe", new RecipeDisassembler("dIronPickaxe",in,out,null));
+		
+		/* IronAxeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemIronPlate.REGISTRY_NAME),3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(Items.iron_axe,1);
+		disassembler.put("dIronAxe", new RecipeDisassembler("dIronAxe",in,out,null));
+		
+		/* IronHoeItem */
+		out[0] = new ItemStack(Items.iron_ingot,2);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(Items.iron_hoe,1);
+		disassembler.put("dIronHoe", new RecipeDisassembler("dIronHoe",in,out,null));
+		
+		/* IronSwordItem */
+		out[0] = new ItemStack(Items.iron_ingot,2);
+		out[1] = new ItemStack(Items.stick,1);
+		in = new ItemStack(Items.iron_sword,1);
+		disassembler.put("", new RecipeDisassembler("",in,out,null));
+		
+		/* CopperShovelItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME), 1);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemCopperShovel.REGISTRY_NAME),1);
+		disassembler.put("dCopperShovel",new RecipeDisassembler("dCopperShovel", in, out, null));
+		
+		/* CopperPickaxeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME),3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemCopperPickaxe.REGISTRY_NAME),1);
+		disassembler.put("dCopperPickaxe", new RecipeDisassembler("dCopperPickaxe",in,out,null));
+		
+		/* CopperAxeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemCopperPlate.REGISTRY_NAME),3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemCopperAxe.REGISTRY_NAME),1);
+		disassembler.put("dCopperAxe", new RecipeDisassembler("dCopperAxe",in,out,null));
+		
+		/* CopperHoeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME),2);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemCopperHoe.REGISTRY_NAME),1);
+		disassembler.put("dCopperHoe", new RecipeDisassembler("dCopperHoe",in,out,null));
+		
+		/* CopperSwordItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME),2);
+		out[1] = new ItemStack(Items.stick,1);
+		in = new ItemStack(AtomizerItems.items.get(ItemCopperSword.REGISTRY_NAME),1);
+		disassembler.put("dCopperSword", new RecipeDisassembler("dCopperSword",in,out,null));
+		
+		/* SilverShovelItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemSilverPlate.REGISTRY_NAME), 1);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemSilverShovel.REGISTRY_NAME),1);
+		disassembler.put("dSilverShovel",new RecipeDisassembler("dSilverShovel", in, out, null));
+		
+		/* SilverPickaxeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME),3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemSilverPickaxe.REGISTRY_NAME),1);
+		disassembler.put("dSilverPickaxe", new RecipeDisassembler("dSilverPickaxe",in,out,null));
+		
+		/* SilverAxeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemSilverPlate.REGISTRY_NAME),3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemSilverAxe.REGISTRY_NAME),1);
+		disassembler.put("dSilverAxe", new RecipeDisassembler("dSilverAxe",in,out,null));
+		
+		/* SilverHoeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME),2);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemSilverHoe.REGISTRY_NAME),1);
+		disassembler.put("dSilverHoe", new RecipeDisassembler("dSilverHoe",in,out,null));
+		
+		/* SilverSwordItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME),2);
+		out[1] = new ItemStack(Items.stick,1);
+		in = new ItemStack(AtomizerItems.items.get(ItemSilverSword.REGISTRY_NAME),1);
+		disassembler.put("dSilverSword", new RecipeDisassembler("dSilverSword",in,out,null));
+		
+		/* BronzeShovelItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemBronzePlate.REGISTRY_NAME), 1);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemBronzeShovel.REGISTRY_NAME),1);
+		disassembler.put("dBronzeShovel",new RecipeDisassembler("dBronzeShovel", in, out, null));
+		
+		/* BronzePickaxeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME),3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemBronzePickaxe.REGISTRY_NAME),1);
+		disassembler.put("dBronzePickaxe", new RecipeDisassembler("dBronzePickaxe",in,out,null));
+		
+		/* BronzeAxeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemBronzePlate.REGISTRY_NAME),3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemBronzeAxe.REGISTRY_NAME),1);
+		disassembler.put("dBronzeAxe", new RecipeDisassembler("dBronzeAxe",in,out,null));
+		
+		/* BronzeHoeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME),2);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemBronzeHoe.REGISTRY_NAME),1);
+		disassembler.put("dBronzeHoe", new RecipeDisassembler("dBronzeHoe",in,out,null));
+		
+		/* BronzeSwordItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemBronzeIngot.REGISTRY_NAME),2);
+		out[1] = new ItemStack(Items.stick,1);
+		in = new ItemStack(AtomizerItems.items.get(ItemBronzeSword.REGISTRY_NAME),1);
+		disassembler.put("dBronzeSword", new RecipeDisassembler("dBronzeSword",in,out,null));
+		
+		/* TinShovelItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemTinPlate.REGISTRY_NAME), 1);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemTinShovel.REGISTRY_NAME),1);
+		disassembler.put("dTinShovel",new RecipeDisassembler("dTinShovel", in, out, null));
+		
+		/* TinPickaxeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME),3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemTinPickaxe.REGISTRY_NAME),1);
+		disassembler.put("dTinPickaxe", new RecipeDisassembler("dTinPickaxe",in,out,null));
+		
+		/* TinAxeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemTinPlate.REGISTRY_NAME),3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemTinAxe.REGISTRY_NAME),1);
+		disassembler.put("dTinAxe", new RecipeDisassembler("dTinAxe",in,out,null));
+		
+		/* TinHoeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME),2);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(AtomizerItems.items.get(ItemTinHoe.REGISTRY_NAME),1);
+		disassembler.put("dTinHoe", new RecipeDisassembler("dTinHoe",in,out,null));
+		
+		/* TinSwordItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME),2);
+		out[1] = new ItemStack(Items.stick,1);
+		in = new ItemStack(AtomizerItems.items.get(ItemTinSword.REGISTRY_NAME),1);
+		disassembler.put("dTinSword", new RecipeDisassembler("dTinSword",in,out,null));
+		
+		/* GoldShovelItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemGoldPlate.REGISTRY_NAME), 1);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(Items.golden_shovel,1);
+		disassembler.put("dGoldShovel",new RecipeDisassembler("dGoldShovel", in, out, null));
+		
+		/* GoldPickaxeItem */
+		out[0] = new ItemStack(Items.gold_ingot,3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(Items.golden_pickaxe,1);
+		disassembler.put("dGoldPickaxe", new RecipeDisassembler("dGoldPickaxe",in,out,null));
+		
+		/* GoldAxeItem */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemGoldPlate.REGISTRY_NAME),3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(Items.golden_axe,1);
+		disassembler.put("dGoldAxe", new RecipeDisassembler("dGoldAxe",in,out,null));
+		
+		/* GoldHoeItem */
+		out[0] = new ItemStack(Items.gold_ingot,2);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(Items.golden_hoe,1);
+		disassembler.put("dGoldHoe", new RecipeDisassembler("dGoldHoe",in,out,null));
+		
+		/* GoldSwordItem */
+		out[0] = new ItemStack(Items.gold_ingot,2);
+		out[1] = new ItemStack(Items.stick,1);
+		in = new ItemStack(Items.golden_sword,1);
+		disassembler.put("dGoldSword", new RecipeDisassembler("dGoldSword",in,out,null));
+		
+		/* DiamondShovelItem */
+		out[0] = new ItemStack(Items.diamond, 1);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(Items.diamond_shovel,1);
+		disassembler.put("dDiamondShovel",new RecipeDisassembler("dDiamondShovel", in, out, null));
+		
+		/* DiamondPickaxeItem */
+		out[0] = new ItemStack(Items.diamond,3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(Items.diamond_pickaxe,1);
+		disassembler.put("dDiamondPickaxe", new RecipeDisassembler("dDiamondPickaxe",in,out,null));
+		
+		/* DiamondAxeItem */
+		out[0] = new ItemStack(Items.diamond,3);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(Items.diamond_axe,1);
+		disassembler.put("dDiamondAxe", new RecipeDisassembler("dDiamondAxe",in,out,null));
+		
+		/* DiamondHoeItem */
+		out[0] = new ItemStack(Items.diamond,2);
+		out[1] = new ItemStack(Items.stick,2);
+		in = new ItemStack(Items.diamond_hoe,1);
+		disassembler.put("dDiamondHoe", new RecipeDisassembler("dDiamondHoe",in,out,null));
+		
+		/* DiamondSwordItem */
+		out[0] = new ItemStack(Items.diamond,2);
+		out[1] = new ItemStack(Items.stick,1);
+		in = new ItemStack(Items.diamond_sword,1);
+		disassembler.put("dDiamondSword", new RecipeDisassembler("dDiamondSword",in,out,null));
 		
 		
 	}
