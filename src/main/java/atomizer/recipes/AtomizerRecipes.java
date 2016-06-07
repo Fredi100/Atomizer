@@ -558,16 +558,71 @@ public class AtomizerRecipes {
 	public static void disassemblerRecipes() {
 		disassembler = new TreeMap<String,RecipeDisassembler>();
 		ItemStack[] out = new ItemStack[2];
+		
 		/* IronOreBlock */
 		out[0] = new ItemStack(AtomizerItems.items.get(ItemIronRaw.REGISTRY_NAME), 4);
 		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
 		disassembler.put("dIronOre", new RecipeDisassembler("dIronOre", new ItemStack(Item.getItemFromBlock(Blocks.iron_ore), 1), out, null));
 		
 		/* CoalOreBlock */
-		out[0] = new ItemStack(Items.coal,4);
+		out[0] = new ItemStack(Items.coal,9);
 		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
 		
+		/* StoneBlock */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME),9);
+		out[1] = null;
+		disassembler.put("dStoneBlock", new RecipeDisassembler("dStoneBlock", new ItemStack(Item.getItemFromBlock(Blocks.stone), 1), out, null));
+	
+		/* CobblestoneBlock */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME),9);
+		out[1] = null;
+		disassembler.put("dCobbleStoneBlock", new RecipeDisassembler("dCobblestoneBlock", new ItemStack(Item.getItemFromBlock(Blocks.cobblestone), 1), out, null));
 		
+		/* GoldOreBlock */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemGoldRaw.REGISTRY_NAME),4);
+		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
+		disassembler.put("dGoldOre", new RecipeDisassembler("dGoldOre", new ItemStack(Item.getItemFromBlock(Blocks.gold_ore), 1), out, null));
+		
+		/* LapisLazuliOreBlock */
+		out[0] = new ItemStack(Item.getItemFromBlock(Blocks.lapis_ore),4);
+		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
+		disassembler.put("dLapisLazuliOre", new RecipeDisassembler("dLapisLazuliOre", new ItemStack(Item.getItemFromBlock(Blocks.lapis_ore), 1), out, null));
+		
+		/* DiamondOreBlock */
+		out[0] = new ItemStack(Item.getItemFromBlock(Blocks.diamond_ore),4);
+		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
+		disassembler.put("dDiamondOre", new RecipeDisassembler("dDiamondOre", new ItemStack(Item.getItemFromBlock(Blocks.diamond_ore), 1), out, null));
+	
+		/* EmeraldOreBlock */
+		out[0] = new ItemStack(Item.getItemFromBlock(Blocks.emerald_ore),4);
+		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
+		disassembler.put("dRedstoneOre", new RecipeDisassembler("dRedstoneOre", new ItemStack(Item.getItemFromBlock(Blocks.redstone_ore), 1), out, null));
+	
+		/* RedstoneOreBlock */
+		out[0] = new ItemStack(Item.getItemFromBlock(Blocks.redstone_ore),4);
+		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
+		disassembler.put("dRedstoneOre", new RecipeDisassembler("dRedstoneOre", new ItemStack(Item.getItemFromBlock(Blocks.redstone_ore), 1), out, null));
+	
+		/* SilverOreBlock */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemSilverRaw.REGISTRY_NAME),4);
+		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
+		disassembler.put("dSilverOre", new RecipeDisassembler("dSilverOre", new ItemStack(AtomizerItems.items.get(ItemSilverIngot.REGISTRY_NAME), 1), out, null));
+	
+		/* CopperOreBlock */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemCopperRaw.REGISTRY_NAME),4);
+		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
+		disassembler.put("dCopperOre", new RecipeDisassembler("dCopperOre", new ItemStack(AtomizerItems.items.get(ItemCopperIngot.REGISTRY_NAME), 1), out, null));
+	
+		/* TinOreBlock */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemTinRaw.REGISTRY_NAME),4);
+		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
+		disassembler.put("dTinOre", new RecipeDisassembler("dTinOre", new ItemStack(AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME), 1), out, null));
+	
+		/* TinOreBlock */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemTinRaw.REGISTRY_NAME),4);
+		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
+		disassembler.put("dTinOre", new RecipeDisassembler("dTinOre", new ItemStack(AtomizerItems.items.get(ItemTinIngot.REGISTRY_NAME), 1), out, null));
+	
 	}
 
 	/**
