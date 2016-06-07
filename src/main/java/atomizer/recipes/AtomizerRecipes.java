@@ -557,9 +557,17 @@ public class AtomizerRecipes {
 	 */
 	public static void disassemblerRecipes() {
 		disassembler = new TreeMap<String,RecipeDisassembler>();
-		ItemStack[] out = { new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5),
-				new ItemStack(AtomizerItems.items.get(ItemIronRaw.REGISTRY_NAME), 4) };
+		ItemStack[] out = new ItemStack[2];
+		/* IronOreBlock */
+		out[0] = new ItemStack(AtomizerItems.items.get(ItemIronRaw.REGISTRY_NAME), 4);
+		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
 		disassembler.put("dIronOre", new RecipeDisassembler("dIronOre", new ItemStack(Item.getItemFromBlock(Blocks.iron_ore), 1), out, null));
+		
+		/* CoalOreBlock */
+		out[0] = new ItemStack(Items.coal,4);
+		out[1] = new ItemStack(AtomizerItems.items.get(ItemStoneRaw.REGISTRY_NAME), 5);
+		
+		
 	}
 
 	/**
