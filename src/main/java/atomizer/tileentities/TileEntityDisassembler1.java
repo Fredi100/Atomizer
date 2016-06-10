@@ -146,7 +146,9 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 										System.out.println("Stelle her");
 										ish.extractItem(SLOT_INPUT, 1, false);
 										ish.insertItem(SLOT_OUTPUT1, rd.getOutput()[0].copy(), false);
-										ish.insertItem(SLOT_OUTPUT2, rd.getOutput()[1].copy(), false);
+										if(output2 != null){
+											ish.insertItem(SLOT_OUTPUT2, rd.getOutput()[1].copy(), false);
+										}
 										if (rd.getLuck() != null) {
 											int luck = (int) (rd.getLuck().length * Math.random());
 											if (rd.getLuck()[luck] != null) {
