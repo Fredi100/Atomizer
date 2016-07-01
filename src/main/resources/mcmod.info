@@ -1,14 +1,14 @@
 [
 {
-  "modid": "atomizer",
-  "name": "Atomizer",
-  "description": "Ein komplettes Crafting Overhaul",
+  "modid": "${modid}",
+  "name": "${modname}",
+  "description": "A complete Crafting Overhaul",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "https://github.com/Fredi100/Atomizer",
   "updateUrl": "https://github.com/Fredi100/Atomizer",
   "authorList": ["Alfred Emsenhuber"],
-  "credits": "The Forge and FML guys, for making this mod possible",
+  "credits": "The Forge and FML guys, for making this mod possible. Barbara Schafhauser for providing those awesome textures. Matthias El-Far for helping.",
   "logoFile": "assets/atomizer/logoFile.png",
   "screenshots": [],
   "dependencies": [mod_MinecraftForge]
