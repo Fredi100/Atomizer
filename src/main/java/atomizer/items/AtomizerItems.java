@@ -74,7 +74,6 @@ public class AtomizerItems {
 	public static Item silverRaw;
 	
 	
-	
 	/**
 	 * Initialisiert alle Items die vom Mod eingebracht werden
 	 */
@@ -177,5 +176,9 @@ public class AtomizerItems {
 			System.out.println("Registered: " + i.getUnlocalizedName());
 		}
 	
+	}
+	
+	public static Item getItem(String name){
+		return items.get(name);
 	}
 }
