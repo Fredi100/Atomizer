@@ -24,7 +24,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * Disassembler Stage 1 Block
  * 
  * @author Alfred Emsenhuber(Fredi100)
- * @version 2016-05-25
+ * @version 2016-07-03
  */
 public class BlockDisassembler1 extends BlockContainer {
 
@@ -55,7 +55,7 @@ public class BlockDisassembler1 extends BlockContainer {
 	 */
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune){
-		return Item.getItemFromBlock(AtomizerBlocks.blocks.get(BlockDisassembler1.REGISTRY_NAME));
+		return Item.getItemFromBlock(AtomizerBlocks.getBlock(AtomizerBlocks.BLOCK_ASSEMBLER1));
 	}
 
 	@Override

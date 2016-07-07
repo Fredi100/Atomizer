@@ -83,8 +83,6 @@ public class Atomizer {
 		// AtomizerTileEntities.init();
 		proxy.registerTileEntities();
 		proxy.init(event);
-		// TODO muss auf die neue Minecraft Version aktualisiert werden
-		GameRegistry.registerWorldGenerator(new AtomizerWorldGen(), 0);
 	}
 
 	/**

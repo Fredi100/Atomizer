@@ -3,14 +3,14 @@
     "variants": {
         "normal": [{
             "textures": {
-                "all": "atomizer:blocks/silverOreBlock"
+                "all": "atomizer:blocks/silverOre"
             },
             "model": "cube_all",
-			"particle": "atomizer:blocks/silverOreBlock"
+			"particle": "atomizer:blocks/silverOre"
         }],
 		"inventory": [{
 			"textures": {
-				"all": "atomizer:blocks/silverOreBlock"
+				"all": "atomizer:blocks/silverOre"
 			},
             "model": "cube_all"
 		}]

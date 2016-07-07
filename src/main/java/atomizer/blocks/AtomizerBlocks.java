@@ -1,5 +1,6 @@
 package atomizer.blocks;
 
+import java.util.ArrayList;
 import java.util.TreeMap;
 
 import atomizer.lib.Constants;
@@ -14,11 +15,26 @@ import net.minecraftforge.client.model.ModelLoader;
  * Kümmert sich um das Erstellen und Initialisieren der einzelnen Blöcke
  * 
  * @author Fredi100
- * @version 2016-05-25
+ * @version 2016-07-03
  */
 public final class AtomizerBlocks {
 	
-	public static TreeMap<String,Block> blocks;
+	public static ArrayList<Block> blocks;
+	
+	public static final int  BLOCK_IT = 0;
+	public static final int  BLOCK_TGM = 1;
+	public static final int  BLOCK_ASSEMBLER1 = 2;
+	public static final int  BLOCK_ASSEMBLER2 = 3;
+	public static final int  BLOCK_ASSEMBLER3 = 4;
+	public static final int  BLOCK_DISASSEMBLER1 = 5;
+	public static final int  BLOCK_DISASSEMBLER2 = 6;
+	public static final int  BLOCK_DISASSEMBLER3 = 7;
+	public static final int  BLOCK_STORAGE2 = 8;
+	public static final int  BLOCK_STORAGE3 = 9;
+	public static final int  BLOCK_SOIL = 10;
+	public static final int  BLOCK_COPPERORE = 11;
+	public static final int  BLOCK_TINORE = 12;
+	public static final int  BLOCK_SILVERORE = 13;
 	
 	/**
 	 * Initializes every block of this mod
@@ -26,25 +42,25 @@ public final class AtomizerBlocks {
 	public static void init(){
 		System.out.println("Atomizer is initializing its blocks now!");
 		
-		blocks = new TreeMap<String, Block>();
+		blocks = new ArrayList<Block>();
+		blocks.add(BLOCK_IT, new BlockIT());
+		blocks.add(BLOCK_TGM, new BlockTGM());
 		
-		blocks.put(BlockIT.UNLOCALIZED_BLOCK_NAME, new BlockIT());
-		blocks.put(BlockTGM.REGISTRY_NAME, new BlockTGM());
 		
-		blocks.put(BlockAssembler1.UNLOCALIZED_BLOCK_NAME, new BlockAssembler1());
-		blocks.put(BlockAssembler2.UNLOCALIZED_BLOCK_NAME, new BlockAssembler2());
-		blocks.put(BlockAssembler3.UNLOCALIZED_BLOCK_NAME, new BlockAssembler3());
-		blocks.put(BlockDisassembler1.REGISTRY_NAME, new BlockDisassembler1());
-		blocks.put(BlockDisassembler2.UNLOCALIZED_BLOCK_NAME, new BlockDisassembler2());
-		blocks.put(BlockDisassembler3.UNLOCALIZED_BLOCK_NAME, new BlockDisassembler3());
-		blocks.put(BlockSpeicher2.UNLOCALIZED_BLOCK_NAME, new BlockSpeicher2());
-		blocks.put(BlockSpeicher3.UNLOCALIZED_BLOCK_NAME, new BlockSpeicher3());
-		blocks.put(BlockSoil.UNLOCALIZED_BLOCK_NAME, new BlockSoil());
+		blocks.add(BLOCK_ASSEMBLER1, new BlockAssembler1());
+		blocks.add(BLOCK_ASSEMBLER2, new BlockAssembler2());
+		blocks.add(BLOCK_ASSEMBLER3, new BlockAssembler3());
+		blocks.add(BLOCK_DISASSEMBLER1, new BlockDisassembler1());
+		blocks.add(BLOCK_DISASSEMBLER2, new BlockDisassembler2());
+		blocks.add(BLOCK_DISASSEMBLER3, new BlockDisassembler3());
+		blocks.add(BLOCK_STORAGE2, new BlockSpeicher2());
+		blocks.add(BLOCK_STORAGE3, new BlockSpeicher3());
+		blocks.add(BLOCK_SOIL, new BlockSoil());
 		
 		//Ores
-		blocks.put(BlockCopperOre.UNLOCALIZED_BLOCK_NAME, new BlockCopperOre());
-		blocks.put(BlockTinOre.UNLOCALIZED_BLOCK_NAME, new BlockTinOre());
-		blocks.put(BlockSilverOre.UNLOCALIZED_BLOCK_NAME, new BlockSilverOre());
+		blocks.add(BLOCK_COPPERORE, new BlockCopperOre());
+		blocks.add(BLOCK_TINORE, new BlockTinOre());
+		blocks.add(BLOCK_SILVERORE, new BlockSilverOre());
 	}
 	
 	/**
@@ -56,7 +72,7 @@ public final class AtomizerBlocks {
 		RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
 		ModelResourceLocation mrl;
 		
-		for(Block b : blocks.values()){
+		for(Block b : blocks){
 			mrl = new ModelResourceLocation(b.getRegistryName(), "inventory");
 			renderItem.getItemModelMesher().register(Item.getItemFromBlock(b), 0, mrl);
 			System.out.println("Registered: " + b.getRegistryName());
@@ -64,6 +80,10 @@ public final class AtomizerBlocks {
 			//ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(b), 0, mrl);
 		}
 	
+	}
+	
+	public static Block getBlock(int index){
+		return blocks.get(index);
 	}
 	
 }

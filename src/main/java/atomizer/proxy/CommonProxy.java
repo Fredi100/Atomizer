@@ -3,6 +3,7 @@ package atomizer.proxy;
 import atomizer.Atomizer;
 import atomizer.gui.AtomizerGuiHandler;
 import atomizer.tileentities.TileEntityDisassembler1;
+import atomizer.world.AtomizerWorldGen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -19,5 +20,6 @@ public class CommonProxy {
 
 	public void init(FMLInitializationEvent e) {
 		NetworkRegistry.INSTANCE.registerGuiHandler(Atomizer.instance, new AtomizerGuiHandler());
+		GameRegistry.registerWorldGenerator(new AtomizerWorldGen(), 0);
 	}
 }

@@ -1,7 +1,7 @@
 [
 {
-  "modid": "${modid}",
-  "name": "${modname}",
+  "modid": "atomizer",
+  "name": "Atomizer",
   "description": "A complete Crafting Overhaul",
   "version": "${version}",
   "mcversion": "${mcversion}",

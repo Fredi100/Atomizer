@@ -3,14 +3,14 @@
     "variants": {
         "normal": [{
             "textures": {
-                "all": "atomizer:blocks/copperOreBlock"
+                "all": "atomizer:blocks/copperOre"
             },
             "model": "cube_all",
-			"particle": "atomizer:blocks/copperOreBlock"
+			"particle": "atomizer:blocks/copperOre"
         }],
 		"inventory": [{
 			"textures": {
-				"all": "atomizer:blocks/copperOreBlock"
+				"all": "atomizer:blocks/copperOre"
 			},
             "model": "cube_all"
 		}]

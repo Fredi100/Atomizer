@@ -3,14 +3,17 @@ tile.atomizer:itBlock.name=IT Block
 tile.atomizer:Assembler1Block.name=Assembler Stufe 1
 tile.atomizer:Assembler2Block.name=Assembler Stufe 2
 tile.atomizer:Assembler3Block.name=Assembler Stufe 3
-tile.atomizer:Disassembler1Block.name=Disassembler Stufe 1
-tile.atomizer:Disassembler2Block.name=Disassembler Stufe 2
-tile.atomizer:Disassembler3Block.name=Disassembler Stufe 3
+tile.atomizer:disassembler1Block.name=Disassembler Stufe 1
+tile.atomizer:disassembler2Block.name=Disassembler Stufe 2
+tile.atomizer:disassembler3Block.name=Disassembler Stufe 3
 tile.atomizer:Speicher2Block.name=Tank
 tile.atomizer:Speicher3Block.name=Magnetfeldtank
 tile.atomizer:Transport1Block.name=Transportrohr Stufe 1
 tile.atomizer:Transport2Block.name=Transportrohr Stufe 2
 tile.atomizer:Transport3Block.name=Magnetfeldroehre
+tile.atomizer:silverOreBlock.name = Silber Erz
+tile.atomizer:tinOreBlock.name = Zinn Erz
+tile.atomizer:copperOreBloc.name = Kupfer Erz
 
 <--! Bearbeiten !-->
 tile.atomizer:soilBlock.name=Ackerboden

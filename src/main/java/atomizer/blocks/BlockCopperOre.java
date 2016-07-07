@@ -8,21 +8,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockCopperOre extends Block{
 	
-	public static final String UNLOCALIZED_BLOCK_NAME = "copperOreBlock";
+	public static final String REGISTRY_NAME = "copperOreBlock";
 
 	protected BlockCopperOre() {
 		super(Material.rock);
 		this.setCreativeTab(CreativeTabs.tabBlock);
-		setUnlocalizedName(Constants.MODID + ":" + UNLOCALIZED_BLOCK_NAME);
-		GameRegistry.registerBlock(this, UNLOCALIZED_BLOCK_NAME);
-	}
-	
-	/**
-	 * Gibt den Namen des Blocks zurück
-	 * 
-	 * @return Der Name des Blocks
-	 */
-	public String getName(){
-		return UNLOCALIZED_BLOCK_NAME;
+		this.setUnlocalizedName(Constants.MODID + ":" + REGISTRY_NAME);
+		this.setRegistryName(REGISTRY_NAME);
+		GameRegistry.registerBlock(this, REGISTRY_NAME);
 	}
 }

@@ -70,6 +70,11 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+/**
+ * 
+ * @author Alfred Emsenhuber(Fredi100)
+ * @version 2016-07-03
+ */
 public class AtomizerRecipes {
 
 	public static HashMap<String, RecipeDisassembler> disassembler;
@@ -501,7 +506,7 @@ public class AtomizerRecipes {
 				AtomizerItems.getItem(ItemWoodenPlank.REGISTRY_NAME), 'D', Items.diamond });
 
 		// SoilePileItem
-		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockSoil.UNLOCALIZED_BLOCK_NAME)),
+		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.getBlock(AtomizerBlocks.BLOCK_SOIL)),
 				new Object[] { "SSS", "SSS", "SSS", 'S', AtomizerItems.getItem(ItemSoilPile.REGISTRY_NAME) });
 		// Laser1Item
 		GameRegistry.addRecipe(new ItemStack(AtomizerItems.getItem(ItemLaser1.REGISTRY_NAME)), new Object[] { "   ",
@@ -515,20 +520,20 @@ public class AtomizerRecipes {
 				new Object[] { "   ", "DLG", "   ", 'D', Items.diamond, 'L',
 						AtomizerItems.getItem(ItemLaser2.REGISTRY_NAME), 'G', Items.gold_ingot });
 		// Assembler1Block
-		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockAssembler1.UNLOCALIZED_BLOCK_NAME)),
+		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.getBlock(AtomizerBlocks.BLOCK_ASSEMBLER1)),
 				new Object[] { "GLG", "SCS", "GRG", 'C', Blocks.crafting_table, 'S', Blocks.stone, 'G',
 						Items.gold_ingot, 'L', AtomizerItems.getItem(ItemLaser1.REGISTRY_NAME), 'R',
 						Items.redstone });
 		// Assembler2Block
-		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockAssembler2.UNLOCALIZED_BLOCK_NAME)),
+		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.getBlock(AtomizerBlocks.BLOCK_ASSEMBLER2)),
 				new Object[] { "GLG", "ICI", "GRG", 'C',
-						AtomizerBlocks.blocks.get(BlockAssembler1.UNLOCALIZED_BLOCK_NAME), 'I', Blocks.iron_block, 'G',
+						AtomizerBlocks.getBlock(AtomizerBlocks.BLOCK_ASSEMBLER1), 'I', Blocks.iron_block, 'G',
 						Items.gold_ingot, 'L', AtomizerItems.getItem(ItemLaser2.REGISTRY_NAME), 'R',
 						Blocks.redstone_block });
 		// Assembler3Block
-		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.blocks.get(BlockAssembler3.UNLOCALIZED_BLOCK_NAME)),
+		GameRegistry.addRecipe(new ItemStack(AtomizerBlocks.getBlock(AtomizerBlocks.BLOCK_ASSEMBLER3)),
 				new Object[] { "GLG", "DCD", "GRG", 'C',
-						AtomizerBlocks.blocks.get(BlockAssembler2.UNLOCALIZED_BLOCK_NAME), 'D', Blocks.diamond_block,
+						AtomizerBlocks.getBlock(AtomizerBlocks.BLOCK_ASSEMBLER2), 'D', Blocks.diamond_block,
 						'G', Items.gold_ingot, 'L', AtomizerItems.getItem(ItemLaser3.REGISTRY_NAME), 'R',
 						Blocks.redstone_block });
 	}
