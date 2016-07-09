@@ -1,7 +1,7 @@
 package atomizer.container;
 
-import atomizer.gui.SlotDisassemblerFuel;
-import atomizer.gui.SlotDisassemblerOutput;
+import atomizer.client.gui.SlotDisassemblerFuel;
+import atomizer.client.gui.SlotDisassemblerOutput;
 import atomizer.tileentities.TileEntityDisassembler1;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;

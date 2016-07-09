@@ -20,7 +20,7 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "v0.1.1-alpha"
+version = "v0.1.2-alpha"
 group= "com.fredi100.atomizer" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "atomizer"
 

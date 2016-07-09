@@ -1,10 +1,10 @@
 package atomizer;
 
-import atomizer.blocks.AtomizerBlocks;
+import atomizer.block.AtomizerBlocks;
+import atomizer.client.gui.AtomizerGuiHandler;
 import atomizer.fluids.AtomizerFluids;
-import atomizer.gui.AtomizerGuiHandler;
-import atomizer.items.AtomizerItems;
-import atomizer.items.ItemBronzeIngot;
+import atomizer.item.AtomizerItems;
+import atomizer.item.ItemBronzeIngot;
 import atomizer.lib.Constants;
 import atomizer.proxy.CommonProxy;
 import atomizer.recipes.AtomizerRecipes;
@@ -56,6 +56,7 @@ public class Atomizer {
 	 */
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		this.proxy.preInit(event);
 		AtomizerBlocks.init();
 		AtomizerItems.init();
 		AtomizerFluids.init();
@@ -68,21 +69,13 @@ public class Atomizer {
 	 */
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
+		this.proxy.init(event);
 
 		AtomizerRecipes.recipeRemover();
 		AtomizerRecipes.smeltingRemover();
 		AtomizerRecipes.init();
 		AtomizerRecipes.disassemblerRecipes();
-
-		if (event.getSide() == Side.CLIENT) {
-			AtomizerItems.registerItemModels();
-			AtomizerBlocks.registerBlockModels();
-		}
-
-		NetworkRegistry.INSTANCE.registerGuiHandler(this.instance, new AtomizerGuiHandler());
-		// AtomizerTileEntities.init();
-		proxy.registerTileEntities();
-		proxy.init(event);
+		
 	}
 
 	/**
@@ -104,7 +97,7 @@ public class Atomizer {
 	 */
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-
+		this.proxy.postInit(event);
 	}
 
 	/**

@@ -1,12 +1,10 @@
 package atomizer.proxy;
 
-import atomizer.block.AtomizerBlocks;
-import atomizer.item.AtomizerItems;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-public class ClientProxy extends CommonProxy{
+public class ServerProxy extends CommonProxy {
 	
 	@Override
 	public void preInit(FMLPreInitializationEvent e) {
@@ -16,14 +14,10 @@ public class ClientProxy extends CommonProxy{
 	@Override
 	public void init(FMLInitializationEvent e) {
 		super.init(e);
-		
-		AtomizerItems.registerItemModels();
-		AtomizerBlocks.registerBlockModels();
 	}
 
 	@Override
 	public void postInit(FMLPostInitializationEvent e) {
 		super.postInit(e);
 	}
-
 }

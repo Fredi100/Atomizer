@@ -2,7 +2,7 @@ package atomizer.world;
 
 import java.util.Random;
 
-import atomizer.blocks.AtomizerBlocks;
+import atomizer.block.AtomizerBlocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -12,40 +12,46 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class AtomizerWorldGen implements IWorldGenerator {
 
-	private WorldGenerator gen_copper_ore; // Generiert Copper Ore(Overworld)
-	private WorldGenerator gen_silver_ore; // Generiert Silver Ore(Overworld)
-	private WorldGenerator gen_tin_ore; // Generiert Tin Ore(Overworld)
+	private WorldGenerator gen_copper_ore; // Generates Copper Ore (used in
+											// Overworld)
+	private int copper_vein_size = 9; //Immer 1 mehr nehmen als verlangt
+	private int copper_chance = 20;
+	private int copper_min_height = 0;
+	private int copper_max_height = 50;
 	
+	private WorldGenerator gen_tin_ore; // Generates Tin Ore (used in Overworld)
+	private int tin_vein_size = 8;
+	private int tin_chance = 16;
+	private int tin_min_height = 0;
+	private int tin_max_height = 40;
+	
+	private WorldGenerator gen_silver_ore; // Generates Silver Ore (used in Overworld)
+	private int silver_vein_size = 7;
+	private int silver_chance = 10;
+	private int silver_min_height = 0;
+	private int silver_max_height = 30;
+
 	public AtomizerWorldGen() {
-		/*
-		this.gen_copper_ore = new WorldGenMinable(AtomizerBlocks.copperOreBlock, 8);
-		this.gen_silver_ore = new WorldGenMinable(AtomizerBlocks.silverOreBlock, 6);
-		this.gen_tin_ore = new WorldGenMinable(AtomizerBlocks.tinOreBlock, 8);
-		*/
+		// Zahl am Ende enstpricht der Venen Größe
+		this.gen_copper_ore = new WorldGenMinable(
+				AtomizerBlocks.getBlock(AtomizerBlocks.COPPER_ORE).getDefaultState(), this.copper_vein_size);
+		this.gen_tin_ore = new WorldGenMinable(AtomizerBlocks.getBlock(AtomizerBlocks.TIN_ORE).getDefaultState(),this.tin_vein_size);
+		this.gen_silver_ore = new WorldGenMinable(AtomizerBlocks.getBlock(AtomizerBlocks.SILVER_ORE).getDefaultState(),this.silver_vein_size);
 	}
 
 	@Override
-	/**
-	 * Diese Methode wird für jede Dimension einzeln aufgerufen.
-	 */
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator,
 			IChunkProvider chunkProvider) {
-		// TODO Auto-generated method stub
-		switch (world.provider.getDimensionId()) { // Um für jede Dimension etwas
-												// anderes zu machen dieses
-												// Switch
+		switch (world.provider.getDimensionId()) {
 		case 0: // Overworld
-			/*
-			this.runGenerator(this.gen_copper_ore, world, random, chunkX, chunkZ, 20, 0, 64);
-			this.runGenerator(this.gen_silver_ore, world, random, chunkX, chunkZ, 20, 0, 64);
-			this.runGenerator(this.gen_tin_ore, world, random, chunkX, chunkZ, 20, 0, 64);
-			*/
+			this.runGenerator(this.gen_copper_ore, world, random, chunkX, chunkZ, this.copper_chance, copper_min_height, copper_max_height);
+			this.runGenerator(this.gen_tin_ore, world, random, chunkX, chunkZ, silver_chance, silver_min_height, silver_max_height);
+			this.runGenerator(this.gen_silver_ore, world, random, chunkX, chunkZ, this.silver_chance, this.silver_min_height, silver_max_height);
 			break;
 		case -1: // Nether
 			break;
 		case 1: // End
 			break;
-
 		}
 	}
 
