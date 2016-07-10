@@ -82,7 +82,7 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 				--this.disassemblerChrushingTime;
 			}
 		} else {
-			this.disassemblerChrushingTime = 200;
+			this.disassemblerChrushingTime = this.getMaxCrushTime();
 		}
 
 		// If this TE has fuelTime left,
@@ -242,5 +242,9 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 
 	public int getMaxFuelTime() {
 		return disassemblerMaxFuelTime;
+	}
+	
+	public int getMaxCrushTime(){
+		return 200;
 	}
 }

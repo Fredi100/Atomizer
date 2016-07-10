@@ -45,13 +45,32 @@ public class GuiDisassembler1 extends GuiContainer {
 		int j = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(i, j, 0, 0, this.xSize, this.ySize);
 		
-		/*
-		if(te.hasFuel()){
-			int fuelMax = te.getMaxFuelTime();
-			int fuel = te.getFuelTime();
-			
-			//fuelMax / 15 * 1
+		
+		
+		if(te.isCrushing()){
+			int k = this.getBurnLeftScaled(13); //Hier die Größe des Felds in Pixel
+			this.drawTexturedModalRect(i + 56, j + 36 + 12 - k, 176, 12 - k, 14, k + 1);
+			//Zahlen noch anpassen
 		}
-		*/
+		
+		int l = this.getCrushProgressScaled(24);
+		this.drawTexturedModalRect(i + 79, j + 34, 176, 14, l + 1, 16);
+		
+	}
+	
+	private int getBurnLeftScaled(int pixels){
+		int i = te.getFuelTime();
+		
+		if(i == 0){
+			i=200;
+		}
+		
+		return te.getMaxFuelTime() * pixels / i;
+	}
+	
+	private int getCrushProgressScaled(int pixels){
+		int i = te.getCrushTime();
+		int j = te.getMaxCrushTime();
+		return j != 0 && i != 0 ? i * pixels / j : 0;
 	}
 }
