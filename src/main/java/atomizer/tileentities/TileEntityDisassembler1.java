@@ -44,6 +44,9 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 	private int disassemblerMaxFuelTime;
 	private int disassemblerChrushingTime;
 
+	private ItemStack input;
+	private ItemStack fuel;
+
 	@CapabilityInject(ItemHandler.class)
 	static Capability<ItemHandler> ITEM_HANDLER_CAPABILITY = null;
 
@@ -59,41 +62,155 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 	 */
 	@Override
 	public void update() {
-		ItemStack input = this.ish.getStackInSlot(SLOT_INPUT);
-		ItemStack fuel = this.ish.getStackInSlot(SLOT_FUEL);
 
-		// Testing Purpose
-		if (this.disassemblerFuelTime % 10 == 0) {
-			System.out.println("FuleTime: " + this.disassemblerFuelTime);
+		this.updateInputStack();
+		this.updateFuelStack();
+
+		/* Testing Purpose */
+		this.printFuelTime();
+		this.printCrushingTime();
+
+		this.updateCrushingTime();
+
+		this.updateFuelTime();
+
+		this.consumeFuleCrushNewItem();
+
+		this.crushItem();
+
+	}
+
+	private void crushItem() {
+
+		if (this.worldObj.isRemote || this.disassemblerChrushingTime > 0) {
+
+		} else {
+			for (RecipeDisassembler rd : AtomizerRecipes.disassembler.values()) {
+				if (this.recipeForInputFound(rd)) {
+					ItemStack[] recipeOutput = this.getRecipeOutput(rd);
+					if (this.outputIsCompatible(recipeOutput)) {
+						this.extractNewItems(recipeOutput);
+						this.extractAvailableLuckItems(rd);
+					}
+				}
+			}
 		}
+	}
+
+	private void extractAvailableLuckItems(RecipeDisassembler rd) {
+		if (rd.getLuck() != null) {
+			int luck = (int) (rd.getLuck().length * Math.random());
+			if (rd.getLuck()[luck] != null) {
+				if (ish.getStackInSlot(SLOT_LUCK) == null
+						|| ish.getStackInSlot(SLOT_LUCK).getItem().equals(rd.getLuck()[luck].getItem())
+						|| ish.getStackInSlot(SLOT_LUCK).getItem() == null) {
+					ish.insertItem(SLOT_LUCK, rd.getLuck()[luck].copy(), false);
+				}
+			}
+		}
+	}
+
+	private boolean outputIsCompatible(ItemStack[] recipeOutput) {
+		if (outputSlot1IsCompatible(recipeOutput) && this.outputSlot2IsCompatible(recipeOutput)) {
+			return true;
+		}
+		return false;
+	}
+
+	private void extractNewItems(ItemStack[] recipeOutput) {
+		ish.extractItem(SLOT_INPUT, 1, false);
+		ish.insertItem(SLOT_OUTPUT1, recipeOutput[0].copy(), false);
+		if (recipeOutput[1] != null) {
+			ish.insertItem(SLOT_OUTPUT2, recipeOutput[1].copy(), false);
+		}
+	}
+
+	private boolean outputSlot2IsCompatible(ItemStack[] recipeOutput) {
+		if (ish.getStackInSlot(SLOT_OUTPUT2) == null || recipeOutput[1] == null
+				|| ish.getStackInSlot(SLOT_OUTPUT2).getItem().equals(recipeOutput[1].getItem())
+				|| ish.getStackInSlot(SLOT_OUTPUT2).getItem() == null) {
+			return true;
+		}
+		return false;
+	}
+
+	private boolean outputSlot1IsCompatible(ItemStack[] recipeOutput) {
+		if (ish.getStackInSlot(SLOT_OUTPUT1) == null
+				|| ish.getStackInSlot(SLOT_OUTPUT1).getItem().equals(recipeOutput[0].getItem())
+				|| ish.getStackInSlot(SLOT_OUTPUT1).getItem() == null) {
+			return true;
+		}
+		return false;
+	}
+
+	private ItemStack[] getRecipeOutput(RecipeDisassembler rd) {
+		ItemStack[] recipeOutput = new ItemStack[2];
+		recipeOutput[0] = rd.getOutput()[0];
+		recipeOutput[1] = rd.getOutput()[1];
+		return recipeOutput;
+	}
+
+	private boolean recipeForInputFound(RecipeDisassembler rd) {
+		if (this.recipeInputNotNull(rd)) {
+			if (rd.getInput().getItem().equals(input.getItem())) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Checks if the Recipe input and the TE Input stack is not null
+	 * 
+	 * @param rd
+	 *            The RecipeDisassembler object for which the input gets checked
+	 * @return Wether the Input and the Recipe input is not null
+	 */
+	private boolean recipeInputNotNull(RecipeDisassembler rd) {
+		if (rd.getInput() == null || input == null || rd.getInput().getItem() == null || input.getItem() == null) {
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * Prints the curshingTime of this TE
+	 */
+	private void printCrushingTime() {
 		if (this.disassemblerChrushingTime % 10 == 0) {
 			System.out.println("CrushingTime: " + this.disassemblerChrushingTime);
 		}
+	}
 
-		// If this TE has crushingTime left and has FuleTime left
-		// it is considered crushing right now. Therefore
-		// the crushing time will be decreased by one.
-		// If it is not crushing anymore, the crushing time will
-		// be set back to 100
-		if (this.isCrushing() && AtomizerRecipes.containsDisassemblerRecipe(input)) {
-			RecipeDisassembler rd = AtomizerRecipes.getDisassemblerRecipe(input);
-			if (ish.getStackInSlot(SLOT_OUTPUT1) == null || ish.getStackInSlot(SLOT_OUTPUT1).getItem() == null
-					|| ish.getStackInSlot(SLOT_OUTPUT1).getItem() == rd.getOutput()[0].getItem()) {
-				--this.disassemblerChrushingTime;
-			}
-		} else {
-			this.disassemblerChrushingTime = this.getMaxCrushTime();
+	/**
+	 * Prints the fuelTime of this TE
+	 */
+	private void printFuelTime() {
+		if (this.disassemblerFuelTime % 10 == 0) {
+			System.out.println("FuleTime: " + this.disassemblerFuelTime);
 		}
+	}
 
-		// If this TE has fuelTime left,
-		// it will get reduced by one
-		if (this.hasFuel()) {
-			--this.disassemblerFuelTime;
-		}
+	/**
+	 * Loads the currently available FuelItemStack
+	 */
+	private void updateFuelStack() {
+		this.fuel = this.ish.getStackInSlot(SLOT_FUEL);
+	}
 
-		// If the crushingTime meets 0 it should check, if there is any Fuel and
-		// if there is something to be processed
-		// then consumes one of this fuel and refreshes the chrushingTime
+	/**
+	 * Loads the currently available InputItemStack
+	 */
+	private void updateInputStack() {
+		this.input = this.ish.getStackInSlot(SLOT_INPUT);
+	}
+
+	/**
+	 * If the crushingTime hits 0 it checks, wethere there is any fuel in the
+	 * fuelSlot and if there is something to be processed. It the consumes one
+	 * of the fuel and refreshes the crushing time
+	 */
+	private void consumeFuleCrushNewItem() {
 		if (this.disassemblerFuelTime < 1) {
 			if (AtomizerRecipes.containsDisassemblerRecipe(input)) {
 				System.out.println("Input has a Recipe");
@@ -108,7 +225,8 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 					} else {
 						System.out.println("No valid Fuel existant");
 					}
-				} else if (ish.getStackInSlot(SLOT_OUTPUT1).getItem() == rd.getOutput()[0].getItem() && ish.getStackInSlot(SLOT_OUTPUT1).stackSize + rd.getOutput()[0].stackSize <= 64) {
+				} else if (ish.getStackInSlot(SLOT_OUTPUT1).getItem() == rd.getOutput()[0].getItem()
+						&& ish.getStackInSlot(SLOT_OUTPUT1).stackSize + rd.getOutput()[0].stackSize <= 64) {
 					System.out.println("Output 1 is not empty but contains Recipe Output");
 					if (fuel != null && TileEntityFurnace.isItemFuel(fuel)) {
 						System.out.println("Consuming Fuel");
@@ -127,46 +245,33 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 		} else {
 			System.out.println("Still Fuel left!");
 		}
+	}
 
-		if (!this.worldObj.isRemote) {
-			if (this.disassemblerChrushingTime < 1) {
-				for (RecipeDisassembler rd : AtomizerRecipes.disassembler.values()) {
-					if (rd.getInput() != null && input != null && rd.getInput().getItem() != null
-							&& input.getItem() != null) {
-						if (rd.getInput().getItem().equals(input.getItem())) {
-							ItemStack output1 = rd.getOutput()[0];
-							ItemStack output2 = rd.getOutput()[1];
-							if (output1 != null) {
-								if (ish.getStackInSlot(SLOT_OUTPUT1) == null
-										|| ish.getStackInSlot(SLOT_OUTPUT1).getItem().equals(output1.getItem())
-										|| ish.getStackInSlot(SLOT_OUTPUT1).getItem() == null) {
-									if (ish.getStackInSlot(SLOT_OUTPUT2) == null || output2 == null
-											|| ish.getStackInSlot(SLOT_OUTPUT2).getItem().equals(output2.getItem())
-											|| ish.getStackInSlot(SLOT_OUTPUT2).getItem() == null) {
-										System.out.println("Stelle her");
-										ish.extractItem(SLOT_INPUT, 1, false);
-										ish.insertItem(SLOT_OUTPUT1, rd.getOutput()[0].copy(), false);
-										if(output2 != null){
-											ish.insertItem(SLOT_OUTPUT2, rd.getOutput()[1].copy(), false);
-										}
-										if (rd.getLuck() != null) {
-											int luck = (int) (rd.getLuck().length * Math.random());
-											if (rd.getLuck()[luck] != null) {
-												if (ish.getStackInSlot(SLOT_LUCK) == null
-														|| ish.getStackInSlot(SLOT_LUCK).getItem()
-																.equals(rd.getLuck()[luck].getItem())
-														|| ish.getStackInSlot(SLOT_LUCK).getItem() == null) {
-													ish.insertItem(SLOT_LUCK, rd.getLuck()[luck].copy(), false);
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
+	/**
+	 * If this TE has fuelTime left, it will get reduced by one
+	 */
+	private void updateFuelTime() {
+		if (this.hasFuel()) {
+			--this.disassemblerFuelTime;
+		}
+
+	}
+
+	/**
+	 * If this TE has crushingTime and fuleTime left it is considered crushing
+	 * right now. Therefore the crushingTime will be dedreased by one. If it is
+	 * not crushing anymore, the crushingTime will be set back to 100.
+	 * 
+	 */
+	private void updateCrushingTime() {
+		if (this.isCrushing() && AtomizerRecipes.containsDisassemblerRecipe(input)) {
+			RecipeDisassembler rd = AtomizerRecipes.getDisassemblerRecipe(input);
+			if (ish.getStackInSlot(SLOT_OUTPUT1) == null || ish.getStackInSlot(SLOT_OUTPUT1).getItem() == null
+					|| ish.getStackInSlot(SLOT_OUTPUT1).getItem() == rd.getOutput()[0].getItem()) {
+				--this.disassemblerChrushingTime;
 			}
+		} else {
+			this.disassemblerChrushingTime = this.getMaxCrushTime();
 		}
 	}
 
@@ -243,8 +348,8 @@ public class TileEntityDisassembler1 extends TileEntity implements ITickable {
 	public int getMaxFuelTime() {
 		return disassemblerMaxFuelTime;
 	}
-	
-	public int getMaxCrushTime(){
+
+	public int getMaxCrushTime() {
 		return 200;
 	}
 }
